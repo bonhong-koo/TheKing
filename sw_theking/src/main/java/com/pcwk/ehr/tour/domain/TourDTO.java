@@ -1,6 +1,6 @@
 package com.pcwk.ehr.tour.domain;
 
-public class tourDTO {
+public class TourDTO {
 	private  int tourNo	; //관광지 번호
 	private  String name	    ; //관광지명      
 	private  String subtitle	; //소제목
@@ -13,9 +13,9 @@ public class tourDTO {
 	private  int fee	    ; //입장료
 	private  int regionNo	; //지역코드
 	
-	public tourDTO() {}
+	public TourDTO() {}
 
-	public tourDTO(int tourNo, String name, String subtitle, String contents, int views, String address, String holiday,
+	public TourDTO(int tourNo, String name, String subtitle, String contents, int views, String address, String holiday,
 			String time, String tel, int fee, int regionNo) {
 		super();
 		this.tourNo = tourNo;
