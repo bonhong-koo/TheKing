@@ -130,5 +130,10 @@
         <!-- setter injection -->
         <property name="dataSource" ref="dataSource" />
     </bean>
+    
+    <!-- TourDao -->
+    <bean id="tourDao" class="com.pcwk.ehr.tour.dao.TourDao">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
 
 </beans>

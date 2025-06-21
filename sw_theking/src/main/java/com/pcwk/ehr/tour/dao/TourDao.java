@@ -24,8 +24,20 @@ public class TourDao implements PLog{
 		
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
+	
+	public void deleteAll() {
+		StringBuilder sb = new StringBuilder(100);
+		sb.append(" delete from tour \n");
 
+		log.debug("1.sql:\n" + sb.toString());
+		jdbcTemplate.update(sb.toString());		
+	}
 
+	/**
+	 * tour 정보 등록
+	 *@param param
+	 * 1(등록 성공), 0(등록 실패)
+	 */
 	public int doSaveTour(TourDTO param) {
 		int flag = 0;
         // 1. 전체 주소에서 시도/구군 추출
@@ -35,7 +47,7 @@ public class TourDao implements PLog{
         String regionSido = parts[0];
         String regionGugun = parts[1];
 		
-		
+		//처음 등록될 경우 Views Default 0
 		StringBuilder sb = new StringBuilder(200);
 		sb.append("INSERT INTO tour (                   \n");
 		sb.append("    TOUR_NO,                         \n");  //자동으로 증가 
@@ -62,13 +74,13 @@ public class TourDao implements PLog{
 		sb.append("           (SELECT REGION_NO         \n");
 		sb.append("				FROM REGION             \n");
 		sb.append("				WHERE REGION_SIDO = ?   \n");
-		sb.append("				AND REGION_GUGUN = ?)); \n");
+		sb.append("				AND REGION_GUGUN = ?))  \n");
 		log.debug("1.sql:\n" + sb.toString());
 		
+		//param 10개
 		Object[] args = {param.getName(),
 							param.getSubtitle(),
 							param.getContents(),
-							param.getViews(),
 							param.getAddress(),
 							param.getHoliday(),
 							param.getTime(),
