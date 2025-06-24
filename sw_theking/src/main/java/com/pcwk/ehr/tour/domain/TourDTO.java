@@ -1,5 +1,7 @@
 package com.pcwk.ehr.tour.domain;
 
+import java.util.List;
+
 import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class TourDTO  {
@@ -14,9 +16,10 @@ public class TourDTO  {
 	private  String tel	    ; //연락처
 	private  int fee	    ; //입장료
 	private  int regionNo	; //지역코드
-	
+
 	
 	public TourDTO() {}
+	
 
 	public TourDTO(int tourNo, String name, String subtitle, String contents, int views, String address, String holiday,
 			String time, String tel, int fee, int regionNo) {
@@ -33,8 +36,29 @@ public class TourDTO  {
 		this.fee = fee;
 		this.regionNo = regionNo;
 	}
-	//region getter/setter
-	
+	//1:n 관계
+	private RegionDTO region;
+
+	public int getRegionNo() {
+		return regionNo;
+	}
+
+
+
+	public RegionDTO getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(RegionDTO region) {
+		this.region = region;
+	}
+
+
+	public void setRegionNo(int regionNo) {
+		this.regionNo = regionNo;
+	}
+
 
 	public int getTourNo() {
 		return tourNo;
@@ -119,11 +143,11 @@ public class TourDTO  {
 
 	@Override
 	public String toString() {
-		return "tourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
+		return "TourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
 				+ ", views=" + views + ", address=" + address + ", holiday=" + holiday + ", time=" + time + ", tel="
-				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + "]";
+				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + "]";
 	}
-	
-	
+
+
 	
 }
