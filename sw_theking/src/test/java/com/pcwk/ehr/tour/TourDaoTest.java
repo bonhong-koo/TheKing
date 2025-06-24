@@ -1,6 +1,8 @@
 package com.pcwk.ehr.tour;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,6 +28,8 @@ class TourDaoTest {
 	TourDaoImpl dao;
 	
 	TourDTO dto01;
+	TourDTO dto02;
+	TourDTO dto03;
 	
 	@Autowired
 	ApplicationContext context;
@@ -35,6 +39,10 @@ class TourDaoTest {
 		log.debug("context:" + context);
 		
 		dto01 = new TourDTO(1,"관광지1","소제목1","상세내용1",0,"서울특별시 서대문구 123","토요일","09:00-16:00","010-1111-2222",100000,0);
+		dto02 = new TourDTO(2,"관광지2","소제목2","상세내용2",0,"세종특별자치시 123","토요일","09:00-16:00","010-1111-2223",200000,0);
+		dto03 = new TourDTO(3,"관광지3","소제목3","상세내용3",0,"세종특별자치시 풍무로","토요일","09:00-16:00","010-1111-2223",200000,0);
+	
+	
 	}
 
 	@AfterEach
@@ -43,21 +51,31 @@ class TourDaoTest {
 		log.debug("@After");
 		log.debug("***************************");
 	}
+	@Test
+	public void testDoSaveTour() {
+	    TourDTO dto = new TourDTO();
+	    dto.setName("테스트 관광지");
+	    dto.setSubtitle("소제목");
+	    dto.setContents("내용");
+	    dto.setAddress("전라북도 전주시 완산구 가련산로");
+	    dto.setHoliday("월요일");
+	    dto.setTime("10:00~18:00");
+	    dto.setTel("063-123-4567");
+	    dto.setFee(10000);
+
+	    int flag = dao.doSaveTour(dto);
+	    assertEquals(1, flag);
+	}
 	
 	@Disabled
 	@Test
-	void doSaveTour() {
-		//1. 전체 삭제
-		//2. 단건 등록
+	void beans() {
+		assertNotNull(context);
+		assertNotNull(dao);
 		
-		dao.deleteAll();
-		
-		int flag = dao.doSaveTour(dto01);
-		assertEquals(1,flag);
+		log.debug(context);
+		log.debug(dao);
 		
 	}
-	@Test
-	void deleteAll() {
-		dao.deleteAll();
-	}
+
 }

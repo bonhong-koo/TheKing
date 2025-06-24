@@ -1,23 +1,33 @@
 package com.pcwk.ehr.tour.dao;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.sql.DataSource;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.pcwk.ehr.cmn.PLog;
+import com.pcwk.ehr.region.dao.RegionDao;
+import com.pcwk.ehr.region.domain.RegionDTO;
 import com.pcwk.ehr.tour.domain.TourDTO;
 
+@Repository
 public class TourDaoImpl implements PLog{
-	private DataSource dataSource;
-	private JdbcTemplate jdbcTemplate;
 	
 	final String NAMESPACE = "com.pcwk.ehr.tour";
 	final String DOT = ".";
 	
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate; //DB 연결, sql 수행, 자원 반납
+	
+	@Autowired
+	RegionDao regionDao;
 	
 	//1. 관광지 정보 등록 doSaveTour
 	//2. 관광지 정보 수정 doUpdate
@@ -27,11 +37,6 @@ public class TourDaoImpl implements PLog{
 	//4.3 관광지 검색 조회 (제목, 지역)(페이징) doSelectOne
 	//5.getCount -> 몇 권인지 조회할 때
 	
-	public void setDataSource(DataSource dataSource) {
-		this.dataSource = dataSource;
-		
-		jdbcTemplate = new JdbcTemplate(dataSource);
-	}
 	
 	public void deleteAll() {
 		String statement = NAMESPACE+DOT+"deleteAll";
@@ -49,62 +54,30 @@ public class TourDaoImpl implements PLog{
 	 */
 	public int doSaveTour(TourDTO param) {
 		int flag = 0;
-        // 1. 전체 주소에서 시도/구군 추출
-        String fullAddress = param.getAddress();
-        String[] parts = fullAddress.split(" ");
+		// 1. 주소 파싱 → 시/도, 구/군 추출
+	    String fullAddress = param.getAddress();
+	    String[] parts = fullAddress.split(" ");
+	    
+	    String regionSido = null;
+	    String regionGugun = null;
 
-        String regionSido = parts[0];
-        String regionGugun = parts[1];
-		
-		//처음 등록될 경우 Views Default 0
-		StringBuilder sb = new StringBuilder(200);
-		sb.append("INSERT INTO tour (                   \n");
-		sb.append("    TOUR_NO,                         \n");  //자동으로 증가 
-		sb.append("    name,                            \n");  //필수값
-		sb.append("    subtitle,						\n");  //필수값
-		sb.append("    contents,                        \n");
-		sb.append("    views,                           \n");  //증가 함수 필요 
-		sb.append("    address,                         \n");  //필수값,주소API 사용 예정
-		sb.append("    holiday,                         \n");
-		sb.append("    time,                            \n");
-		sb.append("    tel,                             \n");
-		sb.append("    fee,                             \n");
-		sb.append("    region_no                        \n");   //필수값
-		sb.append(") VALUES (TOUR_NO_SEQ.NEXTVAL,       \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           0,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           ?,                        \n");
-		sb.append("           (SELECT REGION_NO         \n");
-		sb.append("				FROM REGION             \n");
-		sb.append("				WHERE REGION_SIDO = ?   \n");
-		sb.append("				AND REGION_GUGUN = ?))  \n");
-		log.debug("1.sql:\n" + sb.toString());
-		
-		//param 10개
-		Object[] args = {param.getName(),
-							param.getSubtitle(),
-							param.getContents(),
-							param.getAddress(),
-							param.getHoliday(),
-							param.getTime(),
-							param.getTel(),
-							param.getFee(),
-							regionSido,
-							regionGugun
-							};
-		log.debug("2.param: ");
-		for (Object obj : args) {
-			log.debug(obj.toString());
-		}
-		flag = jdbcTemplate.update(sb.toString(), args);
-		log.debug("3.flag: "+flag);
-		
+	    if (parts.length > 0 && "세종특별자치시".equals(parts[0])) {
+	        regionSido = parts[0];
+	        regionGugun = null;
+	    } else if (parts.length > 1) {
+	        regionSido = parts[0];
+	        regionGugun = parts[1];
+	    }
+
+	    // 2. region_no 조회
+
+
+	    // 3. TourDTO에 regionNo 설정
+
+	    // 4. insert
+	    String statement = NAMESPACE + DOT + "doSaveTour";
+	    flag = sqlSessionTemplate.insert(statement, param);
+
 		return flag;
 	}
 	
