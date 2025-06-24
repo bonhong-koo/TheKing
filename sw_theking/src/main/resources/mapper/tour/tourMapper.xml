@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pcwk.ehr.tour">
-    <resultMap type="com.pcwk.ehr.tour.domain.TourDTO" id="tourResultMap">
+    
+    <!-- ✅ resultMap -->
+    <resultMap id="tourResultMap" type="com.pcwk.ehr.tour.domain.TourDTO">
         <id property="tourNo" column="tour_no"/>
         <result property="name" column="name"/>
         <result property="subtitle" column="subtitle"/>
@@ -12,50 +14,42 @@
         <result property="time" column="time"/>
         <result property="tel" column="tel"/>
         <result property="fee" column="fee"/>
-        <result property="regionNo" column="region_no"/>
-            <association property="region" javaType="com.pcwk.ehr.region.domain.RegionDTO">
-                <id property="regionNo" column="region_no"/>
-                <result property="regionSido" column="region_sido"/>
-                <result property="regionGugun" column="region_gugun"/>        
-            </association>
+
+        <!-- 중첩 Region 매핑 -->
+        <association property="region" javaType="com.pcwk.ehr.region.domain.RegionDTO">
+            <id property="regionNo" column="region_no"/>
+            <result property="regionSido" column="region_sido"/>
+            <result property="regionGugun" column="region_gugun"/>
+        </association>
     </resultMap>
-	
+
+    <!-- ✅ 관광지 저장 -->
     <insert id="doSaveTour" parameterType="com.pcwk.ehr.tour.domain.TourDTO">
-		INSERT INTO TOUR (
-		    tour_no,
-		    name,
-		    subtitle,
-		    contents,
-		    views,
-		    address,
-		    holiday,
-		    time,
-		    tel,
-		    fee,
-		    region_no
-		) VALUES ( TOUR_NO_SEQ.NEXTVAL,
-		           #{name},
-		           #{subtitle},
-		           #{contents},
-		           0,
-		           #{address},
-		           #{holiday},
-		           #{time},
-		           #{tel},
-		           #{fee},
-		           #{regionNo} )
+        INSERT INTO TOUR (
+            tour_no, name, subtitle, contents, views,
+            address, holiday, time, tel, fee, region_no
+        ) VALUES (
+            TOUR_NO_SEQ.NEXTVAL,
+            #{name}, #{subtitle}, #{contents}, 0,
+            #{address}, #{holiday}, #{time}, #{tel}, #{fee}, #{region.regionNo}
+        )
     </insert>
-    
-    <select id="getRegionNo" resultType="int" parameterType="com.pcwk.ehr.region.domain.RegionDTO">
+
+    <!-- ✅ 지역번호 조회 -->
+    <select id="getRegionNo" parameterType="map" resultType="int">
         SELECT region_no
         FROM REGION
         WHERE region_sido = #{regionSido}
-          AND region_gugun = #{regionGugun}
-     </select> 
-    
-    
+        <if test="regionSido != null and regionSido == '세종특별자치시'">
+            AND region_gugun IS NULL
+        </if>
+        <if test="regionSido != null and regionSido != '세종특별자치시'">
+            AND region_gugun = #{regionGugun}
+        </if>
+    </select>
+
+    <!-- ✅ 관광지 전체 삭제 (테스트용) -->
     <delete id="deleteAll">
         DELETE FROM TOUR
     </delete>
-
 </mapper>

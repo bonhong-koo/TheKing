@@ -1,7 +1,5 @@
 package com.pcwk.ehr.tour.domain;
 
-import java.util.List;
-
 import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class TourDTO  {
@@ -16,7 +14,8 @@ public class TourDTO  {
 	private  String tel	    ; //연락처
 	private  int fee	    ; //입장료
 	private  int regionNo	; //지역코드
-
+	
+	private RegionDTO region;
 	
 	public TourDTO() {}
 	
@@ -36,14 +35,6 @@ public class TourDTO  {
 		this.fee = fee;
 		this.regionNo = regionNo;
 	}
-	//1:n 관계
-	private RegionDTO region;
-
-	public int getRegionNo() {
-		return regionNo;
-	}
-
-
 
 	public RegionDTO getRegion() {
 		return region;
@@ -52,6 +43,11 @@ public class TourDTO  {
 
 	public void setRegion(RegionDTO region) {
 		this.region = region;
+	}
+
+
+	public int getRegionNo() {
+		return regionNo;
 	}
 
 

@@ -53,15 +53,16 @@ class TourDaoTest {
 	}
 	@Test
 	public void testDoSaveTour() {
-	    TourDTO dto = new TourDTO();
-	    dto.setName("테스트 관광지");
-	    dto.setSubtitle("소제목");
-	    dto.setContents("내용");
-	    dto.setAddress("전라북도 전주시 완산구 가련산로");
-	    dto.setHoliday("월요일");
-	    dto.setTime("10:00~18:00");
-	    dto.setTel("063-123-4567");
-	    dto.setFee(10000);
+		TourDTO dto = new TourDTO();
+		dto.setName("남산타워");
+		dto.setSubtitle("서울의 랜드마크");
+		dto.setContents("남산서울타워입니다.");
+		dto.setViews(0);
+		dto.setAddress("서울특별시 용산구");
+		dto.setHoliday("연중무휴");
+		dto.setTime("09:00 ~ 23:00");
+		dto.setTel("02-345-6789");
+		dto.setFee(10000);
 
 	    int flag = dao.doSaveTour(dto);
 	    assertEquals(1, flag);

@@ -100,8 +100,8 @@
             value="oracle.jdbc.driver.OracleDriver" />
         <property name="jdbcUrl"
             value="jdbc:oracle:thin:@218.144.130.138:1522:XE" />
-        <property name="username" value="scott" />
-        <property name="password" value="pcwk" />
+        <property name="username" value="king" />
+        <property name="password" value="7749" />
         <!-- Optional settings -->
         <property name="maximumPoolSize" value="10"></property>
         <property name="minimumIdle" value="5"></property>
