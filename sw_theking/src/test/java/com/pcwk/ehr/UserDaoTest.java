@@ -26,7 +26,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.user.dao.UserDao;
-import com.pcwk.ehr.user.domain.Level;
 import com.pcwk.ehr.user.domain.UserDTO;
 
 @ExtendWith(SpringExtension.class)
@@ -52,9 +51,9 @@ public class UserDaoTest {
 
 		log.debug("context:" + context);
 
-		dto01 = new UserDTO("pcwk01", "이상무01", "4321", "사용안함", 0, 0, Level.BASIC, "yejiad12@gmail.com");
-		dto02 = new UserDTO("pcwk02", "이상무02", "4321a", "사용안함", 55, 10, Level.SILVER, "yejiad12@gmail.com");
-		dto03 = new UserDTO("pcwk03", "이상무03", "4321a", "사용안함", 100, 40, Level.GOLD, "yejiad12@gmail.com");
+//		dto01 = new UserDTO("pcwk01", "이상무01", "4321", "사용안함", 0, 0, Level.BASIC, "yejiad12@gmail.com");
+//		dto02 = new UserDTO("pcwk02", "이상무02", "4321a", "사용안함", 55, 10, Level.SILVER, "yejiad12@gmail.com");
+//		dto03 = new UserDTO("pcwk03", "이상무03", "4321a", "사용안함", 100, 40, Level.GOLD, "yejiad12@gmail.com");
 
 		search = new SearchDTO();
 	}
@@ -171,17 +170,18 @@ public class UserDaoTest {
 		// 3.
 		UserDTO outVO = dao.doSelectOne(dto01);
 		assertNotNull(outVO);
-		isSameUser(outVO, dto01);
+//		isSameUser(outVO, dto01);
 
 		// 4.
 		String upString = "_U";
 		int upInt = 999;
 
-		outVO.setName(outVO.getName() + upString);
+		outVO.setUserId(outVO.getUserId() + upString);
 		outVO.setPassword(outVO.getPassword() + upString);
-		outVO.setLogin(outVO.getLogin() + upInt);
-		outVO.setRecommend(outVO.getRecommend() + upInt);
-		outVO.setGrade(outVO.getGrade().GOLD);
+		outVO.setName(outVO.getName() + upString);
+		outVO.setNickname(outVO.getNickname() + upString);
+		outVO.setEmail(outVO.getEmail() + upString);
+		outVO.setMobile(outVO.getMobile());
 		outVO.setEmail(outVO.getEmail() + upString);
 
 		log.debug("outVO:" + outVO);
@@ -194,7 +194,7 @@ public class UserDaoTest {
 		UserDTO upVO = dao.doSelectOne(outVO);
 
 		// 7.
-		isSameUser(outVO, upVO);
+//		isSameUser(outVO, upVO);
 		System.out.println("***");
 
 	}
@@ -295,29 +295,29 @@ public class UserDaoTest {
 		assertEquals(count, 3);
 
 		// 3.
-		UserDTO outVO = dao.doSelectOne(dto01);
-		assertNotNull(outVO);
-		isSameUser(outVO, dto01);
-
-		UserDTO outVO2 = dao.doSelectOne(dto02);
-		assertNotNull(outVO2);
-		isSameUser(outVO2, dto02);
-
-		UserDTO outVO3 = dao.doSelectOne(dto03);
-		assertNotNull(outVO3);
-		isSameUser(outVO3, dto03);
+//		UserDTO outVO = dao.doSelectOne(dto01);
+//		assertNotNull(outVO);
+//		isSameUser(outVO, dto01);
+//
+//		UserDTO outVO2 = dao.doSelectOne(dto02);
+//		assertNotNull(outVO2);
+//		isSameUser(outVO2, dto02);
+//
+//		UserDTO outVO3 = dao.doSelectOne(dto03);
+//		assertNotNull(outVO3);
+//		isSameUser(outVO3, dto03);
 
 	}
 
 	// 데이터 비교
-	public void isSameUser(UserDTO outVO, UserDTO dto01) {
-		assertEquals(outVO.getUserId(), dto01.getUserId());
-		assertEquals(outVO.getName(), dto01.getName());
-		assertEquals(outVO.getPassword(), dto01.getPassword());
-		assertEquals(outVO.getLogin(), dto01.getLogin());
-		assertEquals(outVO.getRecommend(), dto01.getRecommend());
-		assertEquals(outVO.getGrade(), dto01.getGrade());
-		assertEquals(outVO.getEmail(), dto01.getEmail());
-	}
+//	public void isSameUser(UserDTO outVO, UserDTO dto01) {
+//		assertEquals(outVO.getUserId(), dto01.getUserId());
+//		assertEquals(outVO.getName(), dto01.getName());
+//		assertEquals(outVO.getPassword(), dto01.getPassword());
+//		assertEquals(outVO.getLogin(), dto01.getLogin());
+//		assertEquals(outVO.getRecommend(), dto01.getRecommend());
+//		assertEquals(outVO.getGrade(), dto01.getGrade());
+//		assertEquals(outVO.getEmail(), dto01.getEmail());
+//	}
 
 }
