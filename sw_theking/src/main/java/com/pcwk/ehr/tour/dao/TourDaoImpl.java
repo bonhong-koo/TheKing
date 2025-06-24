@@ -46,6 +46,14 @@ public class TourDaoImpl implements PLog{
 		log.debug("2 flag: {}"+flag);
 		
 	}
+	public Integer getRegionNo(String sido, String gugun) {
+	    Map<String, Object> params = new HashMap<>();
+	    params.put("regionSido", sido);
+	    params.put("regionGugun", gugun);
+
+	    String statement = NAMESPACE + DOT + "getRegionNo";
+	    return sqlSessionTemplate.selectOne(statement, params);
+	}
 
 	/**
 	 * tour 정보 등록
@@ -54,7 +62,8 @@ public class TourDaoImpl implements PLog{
 	 */
 	public int doSaveTour(TourDTO param) {
 		int flag = 0;
-		// 1. 주소 파싱 → 시/도, 구/군 추출
+	    
+	    // 1. 주소 파싱 → 시/도, 구/군 추출
 	    String fullAddress = param.getAddress();
 	    String[] parts = fullAddress.split(" ");
 	    
@@ -70,15 +79,20 @@ public class TourDaoImpl implements PLog{
 	    }
 
 	    // 2. region_no 조회
+	    Integer regionNo = getRegionNo(regionSido, regionGugun);
 
-
-	    // 3. TourDTO에 regionNo 설정
+	    // 3. TourDTO에 region 설정
+	    RegionDTO region = new RegionDTO();
+	    region.setRegionNo(regionNo);
+	    region.setRegionSido(regionSido);
+	    region.setRegionGugun(regionGugun);
+	    param.setRegion(region); // ★ 핵심
 
 	    // 4. insert
 	    String statement = NAMESPACE + DOT + "doSaveTour";
 	    flag = sqlSessionTemplate.insert(statement, param);
 
-		return flag;
+	    return flag;
 	}
 	
 }
