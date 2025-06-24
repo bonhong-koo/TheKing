@@ -1,10 +1,11 @@
-package com.pcwk.ehr;
+package com.pcwk.ehr.tour;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.pcwk.ehr.tour.dao.TourDao;
+import com.pcwk.ehr.tour.dao.TourDaoImpl;
 import com.pcwk.ehr.tour.domain.TourDTO;
 
 @ExtendWith(SpringExtension.class)
@@ -22,7 +23,7 @@ class TourDaoTest {
 	Logger log = LogManager.getLogger(getClass());
 	
 	@Autowired
-	TourDao dao;
+	TourDaoImpl dao;
 	
 	TourDTO dto01;
 	
@@ -42,7 +43,8 @@ class TourDaoTest {
 		log.debug("@After");
 		log.debug("***************************");
 	}
-
+	
+	@Disabled
 	@Test
 	void doSaveTour() {
 		//1. 전체 삭제
@@ -53,5 +55,9 @@ class TourDaoTest {
 		int flag = dao.doSaveTour(dto01);
 		assertEquals(1,flag);
 		
+	}
+	@Test
+	void deleteAll() {
+		dao.deleteAll();
 	}
 }

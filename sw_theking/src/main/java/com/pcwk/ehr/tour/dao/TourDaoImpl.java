@@ -2,14 +2,22 @@ package com.pcwk.ehr.tour.dao;
 
 import javax.sql.DataSource;
 
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.pcwk.ehr.cmn.PLog;
 import com.pcwk.ehr.tour.domain.TourDTO;
 
-public class TourDao implements PLog{
+public class TourDaoImpl implements PLog{
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
+	
+	final String NAMESPACE = "com.pcwk.ehr.tour";
+	final String DOT = ".";
+	
+	@Autowired
+	SqlSessionTemplate sqlSessionTemplate; //DB 연결, sql 수행, 자원 반납
 	
 	//1. 관광지 정보 등록 doSaveTour
 	//2. 관광지 정보 수정 doUpdate
@@ -26,11 +34,12 @@ public class TourDao implements PLog{
 	}
 	
 	public void deleteAll() {
-		StringBuilder sb = new StringBuilder(100);
-		sb.append(" delete from tour \n");
-
-		log.debug("1.sql:\n" + sb.toString());
-		jdbcTemplate.update(sb.toString());		
+		String statement = NAMESPACE+DOT+"deleteAll";
+		log.debug("1 statement: {}"+statement);
+		
+		int flag = sqlSessionTemplate.delete(statement);
+		log.debug("2 flag: {}"+flag);
+		
 	}
 
 	/**
