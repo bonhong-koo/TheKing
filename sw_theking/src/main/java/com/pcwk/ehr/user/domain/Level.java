@@ -4,37 +4,45 @@
  */
 package com.pcwk.ehr.user.domain;
 
+/**
+ * @author user
+ *
+ */
 public enum Level {
 
+	
 	GOLD(3, null), SILVER(2, GOLD), BASIC(1, SILVER);
-
-	private final int value;// 현재 Level 값
-	private final Level nextLevel; // 다음 Level
-
+	
+	private final int value;
+	private final Level nextLevel;
+	
 	/**
 	 * @param value
-	 * @param netLevl
+	 * @param nextLevel
 	 */
-	private Level(int value, Level netLevl) {
+	private Level(int value, Level nextLevel) {
 		this.value = value;
-		this.nextLevel = netLevl;
+		this.nextLevel = nextLevel;
 	}
-
+	
 	/**
-	 * @return the netLevl
+	 * @return the nextLevel
 	 */
-	public Level getNetLevel() {
+	public Level getNextLevel() {
 		return nextLevel;
 	}
 
+	/**
+	 * @return the value
+	 */
 	public int getValue() {
 		return value;
 	}
-
-	// 값으로 부터 Level 오브젝트 return
+	
+	//값으로 부터 Level 오브젝트 return
 	public static Level valueOf(int value) {
-
-		switch (value) {
+		
+		switch(value) {
 		case 1:
 			return BASIC;
 		case 2:
@@ -42,8 +50,10 @@ public enum Level {
 		case 3:
 			return GOLD;
 		default:
-			throw new AssertionError("Unknown value :" + value);
-		}
-	}
-
+			throw new AssertionError("Unknown value:" + value);
+		} // switch(value)끝
+		
+	} //valueOf 끝
+	
+	
 }

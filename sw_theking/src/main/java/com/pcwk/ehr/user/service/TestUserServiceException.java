@@ -12,14 +12,13 @@ import org.apache.logging.log4j.Logger;
  *
  */
 public class TestUserServiceException extends RuntimeException {
-
 	Logger log = LogManager.getLogger(getClass());
-
+	
 	public TestUserServiceException(String meString) {
 		super(meString);
-		log.debug("┌───────────────────────────────────────────┐");
-		log.debug("│ TestUserServiceException()                │" + meString);
-		log.debug("└───────────────────────────────────────────┘");
-
+		log.debug("┌───────────────────────────────────────────────┐");
+		log.debug("│ TestUserServiceException()                    │"+meString);
+		log.debug("└───────────────────────────────────────────────┘");
+			
 	}
 }

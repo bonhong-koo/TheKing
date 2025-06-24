@@ -1,4 +1,4 @@
-package com.pcwk.ehr.user.domain;
+package com.pcwk.ehr.mymapper.domain;
 
 public class UserTKDTO {
 	private String userId;

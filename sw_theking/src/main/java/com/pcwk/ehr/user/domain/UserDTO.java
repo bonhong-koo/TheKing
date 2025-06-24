@@ -1,41 +1,40 @@
-/**
- * Package Name : com.pcwk.ehr.user.domain <br/>
- * Class Name: UserDTO.java <br/>
- */
 package com.pcwk.ehr.user.domain;
 
 import com.pcwk.ehr.cmn.DTO;
 
-public class UserDTO extends DTO{
-	// 세로편집 : Alt + shift + A
-	// 소문자 변환 : Alt + shift + Y
-	// 대문자 변환 : Alt + shift + X
-
-	// 화면 : UserDTO
-	// ----------------------------
-	// 전역변수
-	// Default 생성자
-	// 인자있는 생성자
-	// get/setters
-	// toString()
-	private String userid;// 사용자ID
-	private String name;// 이름
-	private String password;// 비밀번호
-	private String regDt;// 등록일
+public class UserDTO extends DTO {
+	//세로편집 :    Alt + shift +A
+	//소문자 변환 :  Alt + shift +Y
+	//대문자 변환 :  Alt + shift +X
 	
-	//-----------------------------------추가
-	private int     login;//로그인
-	private int     recommend;//추천
-	private Level   grade;//등급
-	private String  email;//이메일
-
+	//UserDTO
+	//-------------------------------
+	//전역변수
+	//Default 생성자
+	//인자있는 생성자
+	//get/setters
+	//toString()
 	
-	public UserDTO() {
-	}
-
 	
+	private String  userId   ;//사용자ID
+	private String  name     ;//이름
+	private String  password ;//비밀번호
+	private String  regDt    ;//등록일
+	
+	//----------------------------------------추가
+	private int    login;     //  로그인
+	private int    recommend; //  추천 
+	private Level  grade;     //  등급 
+	private String email;     //  이메일
+	private int no          ;//번호
+	private int totalCnt    ;//총 글수
+	
+	public UserDTO() {}
+
+
+
 	/**
-	 * @param userid
+	 * @param userId
 	 * @param name
 	 * @param password
 	 * @param regDt
@@ -44,10 +43,10 @@ public class UserDTO extends DTO{
 	 * @param grade
 	 * @param email
 	 */
-	public UserDTO(String userid, String name, String password, String regDt, int login, int recommend, Level grade,
+	public UserDTO(String userId, String name, String password, String regDt, int login, int recommend, Level grade,
 			String email) {
 		super();
-		this.userid = userid;
+		this.userId = userId;
 		this.name = name;
 		this.password = password;
 		this.regDt = regDt;
@@ -59,11 +58,48 @@ public class UserDTO extends DTO{
 
 
 	/**
+	 * @return the no
+	 */
+	public int getNo() {
+		return no;
+	}
+
+
+
+	/**
+	 * @param no the no to set
+	 */
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+
+
+	/**
+	 * @return the totalCnt
+	 */
+	public int getTotalCnt() {
+		return totalCnt;
+	}
+
+
+
+	/**
+	 * @param totalCnt the totalCnt to set
+	 */
+	public void setTotalCnt(int totalCnt) {
+		this.totalCnt = totalCnt;
+	}
+
+
+
+	/**
 	 * @return the login
 	 */
 	public int getLogin() {
 		return login;
 	}
+
 
 
 	/**
@@ -74,12 +110,14 @@ public class UserDTO extends DTO{
 	}
 
 
+
 	/**
 	 * @return the recommend
 	 */
 	public int getRecommend() {
 		return recommend;
 	}
+
 
 
 	/**
@@ -90,12 +128,14 @@ public class UserDTO extends DTO{
 	}
 
 
+
 	/**
 	 * @return the grade
 	 */
 	public Level getGrade() {
 		return grade;
 	}
+
 
 
 	/**
@@ -106,12 +146,14 @@ public class UserDTO extends DTO{
 	}
 
 
+
 	/**
 	 * @return the email
 	 */
 	public String getEmail() {
 		return email;
 	}
+
 
 
 	/**
@@ -122,18 +164,19 @@ public class UserDTO extends DTO{
 	}
 
 
+
 	/**
-	 * @return the userid
+	 * @return the userId
 	 */
-	public String getUserid() {
-		return userid;
+	public String getUserId() {
+		return userId;
 	}
 
 	/**
-	 * @param userid the userid to set
+	 * @param userId the userId to set
 	 */
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	/**
@@ -179,12 +222,14 @@ public class UserDTO extends DTO{
 	}
 
 
+
 	@Override
 	public String toString() {
-		return "UserDTO [userid=" + userid + ", name=" + name + ", password=" + password + ", regDt=" + regDt
-				+ ", login=" + login + ", recommend=" + recommend + ", grade=" + grade + ", email=" + email
-				+ ", toString()=" + super.toString() + "]";
+		return "UserDTO [userId=" + userId + ", name=" + name + ", password=" + password + ", regDt=" + regDt
+				+ ", login=" + login + ", recommend=" + recommend + ", grade=" + grade + ", email=" + email + ", no="
+				+ no + ", totalCnt=" + totalCnt + ", toString()=" + super.toString() + "]";
 	}
+	
 
 
 

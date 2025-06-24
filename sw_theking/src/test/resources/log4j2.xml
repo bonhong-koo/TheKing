@@ -26,7 +26,8 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="com" level="debug" additivity="false">
+        <!-- log level -->
+        <Logger name="com.pcwk" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="RollingFile"/>
         </Logger>
