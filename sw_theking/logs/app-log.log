@@ -4587,3 +4587,415 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: FestivalDTO
 [2025-06-25 16:52:03] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
 [2025-06-25 16:52:03] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
 [2025-06-25 16:52:03] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:05:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:05:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59e2d8e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b72cb8a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7f8a9499, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5d43661b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12299890, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2fba3fc4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4bf48f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@420a85c4]
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@1d483de4, started on Wed Jun 25 17:05:23 GMT+09:00 2025
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dao : com.pcwk.ehr.festival.dao.FestivalDaoImpl@3f985a86
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:05:24] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 2(Integer)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=3, name=축제3, subtitle=축제 시작3, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 3(Integer)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:05:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:06:27] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:06:27] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59e2d8e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b72cb8a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7f8a9499, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5d43661b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12299890, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2fba3fc4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4bf48f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@420a85c4]
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@1d483de4, started on Wed Jun 25 17:06:27 GMT+09:00 2025
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dao : com.pcwk.ehr.festival.dao.FestivalDaoImpl@3f985a86
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:06:28] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 2(Integer)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=3, name=축제3, subtitle=축제 시작3, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 3(Integer)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:06:29] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:08:37] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:08:37] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59e2d8e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b72cb8a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7f8a9499, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5d43661b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12299890, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2fba3fc4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4bf48f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@420a85c4]
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@1d483de4, started on Wed Jun 25 17:08:37 GMT+09:00 2025
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dao : com.pcwk.ehr.festival.dao.FestivalDaoImpl@3f985a86
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:08:38] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 2(Integer)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=3, name=축제3, subtitle=축제 시작3, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 3(Integer)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:08:39] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:09:18] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:09:18] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4032d386, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@934b6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55cf0d14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b74ac8, org.springframework.test.context.event.EventPublishingTestExecutionListener@27adc16e]
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@68dc098b, started on Wed Jun 25 17:09:18 GMT+09:00 2025
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dao : com.pcwk.ehr.festival.dao.FestivalDaoImpl@4339e0de
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:09:19] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 2(Integer)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - 1.param:FestivalDTO [festaNo=3, name=축제3, subtitle=축제 시작3, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doDelete
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - ==> Parameters: 3(Integer)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:09:20] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:17:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4032d386, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@934b6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55cf0d14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b74ac8, org.springframework.test.context.event.EventPublishingTestExecutionListener@27adc16e]
+[2025-06-25 17:17:24] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:17:24] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:17:24] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:17:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@68dc098b, started on Wed Jun 25 17:17:24 GMT+09:00 2025
+[2025-06-25 17:17:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@4eed2acf
+[2025-06-25 17:17:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:17:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:43] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:17:43] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4032d386, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@934b6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55cf0d14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b74ac8, org.springframework.test.context.event.EventPublishingTestExecutionListener@27adc16e]
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@68dc098b, started on Wed Jun 25 17:17:43 GMT+09:00 2025
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@4eed2acf
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:17:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:18:30] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:18:30] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4032d386, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@934b6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55cf0d14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b74ac8, org.springframework.test.context.event.EventPublishingTestExecutionListener@27adc16e]
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@68dc098b, started on Wed Jun 25 17:18:30 GMT+09:00 2025
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@4eed2acf
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:18:31] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==> Parameters: 2(Integer)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==> Parameters: 3(Integer)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:18:32] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:19:42] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:19:42] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d483de4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4032d386, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@28d18df5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@934b6cb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55cf0d14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b74ac8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27adc16e, org.springframework.test.context.event.EventPublishingTestExecutionListener@b83a9be]
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@38ba6ce3, started on Wed Jun 25 17:19:42 GMT+09:00 2025
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@36fc05ff
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:19:43] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==>  Preparing: SELECT * FROM festival WHERE festa_no = ?
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==> Parameters: 1(Integer)
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:19:44] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:21:54] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:21:54] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d483de4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4032d386, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@28d18df5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@934b6cb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55cf0d14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b74ac8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27adc16e, org.springframework.test.context.event.EventPublishingTestExecutionListener@b83a9be]
+[2025-06-25 17:21:55] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:21:55] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:21:55] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@38ba6ce3, started on Wed Jun 25 17:21:55 GMT+09:00 2025
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@36fc05ff
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==>  Preparing: SELECT * FROM festival WHERE festa_no = ?
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==> Parameters: 1(Integer)
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - outVO :FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:21:56] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:22:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:22:23] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d483de4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4032d386, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@28d18df5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@934b6cb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55cf0d14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b74ac8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27adc16e, org.springframework.test.context.event.EventPublishingTestExecutionListener@b83a9be]
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@38ba6ce3, started on Wed Jun 25 17:22:23 GMT+09:00 2025
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@36fc05ff
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:22:24] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==>  Preparing: SELECT * FROM festival WHERE festa_no = ?
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==> Parameters: 1(Integer)
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - outVO :FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==>  Preparing: SELECT * FROM festival WHERE festa_no = ?
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==> Parameters: 2(Integer)
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - outVO :FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==>  Preparing: SELECT * FROM festival WHERE festa_no = ?
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - ==> Parameters: 3(Integer)
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - outVO :FestivalDTO [festaNo=3, name=축제3, subtitle=축제 시작3, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:22:25] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:39:35] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:39:35] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28d18df5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@934b6cb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@55cf0d14, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b74ac8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27adc16e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b83a9be, org.springframework.test.context.event.EventPublishingTestExecutionListener@2609b277]
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@d278d2b, started on Wed Jun 25 17:39:35 GMT+09:00 2025
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@57c47a9e
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:39:36] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dto01 :FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doUpdate - ==>  Preparing: UPDATE festival SET ?, ?, ?, ?, ?, ?, ?, ?, ? WHERE festa_no = ?;
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doUpdate - ==> Parameters: 축제9999(String), 재밌는 축제요~~~(String), 축제09999(String), 서울시 마포구(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String), 1(Integer)
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:39:37] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:44:10] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:44:10] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28d18df5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@934b6cb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@55cf0d14, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b74ac8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27adc16e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b83a9be, org.springframework.test.context.event.EventPublishingTestExecutionListener@2609b277]
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@d278d2b, started on Wed Jun 25 17:44:10 GMT+09:00 2025
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@4339e0de
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:44:11] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==>  Preparing: DELETE FROM festival WHERE festa_no = ?
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - ==> Parameters: 1(Integer)
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doDelete - <==    Updates: 1
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doSave - <==    Updates: 1
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dto01 :FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12, endDate=2025-07-12]
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doUpdate - ==>  Preparing: UPDATE festival SET name=? subtitle=? content=? tel=? fee=? region_no=? start_date=? end_date=? WHERE festa_no = ?;
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doUpdate - ==> Parameters: 축제9999(String), 재밌는 축제요~~~(String), 축제09999(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String), 1(Integer)
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 17:44:12] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:07:50] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 18:07:50] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@934b6cb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@55cf0d14, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b74ac8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27adc16e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b83a9be, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2609b277, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fd14d74]
+[2025-06-25 18:07:51] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 18:07:51] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 18:07:51] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - ==>  Preparing: SELECT * FROM( SELECT ROWNUM as rnum, tt2.* FROM( SELECT t1.* FROM festival t1 ORDER BY t1.end_date DESC )tt2 WHERE ROWNUM <= (? * (? - 1) + ?) )tt3 WHERE RNUM >= (? * (? - 1) + 1)
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - ==> Parameters: 20(Integer), 1(Integer), 20(Integer), 20(Integer), 1(Integer)
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - <==      Total: 20
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=154, name=2025 춘천연극제, subtitle=null, contents=관객과 함께 웃고 호흡하는 연극제, views=0, address=강원특별자치도 춘천시 서부대성로 71 봄내극장+춘천시공영주차장+춘천농협 엔타 로비 등, tel=033-241-4345, fee=0, regionNo=51110, startDate=2025-06-27 00:00:00, endDate=2025-10-25 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=112, name=보령머드축제, subtitle=null, contents=머드 체험프로그램+머드 공연+머드챌린지+전시판매 프로그램 등, views=0, address= 보령머드엑스포광장, tel=041-930-0891, fee=0, regionNo=44180, startDate=2025-07-25 00:00:00, endDate=2025-08-10 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=105, name=2025 경포 썸머 페스티벌, subtitle=null, contents=무더운 여름에 시원한 경포 해변에서 열리는 야외 축제, views=0, address=강원특별자치도 강릉시 경포로 365 경포해변 일원, tel=033-640-5130, fee=0, regionNo=51150, startDate=2025-07-29 00:00:00, endDate=2025-08-04 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=115, name=영주 시원(ONE)축제, subtitle=null, contents=공연+전시+플리마켓 장터운영+물놀이장, views=0, address= 영주시 문정둔치 일원, tel=null, fee=0, regionNo=37210, startDate=2025-07-26 00:00:00, endDate=2025-08-03 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=127, name=기장갯마을축제, subtitle=null, contents=체험행사, 주제공연 뮤지컬 경연, 콘서트 등, views=0, address=부산광역시 기장군 일광읍 3길 17 (일광해수욕장 이벤트무대) 일광해수욕장 일원, tel=051-709-4065, fee=0, regionNo=26560, startDate=2025-07-30 00:00:00, endDate=2025-08-03 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=121, name=제18회_정남진_장흥_물축제, subtitle=null, contents=살수대첩 거리 퍼레이드+지상 최대의 물싸움+황금 물고기를 잡아라+수중 줄다리기+워터락풀파티+지상 최대의 워터붐+수상 프로그램 등, views=0, address= 탐진강+편백숲우드랜드, tel=061-860-5771, fee=0, regionNo=41280, startDate=2025-07-26 00:00:00, endDate=2025-08-03 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=120, name=정남진 장흥 물축제, subtitle=null, contents=장흥 Rock 페스티벌+살수대첩 거리 퍼레이드+지상 최대의 물싸움+황금물고기(대왕장어)를 잡아라+글로벌 워터월드(워터樂 풀파티)+수중줄다리기 등, views=0, address=전라남도 장흥군 장흥읍 칠거리예양로 83 탐진강+편백숲우드랜드, tel=061-860-5771, fee=0, regionNo=36810, startDate=2025-07-26 00:00:00, endDate=2025-08-03 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=155, name=두모포 페스티벌, subtitle=null, contents=갈라뮤지컬+두모포 출정러닝+전시회+체험부스+플리마켓+먹거리장터 등, views=0, address=서울특별시 성동구 동호로 21 옥수역, tel=02-2286-5207, fee=0, regionNo=11200, startDate=2025-06-01 00:00:00, endDate=2025-07-31 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=108, name=제15회 진안고원 수박축제, subtitle=null, contents=수박왕 선발대회+수박판매 등, views=0, address=전북특별자치도 진안군 동향면 진성로 1687 동향면 체련공원 일원, tel=063-430-2393, fee=0, regionNo=52720, startDate=2025-07-26 00:00:00, endDate=2025-07-27 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=113, name=거제여름해양축제, subtitle=null, contents=해양스포츠대회+체험프로그램+블루썸머콘서트 등, views=0, address=경상남도 거제시 일운면 거제대로 2056 지세포항수변공원 일원, tel=055-639-4064, fee=0, regionNo=38310, startDate=2025-07-25 00:00:00, endDate=2025-07-27 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=119, name=산토끼와 따오기가 함께하는 창작동요제, subtitle=null, contents=동요노래부르기 대회+창작동요제, views=0, address=경상남도 창녕군 창녕읍 군청1길 35 창녕문화예술회관 대공연장, tel=055-530-1461, fee=0, regionNo=38740, startDate=2025-07-25 00:00:00, endDate=2025-07-26 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=117, name=대한민국 대학연극제, subtitle=null, contents=대학연극인 대상 체류프로그램 및 경연대회 등, views=0, address=경기도 용인시 처인구 중부대로 1199 용인문예회관마루홀,평생학습관큰어울마당 등, tel=031-260-3330, fee=0, regionNo=41460, startDate=2025-07-08 00:00:00, endDate=2025-07-25 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=107, name=묵호 도째비페스타, subtitle=null, contents=개막식+공연행사+먹거리+체험거리부스운영, views=0, address=강원특별자치도 동해시 일출로22 묵호항 여객선터미널 일대, tel=033-530-2412, fee=0, regionNo=51170, startDate=2025-07-18 00:00:00, endDate=2025-07-20 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=126, name=안심창조밸리 연꽃마을 축제, subtitle=null, contents=연꽃그림전 연꽃길 힐링걷기대회 무대공연, views=0, address= 안심창조밸리 일원, tel=053-964-2901, fee=0, regionNo=27120, startDate=2025-07-19 00:00:00, endDate=2025-07-20 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=124, name=울산조선해양축제, subtitle=null, contents=울산동구의 대표 여름축제, views=0, address= 울산광역시 동구 일산해수욕장 일원, tel=052-209-3502, fee=0, regionNo=31170, startDate=2025-07-18 00:00:00, endDate=2025-07-20 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=118, name=제10회 사천비토섬별주부전축제, subtitle=null, contents=용왕제+공연행사+ 체험행사+ 사생대회+ 먹거리 장터 등, views=0, address=경상남도 사천시 서포면 거북길 447 비토해양낚시공원 앞 주차장, tel=null, fee=0, regionNo=38240, startDate=2025-07-18 00:00:00, endDate=2025-07-19 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=109, name=2025년 섬 크로코스미아꽃 축제, subtitle=null, contents=개막식+전시공연+체험프로그램+특별기획전등, views=0, address=전라남도 신안군 압해읍 무지개길 330 1004섬 분재정원, tel=061-240-5445, fee=0, regionNo=36930, startDate=2025-07-04 00:00:00, endDate=2025-07-13 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=110, name=섬 홍도 원추리꽃 축제, subtitle=null, contents=개막식+전시공연+체험프로그램+특별기획전등, views=0, address=전라남도 신안군 흑산면 홍도1길 21-5 다목적 광장, tel=061-240-4061, fee=0, regionNo=36930, startDate=2025-07-04 00:00:00, endDate=2025-07-13 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=2, name=축제2, subtitle=축제 시작2, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@2d6c53fc, started on Wed Jun 25 18:07:51 GMT+09:00 2025
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@5f96f6a2
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 18:07:52] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:08:17] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 18:08:17] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@934b6cb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@55cf0d14, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b74ac8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27adc16e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b83a9be, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2609b277, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fd14d74]
+[2025-06-25 18:08:18] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 18:08:18] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 18:08:18] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - ==>  Preparing: SELECT * FROM( SELECT ROWNUM as rnum, tt2.* FROM( SELECT t1.* FROM festival t1 ORDER BY t1.end_date DESC )tt2 WHERE ROWNUM <= (? * (? - 1) + ?) )tt3 WHERE RNUM >= (? * (? - 1) + 1)
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - ==> Parameters: 20(Integer), 2(Integer), 20(Integer), 20(Integer), 2(Integer)
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.mapper.FestivalMapper.doRetrieve - <==      Total: 20
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=1, name=축제1, subtitle=축제 시작1, contents=축제가 시작됩니다., views=0, address=경기도 고양시, tel=010-1234-1234, fee=10000, regionNo=41280, startDate=2025-06-12 00:00:00, endDate=2025-07-12 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=140, name=제19회 대구국제뮤지컬페스티벌, subtitle=null, contents=공연+전시, views=0, address=대구광역시 중구 공평로 88 대구오페라하우스 및 공연장, tel=053-803-0114, fee=0, regionNo=11140, startDate=2025-06-20 00:00:00, endDate=2025-07-07 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=106, name=상화문학제, subtitle=null, contents=백일장+시낭송대회+문학강연+문학공연, views=0, address=대구광역시 수성구 들안로16길 78 수성못 상화동산+수성문화원, tel=053-768-0002, fee=0, regionNo=27160, startDate=2025-07-04 00:00:00, endDate=2025-07-06 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=152, name=제8회 만화방초 수국축제, subtitle=null, contents=전시, views=0, address=경상남도 고성군 거류면 은황길 82-91 만화방초, tel=null, fee=0, regionNo=51820, startDate=2025-06-07 00:00:00, endDate=2025-07-06 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=111, name=대구치맥페스티벌, subtitle=null, contents=치맥K-POP 콘서트+치맥EDM Party+치맥포크 콘서트+치맥버스킹+초청공연+치맥99타임+하와이안 아이스 펍+치맥 시민 참여 이벤트+치킨 신메뉴 경연대회+수제맥주 창작 칵테일 경연대회+사전예약 식음존+비즈니스 라운지 등, views=0, address=대구광역시 달서구 공원순환로 36 두류공원, tel=053-248-9998, fee=0, regionNo=27170, startDate=2025-07-02 00:00:00, endDate=2025-07-06 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=114, name=대구치맥페스티벌, subtitle=null, contents=체험+공연, views=0, address=대구광역시 중구 공평로 88 두류공원, tel=053-803-0114, fee=0, regionNo=11140, startDate=2025-07-02 00:00:00, endDate=2025-07-06 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=116, name=제23회부여서동연꽃축제, subtitle=null, contents=경관조성+공연·경연+체험, views=0, address=충청남도 부여군 부여읍 궁남로 52 서동공원+궁남지 일원, tel=041-830-2214, fee=0, regionNo=44760, startDate=2025-07-04 00:00:00, endDate=2025-07-06 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=125, name=119안전문화축제, subtitle=null, contents=보고, 듣고, 느끼는 오감만족형 안전체험의 장을 마련하여 안전문화의식을 확산하고자 개최하는 2021 울산119안전문화축제, views=0, address=울산광역시 울주군 삼남읍 울산역로255 울산 전시 컨벤션 센터(UECO), tel=052-229-5331, fee=0, regionNo=31710, startDate=2025-07-04 00:00:00, endDate=2025-07-05 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=138, name=남부면 수국축제, subtitle=null, contents=식전행사+화합행사+수국포토존+목재만들기 체험 등, views=0, address=경상남도 거제시 남부면 남부해안로 30 매물도 여객선터미널+남부면 저구항 일원, tel=055-639-6532, fee=0, regionNo=38310, startDate=2025-06-01 00:00:00, endDate=2025-06-30 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=128, name=제5회 강릉 비치비어페스티벌, subtitle=null, contents=전국 브루어리 맥주+로컬푸드+플로깅+비어도슨트+플리마켓+라이브공연+디제잉파티, views=0, address=강원특별자치도 강릉시 창해로 514 경포해변 중앙광장, tel=033-640-5130, fee=0, regionNo=51150, startDate=2025-06-27 00:00:00, endDate=2025-06-29 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=151, name=서산6쪽마늘축제, subtitle=null, contents=6쪽마늘 판매+공연+체험, views=0, address=충청남도 서산시 해미면 남문2로 143 해미읍성, tel=041-660-3068, fee=0, regionNo=44210, startDate=2025-06-27 00:00:00, endDate=2025-06-29 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=136, name=제6회 섬 수국축제, subtitle=null, contents=개막식+전시공연+체험프로그램+특별기획전등, views=0, address= 수국정원 및 환상의정원 일원, tel=061-240-5418, fee=0, regionNo=36930, startDate=2025-06-20 00:00:00, endDate=2025-06-29 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=129, name=제28회 무안연꽃축제, subtitle=null, contents=연꽃 힐링 및 체험프로그램+먹거리 운영 등, views=0, address=전라남도 무안군 일로읍 백련로 333 회산백련지 일원, tel=061-450-5472, fee=0, regionNo=36860, startDate=2025-06-26 00:00:00, endDate=2025-06-29 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=146, name=동화면 동화나라 버베나 축제, subtitle=null, contents=공연+체험+판매행사 등, views=0, address= 램프공원일대(남평리 260-8), tel=061-390-7240, fee=0, regionNo=36890, startDate=2025-06-28 00:00:00, endDate=2025-06-28 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=141, name=오구오구 어린이 버스킹 시즌3, subtitle=null, contents=마술+버블+다양한 공연, views=0, address=서울특별시 강서구 화곡로 234 관내 어린이공원 등, tel=02-2600-6634, fee=0, regionNo=11530, startDate=2025-06-13 00:00:00, endDate=2025-06-27 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=139, name=신월랑 달빛 축제, subtitle=null, contents=체험 프로그램+먹거리 부스+경연, 시민참여 프로그램 등, views=0, address= 행구동 수변공원 일원, tel=033-737-5125, fee=0, regionNo=51130, startDate=2025-06-21 00:00:00, endDate=2025-06-22 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=153, name=제12회 춘천영화제, subtitle=null, contents=개·폐막식+단편영화 시상+영화 상영+관객과의 대화+부대행사 등, views=0, address=강원특별자치도 춘천시 금강로 70, 4층 메가박스 남춘천점+의암공원, tel=033-251-3370, fee=0, regionNo=51110, startDate=2025-06-19 00:00:00, endDate=2025-06-22 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=150, name=팔봉산 감자축제, subtitle=null, contents=감자캐기 체험+판매, views=0, address= 팔봉면 양길리 주차장, tel=041-660-3451, fee=0, regionNo=44210, startDate=2025-06-21 00:00:00, endDate=2025-06-22 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=143, name=포항국제불빛축제, subtitle=null, contents=국제 불꽃쇼+불빛 드론쇼+드론라이트쇼+라이트 아트웨이+거리퍼레이드+데일리불꽃쇼+불빛 뮤직페스타+프린지공연+불빛테마존 등, views=0, address= 형산강 체육공원 외 포항시 일원, tel=054-289-7852, fee=0, regionNo=37110, startDate=2025-06-14 00:00:00, endDate=2025-06-22 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - FestivalDTO [festaNo=130, name=제15회 반딧불 곤충축제, subtitle=null, contents=반딧불 등 정서·반려곤충 체험관 운영 등 부대행사 추진, views=0, address=충청북도 청주시 청원구 오창읍 가곡길 46 충북농업기술원 일원, tel=043-220-5591, fee=0, regionNo=43110, startDate=2025-06-13 00:00:00, endDate=2025-06-15 00:00:00]
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@2d6c53fc, started on Wed Jun 25 18:08:17 GMT+09:00 2025
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - mapper : org.apache.ibatis.binding.MapperProxy@5f96f6a2
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 18:08:19] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
