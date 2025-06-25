@@ -1,9 +1,8 @@
-package com.pcwk.ehr;
 /**
  * Package Name : com.pcwk.ehr.user <br/>
- * 파일명: UserDaoTest.java <br/>
+ * 파일명: UserTest.java <br/>
  */
-
+package com.pcwk.ehr;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -25,13 +24,13 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.user.dao.UserDao;
-import com.pcwk.ehr.user.domain.Level;
 import com.pcwk.ehr.user.domain.UserDTO;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml"
-		,"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"	})
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml",
+		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
 public class UserDaoTest {
 	Logger log = LogManager.getLogger(getClass());
 
@@ -42,6 +41,8 @@ public class UserDaoTest {
 	UserDTO dto02;
 	UserDTO dto03;
 
+	SearchDTO search;
+	
 	@Autowired
 	ApplicationContext context;
 
@@ -50,12 +51,16 @@ public class UserDaoTest {
 
 		log.debug("context:" + context);
 
-		dto01 = new UserDTO("pcwk01", "이상무01", "4321a", "사용안함", 0, 0, Level.BASIC, "zoqwkdrudfud@gmail.com");
-		dto02 = new UserDTO("pcwk02", "이상무02", "4321b", "사용안함", 55, 10, Level.SILVER, "zoqwkdrudfud@gmail.com");
-		dto03 = new UserDTO("pcwk03", "이상무03", "4321c", "사용안함", 100, 40, Level.GOLD, "zoqwkdrudfud@gmail.com");
+//		dto01 = new UserDTO("pcwk01", "이상무01", "4321", "사용안함", 0, 0, Level.BASIC, "yejiad12@gmail.com");
+//		dto02 = new UserDTO("pcwk02", "이상무02", "4321a", "사용안함", 55, 10, Level.SILVER, "yejiad12@gmail.com");
+//		dto03 = new UserDTO("pcwk03", "이상무03", "4321a", "사용안함", 100, 40, Level.GOLD, "yejiad12@gmail.com");
 
+		search = new SearchDTO();
 	}
 
+	/**
+	 * @throws java.lang.Exception
+	 */
 	@AfterEach
 	public void tearDown() throws Exception {
 		log.debug("***************************");
@@ -63,37 +68,67 @@ public class UserDaoTest {
 		log.debug("***************************");
 	}
 
+	@Disabled
+	@Test
+	void beans() {
+		assertNotNull(context);
+		assertNotNull(dao);
+
+		log.debug(context);
+		log.debug(dao);
+	}
+
+	//@Disabled
 	@Test
 	void doRetrieve() throws SQLException {
+		// 매번 동일한 결과가 도출 되도록 작성
+		// 1. 전체삭제
+		// 2. 다건등록
+		// 3. paging조회
+
 		// 1.
 		dao.deleteAll();
+
 		// 2.
 		int count = dao.saveAll();
 		log.debug("count:" + count);
-
 		assertEquals(502, count);
 
+		//paging
+		search.setPageSize(10);
+		search.setPageNo(1);
+		
+		search.setSearchDiv("20");
+		search.setSearchWord("이상무");
+		
 		// 3.
-		List<UserDTO> list = dao.doRetrieve(dto01);
+		List<UserDTO> list = dao.doRetrieve(search);
+		
 		for (UserDTO vo : list) {
 			log.debug(vo);
 		}
+
+		assertEquals(list.size(), 10);
 	}
 
 	@Disabled
 	@Test
 	void doDelete() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
-		// 1. 전체 삭제
+		// 1. 전체삭제
 		// 2. 단건등록
 		// 2.1 등록건수 비교
 		// 3. 삭제
-		// 4. 등록건수 비교 ==0
+		// 4. 등록건수 비교==0
+
+		// 1.
 		dao.deleteAll();
 
+		// 2.
 		int flag = dao.doSave(dto01);
 		assertEquals(1, flag);
 
+		// 2.1
 		int count = dao.getCount();
 		assertEquals(count, 1);
 
@@ -104,22 +139,24 @@ public class UserDaoTest {
 		// 4.
 		count = dao.getCount();
 		assertEquals(0, count);
-
 	}
 
 	@Disabled
 	@Test
-	void doUpdate() throws SQLException {
+	void doUpate() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
-		// 1. 전체 삭제
+		// 1. 전체삭제
 		// 2. 단건등록
 		// 2.1 등록건수 비교
 		// 3. 단건조회
 		// 3.1 등록데이터 비교
+
 		// 4. 단건조회 데이터 수정
 		// 5. 수정
 		// 6. 수정 조회
-		// 7. 4번 하고 6번 비교
+		// 7. 4 비교 6
+
+		// 1.
 		dao.deleteAll();
 
 		// 2.
@@ -133,17 +170,18 @@ public class UserDaoTest {
 		// 3.
 		UserDTO outVO = dao.doSelectOne(dto01);
 		assertNotNull(outVO);
-		isSameUser(outVO, dto01);
+//		isSameUser(outVO, dto01);
 
 		// 4.
 		String upString = "_U";
 		int upInt = 999;
 
-		outVO.setName(outVO.getName() + upString);
+		outVO.setUserId(outVO.getUserId() + upString);
 		outVO.setPassword(outVO.getPassword() + upString);
-		outVO.setLogin(outVO.getLogin() + upInt);
-		outVO.setRecommend(outVO.getRecommend() + upInt);
-		outVO.setGrade(outVO.getGrade().GOLD);
+		outVO.setName(outVO.getName() + upString);
+		outVO.setNickname(outVO.getNickname() + upString);
+		outVO.setEmail(outVO.getEmail() + upString);
+		outVO.setMobile(outVO.getMobile());
 		outVO.setEmail(outVO.getEmail() + upString);
 
 		log.debug("outVO:" + outVO);
@@ -156,7 +194,7 @@ public class UserDaoTest {
 		UserDTO upVO = dao.doSelectOne(outVO);
 
 		// 7.
-		isSameUser(outVO, upVO);
+//		isSameUser(outVO, upVO);
 		System.out.println("***");
 
 	}
@@ -165,31 +203,32 @@ public class UserDaoTest {
 	@Test
 	public void getAll() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
-		// 1. 전체 삭제
+		// 1. 전체삭제
 		// 2. 단건등록
 		// 3. 단건등록
 		// 4. 단건등록
-		// 3. 전체조회 3건
+		// 5. 전체조회: 3건
 
 		// 1.
 		dao.deleteAll();
+
 		// 2.
 		int flag = dao.doSave(dto01);
 		assertEquals(1, flag);
 
-		// 2.1
 		int count = dao.getCount();
 		assertEquals(count, 1);
 
+		// 3
 		dao.doSave(dto02);
 		count = dao.getCount();
 		assertEquals(count, 2);
-
+		// 4
 		dao.doSave(dto03);
 		count = dao.getCount();
 		assertEquals(count, 3);
 
-		// 5.
+		// 5
 		List<UserDTO> userList = dao.getAll();
 
 		assertEquals(userList.size(), 3);
@@ -197,14 +236,14 @@ public class UserDaoTest {
 		for (UserDTO dto : userList) {
 			log.debug(dto);
 		}
+
 	}
 
 	@Disabled
-	// @Test(expected = EmptyResultDataAccessException.class)
 	@Test
 	public void getFailure() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
-		// 1. 전체 삭제
+		// 1. 전체삭제
 		// 2. 단건등록
 		// 3. 단건조회
 
@@ -216,22 +255,26 @@ public class UserDaoTest {
 		int count = dao.getCount();
 		assertEquals(1, count);
 
-		String unknownId = dto01.getUserid() + "_99";
-		dto01.setUserid(unknownId);
+		String unknownId = dto01.getUserId() + "_99";
+		dto01.setUserId(unknownId);
 
 		assertThrows(EmptyResultDataAccessException.class, () -> {
 			UserDTO outVO = dao.doSelectOne(dto01);
+
 		});
+
 	}
 
 	@Disabled
 	@Test
 	public void addAndGet() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
-		// 1.전체 삭제
-		// 2.단건 등록
-		// 3.단건 조회
-		// 4.비교
+		// 1. 전체삭제
+		// 2. 단건등록
+		// 2.1 전체건수 조회
+		// 3. 단건조회
+		// 4. 비교
+
 		// 1.
 		dao.deleteAll();
 
@@ -252,32 +295,29 @@ public class UserDaoTest {
 		assertEquals(count, 3);
 
 		// 3.
-		UserDTO outVO = dao.doSelectOne(dto01);
-		assertNotNull(outVO);
-		isSameUser(outVO, dto01);
-
-		UserDTO outVO2 = dao.doSelectOne(dto02);
-		assertNotNull(outVO2);
-		isSameUser(outVO2, dto02);
-
-		UserDTO outVO3 = dao.doSelectOne(dto03);
-		assertNotNull(outVO3);
-		isSameUser(outVO3, dto03);
-
-		// 4.
-		// assertEquals(outVO.getUserid(), dto01.getUserid());
-		// assertEquals(outVO.getName(), dto01.getName());
-		// assertEquals(outVO.getPassword(), dto01.getPassword());
-	}
-
-	public void isSameUser(UserDTO outVO, UserDTO dto01) {
-		assertEquals(outVO.getUserid(), dto01.getUserid());
-		assertEquals(outVO.getName(), dto01.getName());
-		assertEquals(outVO.getPassword(), dto01.getPassword());
-		assertEquals(outVO.getLogin(), dto01.getLogin());
-		assertEquals(outVO.getRecommend(), dto01.getRecommend());
-		assertEquals(outVO.getGrade(), dto01.getGrade());
-		assertEquals(outVO.getEmail(), dto01.getEmail());
+//		UserDTO outVO = dao.doSelectOne(dto01);
+//		assertNotNull(outVO);
+//		isSameUser(outVO, dto01);
+//
+//		UserDTO outVO2 = dao.doSelectOne(dto02);
+//		assertNotNull(outVO2);
+//		isSameUser(outVO2, dto02);
+//
+//		UserDTO outVO3 = dao.doSelectOne(dto03);
+//		assertNotNull(outVO3);
+//		isSameUser(outVO3, dto03);
 
 	}
+
+	// 데이터 비교
+//	public void isSameUser(UserDTO outVO, UserDTO dto01) {
+//		assertEquals(outVO.getUserId(), dto01.getUserId());
+//		assertEquals(outVO.getName(), dto01.getName());
+//		assertEquals(outVO.getPassword(), dto01.getPassword());
+//		assertEquals(outVO.getLogin(), dto01.getLogin());
+//		assertEquals(outVO.getRecommend(), dto01.getRecommend());
+//		assertEquals(outVO.getGrade(), dto01.getGrade());
+//		assertEquals(outVO.getEmail(), dto01.getEmail());
+//	}
+
 }

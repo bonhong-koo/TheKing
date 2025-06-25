@@ -4,10 +4,14 @@
  */
 package com.pcwk.ehr.user.service;
 
-import com.pcwk.ehr.user.domain.UserDTO;
-
+/**
+ * @author user
+ *
+ */
 public class TestUserService extends UserServiceImpl {
 
+	
+	
 	private String userId;
 
 	/**
@@ -18,14 +22,8 @@ public class TestUserService extends UserServiceImpl {
 		this.userId = userId;
 	}
 
-	@Override
-	protected void upgradeLevel(UserDTO user) {
-		// pcwk04 등급시 예외 발생.
-		if (userId.equals(user.getUserid())) {
-			throw new TestUserServiceException("예외가 발생 했습니다.\n 사용자아이디:" + userId);
 
-		}
-		super.upgradeLevel(user);
-	}
-
+	
+	
+	
 }
