@@ -7,6 +7,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -20,16 +22,18 @@ import com.pcwk.ehr.tour.domain.TourDTO;
 import com.pcwk.ehr.user.domain.UserDTO;
 
 @Repository
-public class TourDaoImpl implements PLog{
+public class TourDaoImpl{
 	
-	final String NAMESPACE = "com.pcwk.ehr.tour";
-	final String DOT = ".";
-	
-	@Autowired
-	SqlSessionTemplate sqlSessionTemplate; //DB 연결, sql 수행, 자원 반납
-	
-	@Autowired
-	RegionDao regionDao;
+    private static final Logger log = LogManager.getLogger(TourDaoImpl.class);
+
+    private final String NAMESPACE = "com.pcwk.ehr.tour";
+    private final String DOT = ".";
+
+    @Autowired
+    private SqlSessionTemplate sqlSessionTemplate;
+
+    @Autowired
+    private RegionDao regionDao;
 	
 	//1. 관광지 정보 등록 doSave 0
 	//2. 관광지 정보 수정 doUpdate 
@@ -39,23 +43,17 @@ public class TourDaoImpl implements PLog{
 	//4.2 관광지 시군별 조회(페이징) doRetrieve
 	//4.3 관광지 검색 조회 (제목, 지역)(페이징) doSelectOne -> getRegionNo 0
 	//5.getCount -> 몇 권인지 조회할 때 0
-	public TourDTO doSelectOne(TourDTO param) {
-		TourDTO outDTO = null;
-		log.debug("1 param: \n" + param);
+	   // 관광지 정보 조회
+    public TourDTO doSelectOne(TourDTO param) {
+        TourDTO outDTO = null;
+        String statement = NAMESPACE + DOT + "doSelectOne";
+        outDTO = sqlSessionTemplate.selectOne(statement, param);
 
-		String statement = NAMESPACE+DOT+"doSelectOne";
-		log.debug("2 statement: \n" + statement);
-		
-		outDTO = sqlSessionTemplate.selectOne(statement, param);
-		log.debug("3 outDTO: \n" + outDTO);
-
-//		if (null == outDTO) { //조회된 데이터가 없으면 예외 발생
-//			throw new EmptyResultDataAccessException(param.getTourNo() + "번호를 확인하세요.", 0);
-//		}
-
-		return outDTO;
-		
-	}
+        if (outDTO == null) {
+            throw new EmptyResultDataAccessException(param.getTourNo() + "번 관광지가 존재하지 않습니다.", 0);
+        }
+        return outDTO;
+    }
 	
 	public int doDelete(TourDTO param) {
 		int flag = 0;
@@ -96,40 +94,6 @@ public class TourDaoImpl implements PLog{
 	    String statement = NAMESPACE + DOT + "getRegionNo";
 	    return sqlSessionTemplate.selectOne(statement, params);
 	}
-	public int doUpdate(TourDTO param) {
-		int flag = 0;
-		
-		// 1. 주소 파싱 → 시/도, 구/군 추출
-	    String fullAddress = param.getAddress();
-	    String[] parts = fullAddress.split(" ");
-	    
-	    String regionSido = null;
-	    String regionGugun = null;
-
-	    if (parts.length > 0 && "세종특별자치시".equals(parts[0])) {
-	        regionSido = parts[0];
-	        regionGugun = null;
-	    } else if (parts.length > 1) {
-	        regionSido = parts[0];
-	        regionGugun = parts[1];
-	    }
-
-	    // 2. region_no 조회
-	    Integer regionNo = getRegionNo(regionSido, regionGugun);
-
-	    // 3. TourDTO에 region 설정
-	    RegionDTO region = new RegionDTO();
-	    region.setRegionNo(regionNo);
-	    region.setRegionSido(regionSido);
-	    region.setRegionGugun(regionGugun);
-	    param.setRegion(region); 
-	    
-	    // 4. update
-	    String statement = NAMESPACE + DOT + "doUpdate";
-	    flag = sqlSessionTemplate.update(statement, param);
-	    
-		return flag;
-	}
 	
 	/**
 	 * tour 정보 등록
@@ -137,8 +101,8 @@ public class TourDaoImpl implements PLog{
 	 * 1(등록 성공), 0(등록 실패)
 	 */
 	public int doSave(TourDTO param) {
-		int flag = 0;
-	    
+	    int flag = 0;
+
 	    // 1. 주소 파싱 → 시/도, 구/군 추출
 	    String fullAddress = param.getAddress();
 	    String[] parts = fullAddress.split(" ");
@@ -167,6 +131,41 @@ public class TourDaoImpl implements PLog{
 	    // 4. insert
 	    String statement = NAMESPACE + DOT + "doSave";
 	    flag = sqlSessionTemplate.insert(statement, param);
+
+	    return flag;
+	}
+
+	public int doUpdate(TourDTO param) {
+	    int flag = 0;
+
+	    // 1. 주소 파싱 → 시/도, 구/군 추출
+	    String fullAddress = param.getAddress();
+	    String[] parts = fullAddress.split(" ");
+	    
+	    String regionSido = null;
+	    String regionGugun = null;
+
+	    if (parts.length > 0 && "세종특별자치시".equals(parts[0])) {
+	        regionSido = parts[0];
+	        regionGugun = null;
+	    } else if (parts.length > 1) {
+	        regionSido = parts[0];
+	        regionGugun = parts[1];
+	    }
+
+	    // 2. region_no 조회
+	    Integer regionNo = getRegionNo(regionSido, regionGugun);
+
+	    // 3. TourDTO에 region 설정
+	    RegionDTO region = new RegionDTO();
+	    region.setRegionNo(regionNo);
+	    region.setRegionSido(regionSido);
+	    region.setRegionGugun(regionGugun);
+	    param.setRegion(region); 
+
+	    // 4. update
+	    String statement = NAMESPACE + DOT + "doUpdate";
+	    flag = sqlSessionTemplate.update(statement, param);
 
 	    return flag;
 	}
