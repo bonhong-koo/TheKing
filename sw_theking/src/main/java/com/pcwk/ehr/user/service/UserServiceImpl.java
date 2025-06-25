@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Service;
 
-import com.pcwk.ehr.user.dao.UserDao;
+import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 
 @Service
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 	private MailSender mailSender;
 
 	@Autowired
-	private UserDao userDao;
+	private UserMapper mapper;
 	
 	
 	public UserServiceImpl() {
@@ -31,27 +31,27 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public List<UserDTO> doRetrieve(UserDTO param) {
-		return userDao.doRetrieve(param);	
+		return mapper.doRetrieve(param);	
 	}
 	
 	@Override
 	public int doDelete(UserDTO param) {
-		return userDao.doDelete(param);
+		return mapper.doDelete(param);
 	}
 	
 	@Override
 	public int doUpdate(UserDTO param) {
-		return userDao.doUpdate(param);
+		return mapper.doUpdate(param);
 	}
 	
 	@Override
 	public UserDTO doSelectOne(UserDTO param) throws SQLException {
-		return userDao.doSelectOne(param);
+		return mapper.doSelectOne(param);
 	}
 	
 	@Override
 	public int doSave(UserDTO param) throws SQLException {
-		return userDao.doSave(param);
+		return mapper.doSave(param);
 	}
 	
 	//ADMIN인지 확인
