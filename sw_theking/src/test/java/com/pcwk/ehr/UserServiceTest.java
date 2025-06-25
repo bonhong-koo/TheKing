@@ -29,7 +29,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import com.pcwk.ehr.user.dao.UserDao;
+import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 import com.pcwk.ehr.user.service.TestUserService;
 import com.pcwk.ehr.user.service.UserService;
@@ -51,7 +51,7 @@ class UserServiceTest {
 	UserService userService;
 
 	@Autowired
-	UserDao userDao;
+	UserMapper mapper;
 
 	List<UserDTO> users;
 
@@ -116,14 +116,14 @@ class UserServiceTest {
 		
 		try {
 			// 1.
-			userDao.deleteAll();
-			assertEquals(0, userDao.getCount());
+			mapper.deleteAll();
+			assertEquals(0, mapper.getCount());
 
 			// 2.
 			for (UserDTO dto : users) {
-				userDao.doSave(dto);
+				mapper.doSave(dto);
 			}
-			assertEquals(5, userDao.getCount());
+			assertEquals(5, mapper.getCount());
 
 			// 3.
 //			testUserService.upgradeLevels();
@@ -145,22 +145,22 @@ class UserServiceTest {
 		log.debug("└─────────────────────────┘");
 
 		// 1. 전체 삭제
-		userDao.deleteAll();
-		assertEquals(0, userDao.getCount());
+		mapper.deleteAll();
+		assertEquals(0, mapper.getCount());
 
 		// 2. 사용자 등록
 		UserDTO userWithrole = users.get(4); // admin 역할 가진 사용자
 		userService.doSave(userWithrole);
-		assertEquals(1, userDao.getCount());
+		assertEquals(1, mapper.getCount());
 
 		UserDTO userWithOutrole = users.get(0); // 역할 없는 사용자
 		userWithOutrole.setRole(null); // 혹은 초기 상태가 null일 경우 생략 가능
 		userService.doSave(userWithOutrole);
-		assertEquals(2, userDao.getCount());
+		assertEquals(2, mapper.getCount());
 
 		// 3. 조회
-		UserDTO roleAdmin = userDao.doSelectOne(userWithrole);
-		UserDTO roleUser = userDao.doSelectOne(userWithOutrole);
+		UserDTO roleAdmin = mapper.doSelectOne(userWithrole);
+		UserDTO roleUser = mapper.doSelectOne(userWithOutrole);
 
 		// 4. 검증
 		assertEquals("admin", roleAdmin.getRole());
@@ -174,7 +174,7 @@ class UserServiceTest {
 	//@Disabled
 	@Test
 	void beans() {
-		assertNotNull(userDao);
+		assertNotNull(mapper);
 		assertNotNull(context);
 		assertNotNull(userService);
 		assertNotNull(dataSource);
@@ -183,7 +183,7 @@ class UserServiceTest {
 		
 		log.debug("context:" + context);
 		log.debug("userService:" + userService);
-		log.debug("userDao:" + userDao);
+		log.debug("userDao:" + mapper);
 		log.debug("dataSource:" + dataSource);
 		log.debug("transactionManager:" + transactionManager);
 		log.debug("mailSender" + mailSender);
