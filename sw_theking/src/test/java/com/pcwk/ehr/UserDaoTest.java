@@ -25,7 +25,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.pcwk.ehr.cmn.SearchDTO;
-import com.pcwk.ehr.user.dao.UserDao;
+import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 
 @ExtendWith(SpringExtension.class)
@@ -35,7 +35,7 @@ public class UserDaoTest {
 	Logger log = LogManager.getLogger(getClass());
 
 	@Autowired
-	UserDao dao;
+	UserMapper mapper;
 
 	UserDTO dto01;
 	UserDTO dto02;
@@ -72,10 +72,10 @@ public class UserDaoTest {
 	@Test
 	void beans() {
 		assertNotNull(context);
-		assertNotNull(dao);
+		assertNotNull(mapper);
 
 		log.debug(context);
-		log.debug(dao);
+		log.debug(mapper);
 	}
 
 	@Disabled
@@ -87,10 +87,10 @@ public class UserDaoTest {
 		// 3. paging조회
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		int count = dao.saveAll();
+		int count = mapper.saveAll();
 		log.debug("count:" + count);
 		assertEquals(502, count);
 
@@ -102,7 +102,7 @@ public class UserDaoTest {
 		search.setSearchWord("이상무");
 		
 		// 3.
-		List<UserDTO> list = dao.doRetrieve(search);
+		List<UserDTO> list = mapper.doRetrieve(search);
 		
 		for (UserDTO vo : list) {
 			log.debug(vo);
@@ -122,22 +122,22 @@ public class UserDaoTest {
 		// 4. 등록건수 비교==0
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		int flag = dao.doSave(dto01);
+		int flag = mapper.doSave(dto01);
 		assertEquals(1, flag);
 
 		// 2.1
-		int count = dao.getCount();
+		int count = mapper.getCount();
 		assertEquals(count, 1);
 
 		// 3.
-		flag = dao.doDelete(dto01);
+		flag = mapper.doDelete(dto01);
 		assertEquals(1, flag);
 
 		// 4.
-		count = dao.getCount();
+		count = mapper.getCount();
 		assertEquals(0, count);
 	}
 
@@ -157,18 +157,18 @@ public class UserDaoTest {
 		// 7. 4 비교 6
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		int flag = dao.doSave(dto01);
+		int flag = mapper.doSave(dto01);
 		assertEquals(1, flag);
 
 		// 2.1
-		int count = dao.getCount();
+		int count = mapper.getCount();
 		assertEquals(count, 1);
 
 		// 3.
-		UserDTO outVO = dao.doSelectOne(dto01);
+		UserDTO outVO = mapper.doSelectOne(dto01);
 		assertNotNull(outVO);
 		isSameUser(outVO, dto01);
 
@@ -185,11 +185,11 @@ public class UserDaoTest {
 		log.debug("outVO:" + outVO);
 
 		// 5.
-		flag = dao.doUpdate(outVO);
+		flag = mapper.doUpdate(outVO);
 		assertEquals(1, flag);
 
 		// 6.
-		UserDTO upVO = dao.doSelectOne(outVO);
+		UserDTO upVO = mapper.doSelectOne(outVO);
 
 		// 7.
 		isSameUser(outVO, upVO);
@@ -208,26 +208,26 @@ public class UserDaoTest {
 		// 5. 전체조회: 3건
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		int flag = dao.doSave(dto01);
+		int flag = mapper.doSave(dto01);
 		assertEquals(1, flag);
 
-		int count = dao.getCount();
+		int count = mapper.getCount();
 		assertEquals(count, 1);
 
 		// 3
-		dao.doSave(dto02);
-		count = dao.getCount();
+		mapper.doSave(dto02);
+		count = mapper.getCount();
 		assertEquals(count, 2);
 		// 4
-		dao.doSave(dto03);
-		count = dao.getCount();
+		mapper.doSave(dto03);
+		count = mapper.getCount();
 		assertEquals(count, 3);
 
 		// 5
-		List<UserDTO> userList = dao.getAll();
+		List<UserDTO> userList = mapper.getAll();
 
 		assertEquals(userList.size(), 3);
 
@@ -246,17 +246,17 @@ public class UserDaoTest {
 		// 3. 단건조회
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		dao.doSave(dto01);
-		assertEquals(1, dao.getCount());
+		mapper.doSave(dto01);
+		assertEquals(1, mapper.getCount());
 
 		UserDTO unknownUser = new UserDTO();
 		unknownUser.setName(dto01.getName() + "_99");
 
 		assertThrows(EmptyResultDataAccessException.class, () -> {
-			dao.doSelectOne(dto01);
+			mapper.doSelectOne(dto01);
 
 		});
 
@@ -273,34 +273,34 @@ public class UserDaoTest {
 		// 4. 비교
 
 		// 1.
-		dao.deleteAll();
+		mapper.deleteAll();
 
 		// 2.
-		int flag = dao.doSave(dto01);
+		int flag = mapper.doSave(dto01);
 		assertEquals(1, flag);
 
 		// 2.1
-		int count = dao.getCount();
+		int count = mapper.getCount();
 		assertEquals(count, 1);
 
-		dao.doSave(dto02);
-		count = dao.getCount();
+		mapper.doSave(dto02);
+		count = mapper.getCount();
 		assertEquals(count, 2);
 
-		dao.doSave(dto03);
-		count = dao.getCount();
+		mapper.doSave(dto03);
+		count = mapper.getCount();
 		assertEquals(count, 3);
 
 		// 3.
-//		UserDTO outVO = dao.doSelectOne(dto01);
+//		UserDTO outVO = mapper.doSelectOne(dto01);
 //		assertNotNull(outVO);
 //		isSameUser(outVO, dto01);
 //
-//		UserDTO outVO2 = dao.doSelectOne(dto02);
+//		UserDTO outVO2 = mapper.doSelectOne(dto02);
 //		assertNotNull(outVO2);
 //		isSameUser(outVO2, dto02);
 //
-//		UserDTO outVO3 = dao.doSelectOne(dto03);
+//		UserDTO outVO3 = mapper.doSelectOne(dto03);
 //		assertNotNull(outVO3);
 //		isSameUser(outVO3, dto03);
 
