@@ -17,7 +17,7 @@
 					    festa_no,
 					    name,
 					    subtitle,
-					    contents,
+					    contents, 
 					    address,
 					    tel,
 					    fee,
