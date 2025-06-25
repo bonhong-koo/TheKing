@@ -94,11 +94,10 @@
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
         <property name="driverClassName"
             value="oracle.jdbc.driver.OracleDriver" />
-        <property name="jdbcUrl"
+        <property name="jdbcUrl" 
             value="jdbc:oracle:thin:@192.168.100.30:1522:XE" />
         <property name="username" value="king" />
         <property name="password" value="7749" />

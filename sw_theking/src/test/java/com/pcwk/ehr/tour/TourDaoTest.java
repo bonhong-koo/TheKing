@@ -1,7 +1,7 @@
 package com.pcwk.ehr.tour;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,18 +53,8 @@ class TourDaoTest {
 	}
 	@Test
 	public void testDoSaveTour() {
-//		TourDTO dto = new TourDTO();
-//		dto.setName("남산타워");
-//		dto.setSubtitle("서울의 랜드마크");
-//		dto.setContents("남산서울타워입니다.");
-//		dto.setViews(0);
-//		dto.setAddress("서울특별시 용산구");
-//		dto.setHoliday("연중무휴");
-//		dto.setTime("09:00 ~ 23:00");
-//		dto.setTel("02-345-6789");
-//		dto.setFee(10000);
 
-	    int flag = dao.doSaveTour(dto01);
+	    int flag = dao.doSave(dto01);
 	    assertEquals(1, flag);
 	}
 	

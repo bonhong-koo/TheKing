@@ -1,5 +1,6 @@
 package com.pcwk.ehr.tour.dao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,15 +30,27 @@ public class TourDaoImpl implements PLog{
 	@Autowired
 	RegionDao regionDao;
 	
-	//1. 관광지 정보 등록 doSaveTour
+	//1. 관광지 정보 등록 doSave 0
 	//2. 관광지 정보 수정 doUpdate
-	//3. 관광지 정보 삭제 doDelete +deleteAll(테스트용)
+	//3. 관광지 정보 삭제 doDelete 
+	//+deleteAll(테스트용)0
 	//4.1 관광지 시도별 조회(페이징) doRetrieve
 	//4.2 관광지 시군별 조회(페이징) doRetrieve
 	//4.3 관광지 검색 조회 (제목, 지역)(페이징) doSelectOne
 	//5.getCount -> 몇 권인지 조회할 때
-	
-	
+	public int getCount() throws SQLException {
+
+		int count = 0;
+		
+		String statement = NAMESPACE+DOT+"getCount";
+		log.debug("1.statement:{}", statement);
+
+		count = sqlSessionTemplate.selectOne(statement);
+		log.debug("2.count:{}", count);
+
+		return count;
+	}
+
 	public void deleteAll() {
 		String statement = NAMESPACE+DOT+"deleteAll";
 		log.debug("1 statement: {}"+statement);
@@ -60,7 +73,7 @@ public class TourDaoImpl implements PLog{
 	 *@param param
 	 * 1(등록 성공), 0(등록 실패)
 	 */
-	public int doSaveTour(TourDTO param) {
+	public int doSave(TourDTO param) {
 		int flag = 0;
 	    
 	    // 1. 주소 파싱 → 시/도, 구/군 추출
@@ -86,7 +99,7 @@ public class TourDaoImpl implements PLog{
 	    region.setRegionNo(regionNo);
 	    region.setRegionSido(regionSido);
 	    region.setRegionGugun(regionGugun);
-	    param.setRegion(region); // ★ 핵심
+	    param.setRegion(region); 
 
 	    // 4. insert
 	    String statement = NAMESPACE + DOT + "doSaveTour";
