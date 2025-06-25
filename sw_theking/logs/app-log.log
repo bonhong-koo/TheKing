@@ -1,0 +1,28 @@
+[2025-06-25 16:44:45] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 16:44:45] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a37aefe, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5d99c6b5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@266374ef, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@13b3d178, org.springframework.test.context.support.DirtiesContextTestExecutionListener@24c4ddae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@37fb0bed, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a82c5f1, org.springframework.test.context.event.EventPublishingTestExecutionListener@7b7fdc8]
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 1(Integer), 축제1(String), 축제 시작1(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 2(Integer), 축제2(String), 축제 시작2(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - statement :com.pcwk.ehr.festivalMapper.doSave
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==>  Preparing: INSERT INTO festival ( festa_no, name, subtitle, contents, address, tel, fee, region_no, start_date, end_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - ==> Parameters: 3(Integer), 축제3(String), 축제 시작3(String), 축제가 시작됩니다.(String), 경기도 고양시(String), 010-1234-1234(String), 10000(Integer), 41280(Integer), 2025-06-12(String), 2025-07-12(String)
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.festivalMapper.doSave - <==    Updates: 1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.cmn.PLog - flag :1
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - context : org.springframework.context.support.GenericApplicationContext@4066c471, started on Wed Jun 25 16:44:46 GMT+09:00 2025
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - dao : com.pcwk.ehr.festival.dao.FestivalDaoImpl@26bbe604
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - @After
+[2025-06-25 16:44:47] [DEBUG] com.pcwk.ehr.FestivalDaoTest - ***************************
