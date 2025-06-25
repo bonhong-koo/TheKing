@@ -24,7 +24,7 @@
     </resultMap>
 
     <!-- 관광지 저장 -->
-    <insert id="doSaveTour" parameterType="com.pcwk.ehr.tour.domain.TourDTO">
+    <insert id="doSave" parameterType="com.pcwk.ehr.tour.domain.TourDTO">
         INSERT INTO TOUR (
             tour_no, name, subtitle, contents, views,
             address, holiday, time, tel, fee, region_no
@@ -52,4 +52,7 @@
     <delete id="deleteAll">
         DELETE FROM TOUR
     </delete>
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) total_cnt FROM tour
+    </select>
 </mapper>
