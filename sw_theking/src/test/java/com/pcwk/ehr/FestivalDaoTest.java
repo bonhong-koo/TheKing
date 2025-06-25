@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,13 +41,13 @@ class FestivalDaoTest {
 		dto03 =new FestivalDTO(3, "축제3","축제 시작3" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
 	}
-
+ 
 	@AfterEach
 	void tearDown() throws Exception {
 		log.debug("***************************");
 		log.debug("@After");
 		log.debug("***************************");
-	}
+	} 
 
 	@Test
 	void beans() {
@@ -57,7 +58,7 @@ class FestivalDaoTest {
 		log.debug("dao : " + dao);
 	}
 	
-	//@Test
+	@Test
 	void deleteAnddoSave() throws SQLException {
 		dao.doDelete(dto01);
 		dao.doDelete(dto02);
@@ -71,7 +72,7 @@ class FestivalDaoTest {
 		assertNotNull(dto03);
 		
 	}
-	
+	@Disabled
 	@Test
 	void doSave() throws SQLException{
 		dao.doSave(dto01);
