@@ -30,9 +30,15 @@ public class UserController implements PLog {
 		log.debug("└─────────────────────────────────┘");
 	}
 	
+	//로그인 후 화면
+	@GetMapping("/main.do")
+	public String mainPage() {
+		return "user/main";
+	}
+	
 	 //회원가입 화면
-    @GetMapping("/signUP")
-    public String signUP() {
+    @GetMapping("/signUP.do")
+    public String signUPPage() {
         return "user/signUp";
     }
     
