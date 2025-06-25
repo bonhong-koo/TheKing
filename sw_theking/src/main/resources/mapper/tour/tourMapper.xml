@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pcwk.ehr.tour">
     
-    <!-- ✅ resultMap -->
+    <!-- resultMap -->
     <resultMap id="tourResultMap" type="com.pcwk.ehr.tour.domain.TourDTO">
         <id property="tourNo" column="tour_no"/>
         <result property="name" column="name"/>
@@ -23,7 +23,7 @@
         </association>
     </resultMap>
 
-    <!-- ✅ 관광지 저장 -->
+    <!-- 관광지 저장 -->
     <insert id="doSaveTour" parameterType="com.pcwk.ehr.tour.domain.TourDTO">
         INSERT INTO TOUR (
             tour_no, name, subtitle, contents, views,
@@ -35,7 +35,7 @@
         )
     </insert>
 
-    <!-- ✅ 지역번호 조회 -->
+    <!-- 지역번호 조회 -->
     <select id="getRegionNo" parameterType="map" resultType="int">
         SELECT region_no
         FROM REGION
@@ -48,7 +48,7 @@
         </if>
     </select>
 
-    <!-- ✅ 관광지 전체 삭제 (테스트용) -->
+    <!--관광지 전체 삭제 (테스트용) -->
     <delete id="deleteAll">
         DELETE FROM TOUR
     </delete>
