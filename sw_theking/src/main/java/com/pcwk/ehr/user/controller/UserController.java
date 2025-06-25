@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.pcwk.ehr.cmn.PLog;
+import com.pcwk.ehr.user.domain.UserDTO;
 import com.pcwk.ehr.user.service.UserService;
 
 @Controller
@@ -29,6 +30,33 @@ public class UserController implements PLog {
 		log.debug("└─────────────────────────────────┘");
 	}
 	
+	 //회원가입 화면
+    @GetMapping("/signUP")
+    public String signUP() {
+        return "user/signUp";
+    }
+    
+    //회원가입
+    @PostMapping("/signUP")
+    public String doSave(UserDTO user, Model model) throws SQLException {
+    	try {
+            // 1. 서비스 호출
+            userService.doSave(user);
+
+            // 2. 성공 시 성공 페이지로 이동
+            model.addAttribute("message", "회원가입 성공!");
+            return "user/main";
+
+        } catch (IllegalArgumentException | SQLException e) {
+            // 3. 유효성 검사 실패 또는 DB 오류 시
+            model.addAttribute("user", user); // 사용자가 입력한 데이터 유지를 위해 다시 모델에 추가
+            model.addAttribute("error", e.getMessage()); // 서비스에서 던진 에러 메시지를 모델에 추가
+
+            // 4. 다시 회원가입 폼으로 돌아감
+            return "user/signUP"; // join.jsp
+        }
+    }
+    
 	@GetMapping("/doSaveView.do")
 	public String doSaveView() {
 		String viewName = "user/user_mng";

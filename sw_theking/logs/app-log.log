@@ -4524,3 +4524,615 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: FestivalDTO
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141) ~[spring-test-5.3.37.jar:5.3.37]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90) ~[spring-test-5.3.37.jar:5.3.37]
 	... 74 more
+[2025-06-25 16:57:16] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 16:57:17] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ Exception()                     │Invalid bound statement (not found): com.pcwk.ehr.mapper.UserMapper.deleteAll
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 16:57:17 KST 2025
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@4554de02
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@3f9f71ff
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (null)
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@fabb651
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@27e5b378
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:57:18] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:04] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 16:59:04] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 16:59:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 16:59:04 KST 2025
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@1d61a348
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@78a515e4
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@d2291de
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@51c8f62c
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 16:59:06] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:02] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:01:02] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:01:03] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:01:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:01:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:01:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:01:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:01:02 KST 2025
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5f96f6a2
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@48df4071
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@290e8cab
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@6e3ecf5c
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:05] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:13] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:01:13] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:01:15] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), admin(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:01:14 KST 2025
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5f96f6a2
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@48df4071
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@290e8cab
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@6e3ecf5c
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:01:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:13] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:02:13] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:02:14] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), admin(String), profile(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:02:13 KST 2025
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5f96f6a2
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@48df4071
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@290e8cab
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@6e3ecf5c
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:16] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:56] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:02:56] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:02:57] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), admin(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:02:56 KST 2025
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5f96f6a2
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@48df4071
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@290e8cab
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@6e3ecf5c
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:02:58] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:32] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:03:32] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:03:33] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), admin(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - roleUser: UserTKDTO [userId=admin, password=admin123!, name=관리자, nickname=관리자, email=admin01@gmail.com, mobile=010-1111-1111, address=서울시 마포구 서교동 21-1, role=user, profile=profile, regDt=2025/06/25 17:03:33, modDt=2025/06/25 17:03:33]
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - roleAdmin: UserTKDTO [userId=pcwk01, password=pcwk01234!, name=이상무, nickname=이상무01, email=pcwk01@gmail.com, mobile=010-1111-1111, address=서울시 마포구 서교동 21-1, role=admin, profile=profile, regDt=2025/06/25 17:03:33, modDt=2025/06/25 17:03:33]
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:03:32 KST 2025
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5740ff5e
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@4a901445
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@67f77f6e
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@2b0b7e5a
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:03:34] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:52] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-25 17:07:52] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4066c471, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b175c00, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3eb81efb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cdba6dc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d3d101b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c8681, org.springframework.test.context.event.EventPublishingTestExecutionListener@5cdec700]
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.cmn.PLog - ┌─────────────────────────────────┐
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.cmn.PLog - │ UserController()                │
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.cmn.PLog - └─────────────────────────────────┘
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────┐
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - │ *doSave()*              │
+[2025-06-25 17:07:53] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 5
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), admin(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: admin(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - roleUser: UserTKDTO [userId=admin, password=admin123!, name=관리자, nickname=관리자, email=admin01@gmail.com, mobile=010-1111-1111, address=서울시 마포구 서교동 21-1, role=user, profile=profile, regDt=2025/06/25 17:07:53, modDt=2025/06/25 17:07:53]
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - roleAdmin: UserTKDTO [userId=pcwk01, password=pcwk01234!, name=이상무, nickname=이상무01, email=pcwk01@gmail.com, mobile=010-1111-1111, address=서울시 마포구 서교동 21-1, role=admin, profile=profile, regDt=2025/06/25 17:07:53, modDt=2025/06/25 17:07:53]
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ upgradeAllOrNothing()           │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 2
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk02(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk02@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk03(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk03@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk04(String), pcwk01234!(String), 이상무(String), 이상무01(String), pcwk04@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: admin(String), admin123!(String), 관리자(String), 관리자(String), admin01@gmail.com(String), 010-1111-1111(String), 서울시 마포구 서교동 21-1(String), user(String), profile(String)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ setUp()                                                 │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - context:org.springframework.context.support.GenericApplicationContext@3561c410, started on Wed Jun 25 17:07:52 KST 2025
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - userService:com.pcwk.ehr.user.service.UserServiceImpl@5740ff5e
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - userDao:org.apache.ibatis.binding.MapperProxy@4a901445
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - dataSource:HikariDataSource (HikariPool-1)
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - transactionManager:org.springframework.jdbc.datasource.DataSourceTransactionManager@67f77f6e
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - mailSendercom.pcwk.ehr.user.service.DummyMailService@2b0b7e5a
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - │ tearDown()                                              │
+[2025-06-25 17:07:54] [DEBUG] com.pcwk.ehr.UserServiceTest - └─────────────────────────────────────────────────────────┘

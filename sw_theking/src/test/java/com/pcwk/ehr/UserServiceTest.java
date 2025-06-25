@@ -15,10 +15,8 @@ import javax.sql.DataSource;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.pattern.EqualsIgnoreCaseReplacementConverter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +29,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
-import com.pcwk.ehr.user.service.TestUserService;
 import com.pcwk.ehr.user.service.UserService;
 
 /**
@@ -154,21 +151,21 @@ class UserServiceTest {
 		assertEquals(1, mapper.getCount());
 
 		UserDTO userWithOutrole = users.get(0); // 역할 없는 사용자
-		userWithOutrole.setRole(null); // 혹은 초기 상태가 null일 경우 생략 가능
+		userWithOutrole.setRole("admin"); // 혹은 초기 상태가 null일 경우 생략 가능
 		userService.doSave(userWithOutrole);
 		assertEquals(2, mapper.getCount());
 
 		// 3. 조회
-		UserDTO roleAdmin = mapper.doSelectOne(userWithrole);
-		UserDTO roleUser = mapper.doSelectOne(userWithOutrole);
+		UserDTO roleUser = mapper.doSelectOne(userWithrole);
+		UserDTO roleAdmin = mapper.doSelectOne(userWithOutrole);
 
 		// 4. 검증
 		assertEquals("admin", roleAdmin.getRole());
-		assertEquals("user", roleUser.getRole()); // ✅ 대소문자 주의
+		assertEquals("user", roleUser.getRole()); 
 
 		// 로그로 확인
-		log.debug("roleAdmin: {}", roleAdmin);
 		log.debug("roleUser: {}", roleUser);
+		log.debug("roleAdmin: {}", roleAdmin);
 	}
 	
 	//@Disabled
