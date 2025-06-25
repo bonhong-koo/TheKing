@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pcwk.ehr.festivalMapper">
-    <select id="doSelectOne">
+<mapper namespace="com.pcwk.ehr.mapper.FestivalMapper">
+    <select id="doRetrieve" parameterType="DTO" resultType="FestivalDTO">
+        SELECT *                                           
+		    FROM(                                                         
+		        SELECT ROWNUM as rnum,                                    
+			         tt2.*                                                    
+			        FROM(                                                     
+			            SELECT t1.*                                           
+			            FROM festival t1
+			            ORDER BY t1.end_date DESC                               
+			        )tt2                                                      
+			     <![CDATA[
+                WHERE ROWNUM <= (#{pageSize} * (#{pageNo} - 1) + #{pageSize})                                            
+			    )tt3                                                          
+			    WHERE RNUM >= (#{pageSize} * (#{pageNo} - 1) + 1)]]>
+        
+    </select>
+
+    <update id="doUpdate" parameterType="FestivalDTO">
+        UPDATE festival
+	     <set>
+	        <if test="name != null">name=#{name}</if>
+	        <if test="subtitle != null">subtitle=#{subtitle}</if>
+	        <if test="contents != null">content=#{contents}</if>
+	        <if test="tel != null">tel=#{tel}</if>
+	        <if test="fee != null">fee=#{fee}</if>
+	        <if test="regionNo != null">region_no=#{regionNo}</if>
+	        <if test="startDate != null">start_date=#{startDate}</if>
+	        <if test="endDate != null">end_date=#{endDate}</if>
+	    </set>
+		WHERE festa_no = #{festaNo}
+    </update>
+
+    <select id="doSelectOne" parameterType="FestivalDTO" resultType="FestivalDTO">
         SELECT * 
             FROM festival
         WHERE festa_no = #{festaNo}
