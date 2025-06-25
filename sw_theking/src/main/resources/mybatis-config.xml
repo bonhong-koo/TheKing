@@ -10,6 +10,8 @@
   </settings>
   
   <typeAliases>
+    <typeAlias alias="TourDTO" type="com.pcwk.ehr.tour.domain.TourDTO"/>
+    <typeAlias alias="RegionDTO" type="com.pcwk.ehr.region.domain.RegionDTO"/>
     <typeAlias alias="FestivalDTO" type="com.pcwk.ehr.festival.domain.FestivalDTO"/>
     <typeAlias alias="MyMapperDTO" type="com.pcwk.ehr.mymapper.domain.MyMapperDTO"/>
     <typeAlias alias="UserDTO" type="com.pcwk.ehr.user.domain.UserDTO"/>

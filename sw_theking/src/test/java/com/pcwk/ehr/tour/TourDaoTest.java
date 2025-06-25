@@ -3,6 +3,8 @@ package com.pcwk.ehr.tour;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.sql.SQLException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -17,6 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.pcwk.ehr.tour.dao.TourDaoImpl;
 import com.pcwk.ehr.tour.domain.TourDTO;
+import com.pcwk.ehr.user.domain.UserDTO;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml"
@@ -52,10 +55,58 @@ class TourDaoTest {
 		log.debug("***************************");
 	}
 	@Test
-	public void testDoSaveTour() {
+	void doUpdate() throws SQLException {
+		//매번 동일한 결과가 도출되도록 작성
+	    //1. 전체 삭제
+	    //2. 단건 등록
+	    //2.1 등록 건수 비교
+	    //3. 단건 조회
+	    //4. 단건 조회 데이터 수정
+	    //5. 수정
+	    //6. 수정 조회
+	    //7. 4번과 6번 비교
+		
+		//1.
+//		dao.deleteAll();
+//		//2.
+//		int flag = dao.doSave(dto01);
+//		assertEquals(1, flag);
+		//2.1
+		int count = dao.getCount();
+		assertEquals(1, count);
+		//3.
+		TourDTO outVO = dao.doSelectOne(dto01);
+		assertNotNull(outVO);
+		
+		//4.수정
+		String upString ="_U";
+		int upInt = 999;
+		outVO.setTourNo(11);
+		outVO.setName(outVO.getName()+upString);
+		outVO.setSubtitle(outVO.getSubtitle()+upString);
+		log.debug("outVO: "+outVO);
+		
+		int flag = dao.doUpdate(outVO);
+		assertEquals(1,flag);
+		
+		TourDTO upVO = dao.doSelectOne(outVO);
+		
+	}
+	
+	@Disabled
+	@Test
+	public void testDoSave() throws SQLException {
+		
+		dao.deleteAll();
+		
 
 	    int flag = dao.doSave(dto01);
 	    assertEquals(1, flag);
+	    int count = dao.getCount();
+		assertEquals(1, count);
+		
+		count = dao.doDelete(dto01);
+		assertEquals(0, count);
 	}
 	
 	@Disabled
