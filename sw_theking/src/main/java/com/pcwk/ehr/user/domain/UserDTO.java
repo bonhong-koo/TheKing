@@ -16,7 +16,9 @@ public class UserDTO extends DTO {
 	private String modDt;
 	
 	
-	
+	public UserDTO() {
+		
+	}
 	/**
 	 * @param userId
 	 * @param password

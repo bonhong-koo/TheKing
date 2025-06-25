@@ -51,9 +51,9 @@ public class UserDaoTest {
 
 		log.debug("context:" + context);
 
-//		dto01 = new UserDTO("pcwk01", "이상무01", "4321", "사용안함", 0, 0, Level.BASIC, "yejiad12@gmail.com");
-//		dto02 = new UserDTO("pcwk02", "이상무02", "4321a", "사용안함", 55, 10, Level.SILVER, "yejiad12@gmail.com");
-//		dto03 = new UserDTO("pcwk03", "이상무03", "4321a", "사용안함", 100, 40, Level.GOLD, "yejiad12@gmail.com");
+		dto01 = new UserDTO("pcwk01", "4321abc!@#" ,"이상무01", "이상무닉1", "pcwk01@naver.com", "010-1111-1111", "서울시 마포구 서교동11","admin", "profile", "사용안함", "사용안함");
+		dto02 = new UserDTO("pcwk02", "1234abc!@#$","이상무02", "이상무닉2", "pcwk02@naver.com", "010-1111-1111", "서울시 마포구 서교동11","user" , "profile", "사용안함", "사용안함");
+		dto03 = new UserDTO("pcwk03", "1234abcd!!" ,"이상무03", "이상무닉3", "pcwk03@naver.com", "010-1111-1111", "서울시 마포구 서교동11","user" , "profile", "사용안함", "사용안함");
 
 		search = new SearchDTO();
 	}
@@ -68,7 +68,7 @@ public class UserDaoTest {
 		log.debug("***************************");
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	void beans() {
 		assertNotNull(context);
@@ -78,7 +78,7 @@ public class UserDaoTest {
 		log.debug(dao);
 	}
 
-	//@Disabled
+	@Disabled
 	@Test
 	void doRetrieve() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
@@ -170,19 +170,17 @@ public class UserDaoTest {
 		// 3.
 		UserDTO outVO = dao.doSelectOne(dto01);
 		assertNotNull(outVO);
-//		isSameUser(outVO, dto01);
+		isSameUser(outVO, dto01);
 
 		// 4.
 		String upString = "_U";
-		int upInt = 999;
 
-		outVO.setUserId(outVO.getUserId() + upString);
 		outVO.setPassword(outVO.getPassword() + upString);
 		outVO.setName(outVO.getName() + upString);
 		outVO.setNickname(outVO.getNickname() + upString);
 		outVO.setEmail(outVO.getEmail() + upString);
-		outVO.setMobile(outVO.getMobile());
-		outVO.setEmail(outVO.getEmail() + upString);
+		outVO.setMobile(outVO.getMobile() + upString);
+		outVO.setProfile(outVO.getProfile() + upString);
 
 		log.debug("outVO:" + outVO);
 
@@ -194,7 +192,7 @@ public class UserDaoTest {
 		UserDTO upVO = dao.doSelectOne(outVO);
 
 		// 7.
-//		isSameUser(outVO, upVO);
+		isSameUser(outVO, upVO);
 		System.out.println("***");
 
 	}
@@ -239,7 +237,7 @@ public class UserDaoTest {
 
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	public void getFailure() throws SQLException {
 		// 매번 동일한 결과가 도출 되도록 작성
@@ -252,14 +250,13 @@ public class UserDaoTest {
 
 		// 2.
 		dao.doSave(dto01);
-		int count = dao.getCount();
-		assertEquals(1, count);
+		assertEquals(1, dao.getCount());
 
-		String unknownId = dto01.getUserId() + "_99";
-		dto01.setUserId(unknownId);
+		UserDTO unknownUser = new UserDTO();
+		unknownUser.setName(dto01.getName() + "_99");
 
 		assertThrows(EmptyResultDataAccessException.class, () -> {
-			UserDTO outVO = dao.doSelectOne(dto01);
+			dao.doSelectOne(dto01);
 
 		});
 
@@ -310,14 +307,15 @@ public class UserDaoTest {
 	}
 
 	// 데이터 비교
-//	public void isSameUser(UserDTO outVO, UserDTO dto01) {
-//		assertEquals(outVO.getUserId(), dto01.getUserId());
-//		assertEquals(outVO.getName(), dto01.getName());
-//		assertEquals(outVO.getPassword(), dto01.getPassword());
-//		assertEquals(outVO.getLogin(), dto01.getLogin());
-//		assertEquals(outVO.getRecommend(), dto01.getRecommend());
-//		assertEquals(outVO.getGrade(), dto01.getGrade());
-//		assertEquals(outVO.getEmail(), dto01.getEmail());
-//	}
-
+	public void isSameUser(UserDTO outVO, UserDTO dto01) {
+	    assertEquals(outVO.getUserId(), dto01.getUserId());
+	    assertEquals(outVO.getPassword(), dto01.getPassword());
+	    assertEquals(outVO.getName(), dto01.getName());
+	    assertEquals(outVO.getNickname(), dto01.getNickname());
+	    assertEquals(outVO.getEmail(), dto01.getEmail());
+	    assertEquals(outVO.getMobile(), dto01.getMobile());
+	    assertEquals(outVO.getAddress(), dto01.getAddress());
+	    assertEquals(outVO.getRole(), dto01.getRole());
+	    assertEquals(outVO.getProfile(), dto01.getProfile());
+	}
 }
