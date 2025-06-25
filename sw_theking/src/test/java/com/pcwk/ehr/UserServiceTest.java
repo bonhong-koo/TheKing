@@ -81,15 +81,15 @@ class UserServiceTest {
 		users = Arrays.asList(
 				
 				new UserDTO("pcwk01", "pcwk01234!", "이상무", "이상무01", "pcwk01@gmail.com", 
-						"010-1111-1111","서울시 마포구 서교동 21-1","user",null, "사용안함", "사용안함"),
-				new UserDTO("pcwk01", "pcwk01234!", "이상무", "이상무01", "pcwk02@gmail.com", 
-						"010-1111-1111","서울시 마포구 서교동 21-1","user",null, "사용안함", "사용안함"),
-				new UserDTO("pcwk01", "pcwk01234!", "이상무", "이상무01", "pcwk03@gmail.com", 
-						"010-1111-1111","서울시 마포구 서교동 21-1","user",null, "사용안함", "사용안함"),
-				new UserDTO("pcwk01", "pcwk01234!", "이상무", "이상무01", "pcwk04@gmail.com", 
-						"010-1111-1111","서울시 마포구 서교동 21-1","user",null, "사용안함", "사용안함"),
+						"010-1111-1111","서울시 마포구 서교동 21-1","user","profile", "사용안함", "사용안함"),
+				new UserDTO("pcwk02", "pcwk01234!", "이상무", "이상무01", "pcwk02@gmail.com", 
+						"010-1111-1111","서울시 마포구 서교동 21-1","user","profile", "사용안함", "사용안함"),
+				new UserDTO("pcwk03", "pcwk01234!", "이상무", "이상무01", "pcwk03@gmail.com", 
+						"010-1111-1111","서울시 마포구 서교동 21-1","user","profile", "사용안함", "사용안함"),
+				new UserDTO("pcwk04", "pcwk01234!", "이상무", "이상무01", "pcwk04@gmail.com", 
+						"010-1111-1111","서울시 마포구 서교동 21-1","user","profile", "사용안함", "사용안함"),
 				new UserDTO("admin", "admin123!", "관리자", "관리자", "admin01@gmail.com", 
-						"010-1111-1111","서울시 마포구 서교동 21-1","user",null, "사용안함", "사용안함"));
+						"010-1111-1111","서울시 마포구 서교동 21-1","user","profile", "사용안함", "사용안함"));
 	}
 
 	/**
@@ -102,7 +102,7 @@ class UserServiceTest {
 		log.debug("└─────────────────────────────────────────────────────────┘");
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	void upgradeAllOrNothing() throws SQLException {
 		log.debug("┌─────────────────────────────────┐");
@@ -137,92 +137,40 @@ class UserServiceTest {
 //		checkLevel(users.get(1), false);
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	public void doSave() throws SQLException {
-		// 매번 동일한 결과가 도출 되도록 작성
-		// 1.전체삭제
-		// 2.등급있는 사용자 등록
-		// 2.등급없는 사용자 등록
-		// 3.조회
-		// 4.비교
-
 		log.debug("┌─────────────────────────┐");
 		log.debug("│ *doSave()*              │");
 		log.debug("└─────────────────────────┘");
 
-		// 1.
+		// 1. 전체 삭제
 		userDao.deleteAll();
 		assertEquals(0, userDao.getCount());
 
-		// 2.
-		UserDTO userWithrole = users.get(4);
+		// 2. 사용자 등록
+		UserDTO userWithrole = users.get(4); // admin 역할 가진 사용자
 		userService.doSave(userWithrole);
 		assertEquals(1, userDao.getCount());
 
-		UserDTO userWithOutrole = users.get(0);
-		userWithOutrole.setRole(null);
+		UserDTO userWithOutrole = users.get(0); // 역할 없는 사용자
+		userWithOutrole.setRole(null); // 혹은 초기 상태가 null일 경우 생략 가능
 		userService.doSave(userWithOutrole);
 		assertEquals(2, userDao.getCount());
 
-		// 3.
+		// 3. 조회
 		UserDTO roleAdmin = userDao.doSelectOne(userWithrole);
 		UserDTO roleUser = userDao.doSelectOne(userWithOutrole);
-		assertEquals(roleAdmin.getRole(), "admin");
-		assertEquals(roleUser.getRole(), "User");
 
+		// 4. 검증
+		assertEquals("admin", roleAdmin.getRole());
+		assertEquals("user", roleUser.getRole()); // ✅ 대소문자 주의
+
+		// 로그로 확인
+		log.debug("roleAdmin: {}", roleAdmin);
+		log.debug("roleUser: {}", roleUser);
 	}
-
-	@Disabled
-	@Test
-	public void upgradeLevels() throws SQLException {
-		// 매번 동일한 결과가 도출 되도록 작성
-		// 1.전체삭제
-		// 2.5명 사용자 모두 입력
-		// 3.등업
-		// 4.데이터로 비교
-		log.debug("┌─────────────────────────┐");
-		log.debug("│ *upgradeLevels()*       │");
-		log.debug("└─────────────────────────┘");
-
-		// 1.
-		userDao.deleteAll();
-		assertEquals(0, userDao.getCount());
-
-		// 2.
-
-		for (UserDTO dto : users) {
-			userDao.doSave(dto);
-		}
-
-		assertEquals(5, userDao.getCount());
-
-		// 3.
-		//userService.upgradeLevels();
-
-		userService.doSelectOne(users.get(0));
-		// 4.
-//		checkLevel(users.get(0), false);
-//		checkLevel(users.get(1), true);
-//		checkLevel(users.get(2), false);
-//		checkLevel(users.get(3), true);
-//		checkLevel(users.get(4), false);
-
-//		checkLevel(UserDTO user, boolean upgraded)
-	}
-
-//	private void checkLevel(UserDTO user, boolean upgraded) throws SQLException {
-//		UserDTO upgradeUser = userDao.doSelectOne(user);
-//
-//		// 등업
-//		if (upgraded == true) {
-//			assertEquals(upgradeUser.getGrade(), user.getGrade().getNextLevel());
-//		} else {// No 등업
-//			assertEquals(upgradeUser.getGrade(), user.getGrade());
-//		}
-//
-//	}
-
+	
 	//@Disabled
 	@Test
 	void beans() {
