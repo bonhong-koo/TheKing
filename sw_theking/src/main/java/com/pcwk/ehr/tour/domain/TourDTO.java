@@ -15,8 +15,10 @@ public class TourDTO  {
 	private  int fee	    ; //입장료
 	private  int regionNo	; //지역코드
 	
+	private RegionDTO region;
 	
 	public TourDTO() {}
+	
 
 	public TourDTO(int tourNo, String name, String subtitle, String contents, int views, String address, String holiday,
 			String time, String tel, int fee, int regionNo) {
@@ -33,8 +35,26 @@ public class TourDTO  {
 		this.fee = fee;
 		this.regionNo = regionNo;
 	}
-	//region getter/setter
-	
+
+	public RegionDTO getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(RegionDTO region) {
+		this.region = region;
+	}
+
+
+	public int getRegionNo() {
+		return regionNo;
+	}
+
+
+	public void setRegionNo(int regionNo) {
+		this.regionNo = regionNo;
+	}
+
 
 	public int getTourNo() {
 		return tourNo;
@@ -119,11 +139,11 @@ public class TourDTO  {
 
 	@Override
 	public String toString() {
-		return "tourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
+		return "TourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
 				+ ", views=" + views + ", address=" + address + ", holiday=" + holiday + ", time=" + time + ", tel="
-				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + "]";
+				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + "]";
 	}
-	
-	
+
+
 	
 }
