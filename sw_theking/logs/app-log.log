@@ -1,0 +1,540 @@
+[2025-06-27 00:19:13] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:19:13] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@df6620a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4e31276e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1a72a540, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@27d5a580, org.springframework.test.context.support.DirtiesContextTestExecutionListener@198d6542, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e403b4a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5117dd67, org.springframework.test.context.event.EventPublishingTestExecutionListener@5be49b60]
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:19:15] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:19:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:19:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:19:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:19:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:19:31] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:19:31] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:19:32] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:19:32] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:19:32] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:19:32] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:19:33] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:19:49] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:19:49] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:19:50] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:19:50] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:19:50] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:19:50] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:19:51] [WARN ] org.springframework.web.servlet.PageNotFound - No mapping for POST /login.do
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:19:51] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:20:14] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:20:14] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:20:15] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:20:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:20:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:20:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@6dc1dc69
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:20:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:28:32] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:28:32] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:28:33] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:28:33] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:28:33] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:28:34] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:28:34] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:28:34] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:28:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:28:35] [WARN ] org.springframework.web.servlet.PageNotFound - No mapping for POST /login.do
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:28:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:29:25] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:29:25] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:29:26] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:29:26] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:29:26] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:29:26] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:29:27] [WARN ] org.springframework.web.servlet.PageNotFound - No mapping for POST /login.do
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:29:27] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:30:40] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:30:40] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:30:41] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:30:41] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:30:41] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:30:41] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:30:42] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:31:55] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:31:55] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:31:56] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:31:56] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:31:56] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:31:56] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:31:57] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:33:06] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:33:06] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:33:07] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:33:07] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:33:07] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:33:07] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:33:08] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:39:45] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:39:45] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:39:46] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:39:46] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:39:46] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:39:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:39:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:43:42] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:43:42] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:43:43] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:43:43] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:43:43] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:43:43] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:43:42, modDt=2025/06/27 00:43:42]
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":1,"message":"","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:43:44] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:44:32] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:44:32] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:44:34] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:44:34] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:44:34] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:44:34] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:44:33, modDt=2025/06/27 00:44:33]
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":1,"message":"","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - resultMessage: MessageDTO [messageId=1, message=]
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:44:35] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:51:12] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:51:12] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:51:14] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:51:14] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:51:14] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:51:14] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:51:13, modDt=2025/06/27 00:51:13]
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - session:org.springframework.mock.web.MockHttpSession@60bb7995
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - resultMessage: MessageDTO [messageId=1, message=pcwk01님 환영합니다.]
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:51:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:51:45] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:51:45] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:51:46] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:51:46] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:51:46] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:51:46] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:51:45, modDt=2025/06/27 00:51:45]
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.controller.UserController - session:org.springframework.mock.web.MockHttpSession@60bb7995
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - resultMessage: MessageDTO [messageId=1, message=pcwk01님 환영합니다.]
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:51:47] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:52:02] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:52:02] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:52:03] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:52:03] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:52:03] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:52:03] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:52:03, modDt=2025/06/27 00:52:03]
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - session:org.springframework.mock.web.MockHttpSession@60bb7995
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":0,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":0,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - resultMessage: MessageDTO [messageId=0, message=pcwk01님 환영합니다.]
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:52:04] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:52:14] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-27 00:52:14] [INFO ] org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ae8bcbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cdba6dc, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7d3d101b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@30c8681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cdec700, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d026701, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78aa1f72, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f75a668]
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ setUp()                                                 │
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘
+[2025-06-27 00:52:15] [INFO ] org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+[2025-06-27 00:52:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+[2025-06-27 00:52:15] [INFO ] org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌───────────────────────────────┐
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ doLoginTest()                 │
+[2025-06-27 00:52:15] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └───────────────────────────────┘
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==>  Preparing: DELETE FROM user_tk
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - ==> Parameters: 
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.deleteAll - <==    Updates: 1
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==>  Preparing: INSERT INTO user_tk ( user_id, password, name, nickname, email, mobile, address, role, profile, reg_date, mod_date ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE, SYSDATE )
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - ==> Parameters: pcwk01(String), 4321abc!@#(String), 이상무01(String), 이상무닉1(String), pcwk01@naver.com(String), 010-1111-1111(String), 서울시 마포구 서교동11(String), admin(String), profile(String)
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSave - <==    Updates: 1
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==>  Preparing: SELECT count(*) AS totalCnt FROM user_tk
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - ==> Parameters: 
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.getCount - <==      Total: 1
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - requestBuilder:org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder@7e9f2c32
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==>  Preparing: SELECT user_id, password, name, nickname, email, mobile, address, role, profile, TO_CHAR(reg_date, 'YYYY/MM/DD HH24:MI:SS') AS regDt, TO_CHAR(mod_date, 'YYYY/MM/DD HH24:MI:SS') AS modDt FROM user_tk WHERE user_id = ?
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - ==> Parameters: pcwk01(String)
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.mapper.UserMapper.doSelectOne - <==      Total: 1
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.controller.UserController - loginUser: UserTKDTO [userId=pcwk01, password=4321abc!@#, name=이상무01, nickname=이상무닉1, email=pcwk01@naver.com, mobile=010-1111-1111, address=서울시 마포구 서교동11, role=admin, profile=profile, regDt=2025/06/27 00:52:15, modDt=2025/06/27 00:52:15]
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.controller.UserController - session:org.springframework.mock.web.MockHttpSession@60bb7995
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.controller.UserController - jsonString:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - returnBody:{"messageId":1,"message":"pcwk01님 환영합니다.","no":0,"totalCnt":0,"pageSize":0,"pageNo":0}
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - resultMessage: MessageDTO [messageId=1, message=pcwk01님 환영합니다.]
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - ┌─────────────────────────────────────────────────────────┐
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - │ tearDown()                                              │
+[2025-06-27 00:52:16] [DEBUG] com.pcwk.ehr.user.UserControllerTest - └─────────────────────────────────────────────────────────┘

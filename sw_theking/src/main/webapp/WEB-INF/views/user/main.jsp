@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/user/signUp"><font color="#000000">회원가입</font></a>
+<h1>로그인 상태</h1>
+<c:if test="${not empty message}">
+    <div>${message}</div>
+</c:if>
+
+
 </body>
 </html>
