@@ -21,7 +21,11 @@
 			        FROM(                                                     
 			            SELECT t1.*                                           
 			            FROM festival t1
-			            ORDER BY t1.end_date DESC                               
+			            ORDER BY t1.end_date DESC
+			            <where>
+			                 <if test="">
+			                 </if>
+			            </where>                               
 			        )tt2                                                      
 			     <![CDATA[
                 WHERE ROWNUM <= (#{pageSize} * (#{pageNo} - 1) + #{pageSize})                                            
