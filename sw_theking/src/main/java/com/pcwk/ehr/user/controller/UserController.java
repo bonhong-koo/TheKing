@@ -41,13 +41,13 @@ public class UserController {
 	}
 	
 	 //회원가입 화면
-    @GetMapping("/signUp.do")
+    @GetMapping("/signUpPage.do")
     public String signUPPage() {
         return "user/signUp";
     }
     
     //회원가입
-    @PostMapping("/doSave.do")
+    @PostMapping("/signUp.do")
     public String doSave(UserDTO user, Model model) throws SQLException {
     	try {
             // 1. 서비스 호출
