@@ -66,6 +66,18 @@ class FestivalDaoTest {
 	}
 	
 	@Test
+	void getCount() throws SQLException {
+		int count = mapper.getCount();
+		
+		log.debug("count :{}",count);
+		
+		assertEquals(52, count);
+		
+	}
+	
+	
+	@Disabled
+	@Test
 	void doRetrieve() {
 
 		dto01.setPageNo(2);
