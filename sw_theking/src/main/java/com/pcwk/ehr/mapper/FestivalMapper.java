@@ -19,7 +19,7 @@ public interface FestivalMapper extends WorkDiv<FestivalDTO>{
 	//조회수 증가
 	int upViews(FestivalDTO dto);
 	
-	List<FestivalDTO> checkRetrieve(@Param("regionSido") String regionSido,
+	List<FestivalDTO> checkRetrieve(@Param("sido") String sido,
             						@Param("date") String date,
-            						SearchDTO dto);
+            						@Param("dto")SearchDTO dto);
 }

@@ -69,11 +69,17 @@ class FestivalDaoTest {
 	
 	@Test
 	void checkRetrieve() {
-		String regionSido = "";
-		String date ="";
+		//null or 값  
+		String sido = null;
+		String date ="2025-06-26";
 		searchDTO.setPageNo(1);
 		searchDTO.setPageSize(10);
-		List list = mapper.checkRetrieve(regionSido, date, searchDTO);
+		List<FestivalDTO> list = mapper.checkRetrieve(sido, date, searchDTO);
+		assertNotNull(list);
+		log.debug(list);
+		for(FestivalDTO outVO : list) {
+			log.debug(outVO);
+		}
 	}
 	
 	
@@ -134,17 +140,18 @@ class FestivalDaoTest {
 		
 		log.debug("dto01 :{}",dto01);
 		//수정
-		dto01.setAddress("서울시 마포구");
 		dto01.setName("축제9999");
 		dto01.setContents("축제09999");
 		dto01.setSubtitle("재밌는 축제요~~~");
+		dto01.setAddress("서울시 마포구");
 		mapper.doUpdate(dto01);
 		
-		log.debug("dto01 :{}",dto01);
-		assertEquals("서울시 마포구", dto01.getAddress());
-		assertEquals("축제9999", dto01.getName());
-		assertEquals("축제09999", dto01.getContents());
-		assertEquals("재밌는 축제요~~~", dto01.getSubtitle());
+		FestivalDTO outVO = mapper.doSelectOne(dto01);
+		log.debug("outVO :{}",outVO);
+		assertEquals(outVO.getName(), dto01.getName());
+		assertEquals(outVO.getContents(), dto01.getContents());
+		assertEquals(outVO.getSubtitle(), dto01.getSubtitle());
+		assertEquals(outVO.getAddress(), dto01.getAddress());
 		
 	}
 	
