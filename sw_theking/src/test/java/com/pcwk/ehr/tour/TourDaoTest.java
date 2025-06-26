@@ -55,6 +55,17 @@ class TourDaoTest {
         log.debug("@After");
         log.debug("***************************");
     }
+    @Test
+    void doRetrive()throws SQLException {
+    	//1. 전체 삭제
+    	dao.deleteAll();
+    	
+    	//2.
+    	int count = dao.saveAll();
+    	log.debug("count: "+count);
+    	assertEquals(509,count);
+    }
+    
     @Disabled
     @Test
     void doUpdate() throws SQLException {
