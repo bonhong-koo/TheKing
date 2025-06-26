@@ -70,12 +70,12 @@ public class UserServiceImpl implements UserService {
 	    if (UserValidation.isDuplicateUserId(mapper, param.getUserId())) {
 	        throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
 	    }
-//	    if (UserValidation.isDuplicateNickname(mapper, param.getNickname())) {
-//	        throw new IllegalArgumentException("이미 존재하는 닉네임입니다.");
-//	    }
-//	    if (UserValidation.isDuplicateUserId(mapper, param.getEmail())) {
-//	        throw new IllegalArgumentException("이미 존재하는 이메일입니다.");
-//	    }
+	    if (UserValidation.isDuplicateNickname(mapper, param.getNickname())) {
+	        throw new IllegalArgumentException("이미 존재하는 닉네임입니다.");
+	    }
+	    if (UserValidation.isDuplicateUserId(mapper, param.getEmail())) {
+	        throw new IllegalArgumentException("이미 존재하는 이메일입니다.");
+	    }
 
 	    // 3. 저장
 	    return mapper.doSave(param);

@@ -35,4 +35,10 @@ public interface UserMapper extends WorkDiv<UserDTO> {
 	void deleteAll() throws SQLException;
 	
 	int getCount() throws SQLException;
+	
+	int isDuplicateUserId(String userId);
+	
+	int isDuplicateNickname(String nickname);
+	
+	int isDuplicateEmail(String email);
 }
