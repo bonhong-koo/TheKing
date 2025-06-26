@@ -101,31 +101,6 @@ class UserServiceTest {
 	}
 
 	
-	@Test
-    void testDoSave() throws SQLException {
-		log.debug("┌────────────────────────┐");
-		log.debug("│ testDoSave()           │");
-		log.debug("└────────────────────────┘");
-		// 1. 전체 삭제
-		mapper.deleteAll();
-		assertEquals(0, mapper.getCount());
-		//2.등록
-        UserDTO user = new UserDTO();
-        user.setUserId("test123");
-        user.setPassword("Test@1234");
-        user.setName("홍길동");
-        user.setNickname("별명");
-        user.setEmail("test" + "@email.com");
-        user.setMobile("010-1234-5678");
-        user.setAddress("서울시 마포구 서교동 22-1");
-        user.setRole("user");
-        user.setProfile("default.png");
-
-        int result = userService.doSave(user);
-		log.debug("result:{}", result);
-        assertEquals(1, result);
-    }
-	
 	@Disabled
 	@Test
 	void upgradeAllOrNothing() throws SQLException {
@@ -161,7 +136,7 @@ class UserServiceTest {
 //		checkLevel(users.get(1), false);
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
 	public void doSave() throws SQLException {
 		log.debug("┌─────────────────────────┐");
@@ -171,28 +146,24 @@ class UserServiceTest {
 		// 1. 전체 삭제
 		mapper.deleteAll();
 		assertEquals(0, mapper.getCount());
+		
+		//2.등록
+		UserDTO user = new UserDTO();
+		user.setUserId("test123465");
+		user.setPassword("Test@1234");
+		user.setName("홍길동");
+		user.setNickname("별명");
+		user.setEmail("test" + "@email.com");
+		user.setMobile("010-1234-5678");
+		user.setAddress("서울시 마포구 서교동 22-1");
+		user.setRole("user");
+		user.setProfile("default.png");
+		log.debug("user:{}", user);
+		
+		int result = userService.doSave(user);
+		log.debug("result:{}", result);
+		assertEquals(1, result);
 
-		// 2. 사용자 등록
-		UserDTO userWithrole = users.get(4); // admin 역할 가진 사용자
-		userService.doSave(userWithrole);
-		assertEquals(1, mapper.getCount());
-
-		UserDTO userWithOutrole = users.get(0); // 역할 없는 사용자
-		userWithOutrole.setRole("admin"); // 혹은 초기 상태가 null일 경우 생략 가능
-		userService.doSave(userWithOutrole);
-		assertEquals(2, mapper.getCount());
-
-		// 3. 조회
-		UserDTO roleUser = mapper.doSelectOne(userWithrole);
-		UserDTO roleAdmin = mapper.doSelectOne(userWithOutrole);
-
-		// 4. 검증
-		assertEquals("admin", roleAdmin.getRole());
-		assertEquals("user", roleUser.getRole()); 
-
-		// 로그로 확인
-		log.debug("roleUser: {}", roleUser);
-		log.debug("roleAdmin: {}", roleAdmin);
 	}
 	
 	@Disabled

@@ -20,6 +20,24 @@
         </where>
     </sql>
     
+    <select id="isDuplicateUserId" parameterType="String" resultType="java.lang.Integer">
+        SELECT COUNT(*) 
+          FROM user_tk 
+         WHERE user_id = #{userId}
+    </select>
+    
+    <select id="isDuplicateNickname" parameterType="String" resultType="java.lang.Integer">
+        SELECT COUNT(*) 
+          FROM user_tk 
+         WHERE nickname = #{nickname}
+    </select>
+    
+    <select id="isDuplicateEmail" parameterType="String" resultType="java.lang.Integer">
+        SELECT COUNT(*) 
+          FROM user_tk 
+         WHERE email = #{email}
+    </select>
+    
     <select id="doRetrieve" parameterType="SearchDTO" resultType="UserDTO">
 	    SELECT A.*, B.*
 	    FROM (
