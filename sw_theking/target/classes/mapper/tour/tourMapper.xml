@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pcwk.ehr.tour">
-    
+<mapper namespace="com.pcwk.ehr.mapper.TourMapper">
+
     <!-- resultMap -->
     <resultMap id="tourResultMap" type="TourDTO">
         <id property="tourNo" column="tour_no"/>
@@ -35,38 +35,37 @@
 
 
     <!-- 관광지 저장 -->
-    <insert id="doSave" parameterType="TourDTO">
-        <selectKey keyProperty="tourNo" resultType="int" order="BEFORE">
-            SELECT tour_no_seq.NEXTVAL FROM dual
-        </selectKey>
-
-        <!-- 주소를 바탕으로 region_no를 조회하여 저장 -->
-        INSERT INTO TOUR (
-            tour_no,
-            name,
-            subtitle,
-            contents,
-            views,
-            address,
-            holiday,
-            time,
-            tel,
-            fee,
-            region_no
-        ) VALUES (
-            #{tourNo},
-            #{name},
-            #{subtitle},
-            #{contents},
-            0,
-            #{address},
-            #{holiday},
-            #{time},
-            #{tel},
-            #{fee},
-            #{region.regionNo}
-        )
-    </insert>
+	<insert id="doSave" parameterType="TourDTO">
+	    <selectKey keyProperty="tourNo" resultType="int" order="BEFORE">
+	        SELECT tour_no_seq.NEXTVAL FROM dual
+	    </selectKey>
+	
+	    INSERT INTO TOUR (
+	        tour_no,
+	        name,
+	        subtitle,
+	        contents,
+	        views,
+	        address,
+	        holiday,
+	        time,
+	        tel,
+	        fee,
+	        region_no
+	    ) VALUES (
+	        #{tourNo},
+	        #{name},
+	        #{subtitle},
+	        #{contents},
+	        0,
+	        #{address},
+	        #{holiday},
+	        #{time},
+	        #{tel},
+	        #{fee},
+	        #{region.regionNo, jdbcType=INTEGER}
+	    )
+	</insert>
 
     <!-- 관광지 정보 수정 -->
     <update id="doUpdate" parameterType="TourDTO">
@@ -105,45 +104,52 @@
 		            LEFT JOIN image i ON t.tour_no = i.target_no
 		                        AND i.table_name = 'TOUR'
 		            <where>
-		                <if test="regionSido != null and regionSido != ''">
-		                    AND r.region_sido = #{regionSido}
-		                </if>
-		
-		                <if test="regionGugun != null">
-		                    <choose>
-		                        <when test="regionGugun == ''">
-		                            AND r.region_gugun IS NULL
-		                        </when>
-		                        <otherwise>
-		                            AND r.region_gugun = #{regionGugun}
-		                        </otherwise>
-		                    </choose>
-		                </if>
+		                <if test="region.regionSido != null and region.regionSido != ''">
+					        AND r.region_sido = #{region.regionSido}
+					    </if>
+					    <if test="region.regionGugun != null">
+					        <choose>
+					            <when test="region.regionGugun == ''">
+					                AND r.region_gugun IS NULL
+					            </when>
+					            <otherwise>
+					                AND r.region_gugun = #{region.regionGugun}
+					            </otherwise>
+					        </choose>
+					    </if>
+	                     <if test="search.searchDiv !='' ">             
+			                 t.name LIKE '%'|| #{search.searchWord} || '%'
+			            </if>  
 		            </where>
 		            ORDER BY t.tour_no DESC
 		        ) tt2
-	<![CDATA[	  WHERE ROWNUM <= 10 
+	<![CDATA[	  WHERE ROWNUM <= (#{search.pageSize} * (#{search.pageNo} - 1) + #{search.pageSize})
 		    ) tt3
-		    WHERE RNUM >= 1   ]]>
+		    WHERE RNUM >= (#{search.pageSize} * (#{search.pageNo} - 1) + 1)   ]]>
 		) A
 		CROSS JOIN (
 		    SELECT COUNT(*) AS total_cnt
-		    FROM tour
+		    FROM tour t
+		    <if test="search.searchWord != null and search.searchWord != ''">
+			    AND t.name LIKE '%' || #{search.searchWord, jdbcType=VARCHAR}} || '%'
+			</if>
 		) B
     </select>
 
     <!-- 지역번호 조회 -->
-    <select id="getRegionNo" parameterType="map" resultType="int">
-        SELECT region_no
-        FROM REGION
-        WHERE region_sido = #{regionSido}
-        <if test="regionSido != null and regionSido == '세종특별자치시'">
-            AND region_gugun IS NULL
-        </if>
-        <if test="regionSido != null and regionSido != '세종특별자치시'">
-            AND region_gugun = #{regionGugun}
-        </if>
-    </select>
+	<select id="getRegionNo" resultType="int">
+	    SELECT region_no
+	    FROM REGION
+	    WHERE region_sido = #{regionSido}
+	    <choose>
+	        <when test="regionSido == '세종특별자치시'">
+	            AND region_gugun IS NULL
+	        </when>
+	        <otherwise>
+	            AND region_gugun = #{regionGugun}
+	        </otherwise>
+	    </choose>
+	</select>
     <!-- 조회 수 업데이트 -->
     <update id="viewsUpdate" parameterType="TourDTO">
 	UPDATE tour
@@ -178,17 +184,17 @@
     <!-- 관광지 추가(테스트용) -->
     <insert id="saveAll">
         INSERT INTO tour                                     
-        SELECT  LEVEL AS tour_no,                    
+        SELECT  LEVEL AS tourNo,                    
                 '관광지명'||LEVEL AS name,                        
                 '소제목'||LEVEL AS subtitle,                            
-                '내용'|| AS contents,                     
+                '내용'|| LEVEL AS contents,                     
                 MOD(level,10) AS views,                        
                 '서울특별시 서대문구 '||LEVEL AS address,                     
                 '휴일'|| LEVEL  AS holiday,
                 '운영시간   '|| LEVEL AS time,
                 '010-0000-111'||LEVEL as tel,
                 '20000'||LEVEL as fee,
-                11440 as region_no
+                11440 as regionNo
         FROM dual                                              
            <![CDATA[ CONNECT BY LEVEL <=509      ]]>                       
     </insert>  

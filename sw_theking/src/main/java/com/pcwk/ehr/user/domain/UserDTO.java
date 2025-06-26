@@ -1,6 +1,7 @@
 package com.pcwk.ehr.user.domain;
 
 import com.pcwk.ehr.cmn.DTO;
+import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class UserDTO extends DTO {
 	private String userId;
@@ -187,6 +188,7 @@ public class UserDTO extends DTO {
 				+ ", email=" + email + ", mobile=" + mobile + ", address=" + address + ", role=" + role + ", profile="
 				+ profile + ", regDt=" + regDt + ", modDt=" + modDt + "]";
 	}
+
 	
 	
 	
