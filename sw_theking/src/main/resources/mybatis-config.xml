@@ -20,4 +20,5 @@
     <typeAlias alias="UserDTO" type="com.pcwk.ehr.user.domain.UserDTO"/>
     <typeAlias alias="SearchDTO" type="com.pcwk.ehr.cmn.SearchDTO"/>
   </typeAliases>
+
 </configuration>

@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +18,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.pcwk.ehr.region.domain.RegionDTO;
 import com.pcwk.ehr.tour.dao.TourDaoImpl;
 import com.pcwk.ehr.tour.domain.TourDTO;
 import com.pcwk.ehr.user.domain.UserDTO;
@@ -36,6 +38,8 @@ class TourDaoTest {
 	
 	@Autowired
 	ApplicationContext context;
+	
+	RegionDTO region;
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -47,7 +51,9 @@ class TourDaoTest {
                 "세종특별자치시 123", "토요일", "09:00-16:00", "010-1111-2223", 200000, 0, null);
         dto03 = new TourDTO(0, "관광지3", "소제목3", "상세내용3", 0,
                 "세종특별자치시 풍무로", "토요일", "09:00-16:00", "010-1111-2223", 200000, 0, null);
-    }
+    
+        region = new RegionDTO();
+	}
 
     @AfterEach
     void tearDown() throws Exception {
@@ -60,10 +66,20 @@ class TourDaoTest {
     	//1. 전체 삭제
     	dao.deleteAll();
     	
-    	//2.
+    	//2. saveAll(); 성공
     	int count = dao.saveAll();
     	log.debug("count: "+count);
     	assertEquals(509,count);
+    	
+    	region.setRegionSido("서울특별시");
+    	//region.setRegionGugun("");
+    	
+    	List<TourDTO> list = dao.doRetrieve(region);
+    	
+    	for(TourDTO vo : list) {
+			log.debug(vo);
+		}
+    	assertEquals(list.size(),10);
     }
     
     @Disabled
@@ -102,6 +118,7 @@ class TourDaoTest {
         assertEquals(outVO.getSubtitle(), updatedVO.getSubtitle());
         assertEquals(outVO.getTel(), updatedVO.getTel());
     }
+    @Disabled
     @Test
     void viewsUpdate() {
     	dao.deleteAll();

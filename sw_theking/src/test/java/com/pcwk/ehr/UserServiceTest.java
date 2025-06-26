@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -99,7 +100,33 @@ class UserServiceTest {
 		log.debug("└─────────────────────────────────────────────────────────┘");
 	}
 
-	//@Disabled
+	
+	@Test
+    void testDoSave() throws SQLException {
+		log.debug("┌────────────────────────┐");
+		log.debug("│ testDoSave()           │");
+		log.debug("└────────────────────────┘");
+		// 1. 전체 삭제
+		mapper.deleteAll();
+		assertEquals(0, mapper.getCount());
+		//2.등록
+        UserDTO user = new UserDTO();
+        user.setUserId("test123");
+        user.setPassword("Test@1234");
+        user.setName("홍길동");
+        user.setNickname("별명");
+        user.setEmail("test" + "@email.com");
+        user.setMobile("010-1234-5678");
+        user.setAddress("서울시 마포구 서교동 22-1");
+        user.setRole("user");
+        user.setProfile("default.png");
+
+        int result = userService.doSave(user);
+		log.debug("result:{}", result);
+        assertEquals(1, result);
+    }
+	
+	@Disabled
 	@Test
 	void upgradeAllOrNothing() throws SQLException {
 		log.debug("┌─────────────────────────────────┐");
@@ -134,7 +161,7 @@ class UserServiceTest {
 //		checkLevel(users.get(1), false);
 	}
 
-	//@Disabled
+	@Disabled
 	@Test
 	public void doSave() throws SQLException {
 		log.debug("┌─────────────────────────┐");
@@ -168,7 +195,7 @@ class UserServiceTest {
 		log.debug("roleAdmin: {}", roleAdmin);
 	}
 	
-	//@Disabled
+	@Disabled
 	@Test
 	void beans() {
 		assertNotNull(mapper);

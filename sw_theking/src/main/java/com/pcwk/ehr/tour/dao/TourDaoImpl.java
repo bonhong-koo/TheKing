@@ -50,7 +50,7 @@ public class TourDaoImpl{
 		
 		return flag;
 	}
-    public List<TourDTO>doRetrieve(TourDTO param) {
+    public List<TourDTO>doRetrieve(RegionDTO param) {
 		List<TourDTO> list = new ArrayList<TourDTO>();
 		
 		//SearchDTO searchDTO =(SearchDTO) param;

@@ -1362,3 +1362,199 @@ com.pcwk.ehr.user.controller.UserController#doSave(String, String, Model) mapped
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141) ~[spring-test-5.3.37.jar:5.3.37]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90) ~[spring-test-5.3.37.jar:5.3.37]
 	... 74 more
+[2025-06-26 17:41:35] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:41:35] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a68df9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28b576a9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7cf7aee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b1637e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18151a14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64711bf2, org.springframework.test.context.event.EventPublishingTestExecutionListener@169da7f2]
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@6c000e0c, started on Thu Jun 26 17:41:36 GMT+09:00 2025
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'|| AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@6c000e0c, started on Thu Jun 26 17:41:36 GMT+09:00 2025
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 0
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}0
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.getRegionNo - ==>  Preparing: SELECT region_no FROM REGION WHERE region_sido = ? AND region_gugun = ?
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.getRegionNo - ==> Parameters: 서울특별시(String), 서대문구(String)
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.getRegionNo - <==      Total: 1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - ==>  Preparing: SELECT tour_no_seq.NEXTVAL FROM dual
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - ==> Parameters: 
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - <==      Total: 1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave - ==>  Preparing: INSERT INTO TOUR ( tour_no, name, subtitle, contents, views, address, holiday, time, tel, fee, region_no ) VALUES ( ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ? )
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave - ==> Parameters: 66(Integer), 관광지1(String), 소제목1(String), 상세내용1(String), 서울특별시 서대문구 123(String), 토요일(String), 09:00-16:00(String), 010-1111-2222(String), 100000(Integer), 11440(Integer)
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSave - <==    Updates: 1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1.statement:com.pcwk.ehr.tour.viewsUpdate
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - ==>  Preparing: UPDATE tour SET views = ?+1 WHERE tour_no = ?
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - ==> Parameters: 0(Integer), 66(Integer)
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - <==    Updates: 1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2.flag:1
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSelectOne - ==>  Preparing: SELECT tour_no, name, subtitle, contents, views, address, holiday, time, tel, fee, region_no FROM TOUR WHERE tour_no = ?
+[2025-06-26 17:41:37] [DEBUG] com.pcwk.ehr.tour.doSelectOne - ==> Parameters: 66(Integer)
+[2025-06-26 17:41:38] [DEBUG] com.pcwk.ehr.tour.doSelectOne - <==      Total: 1
+[2025-06-26 17:41:38] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:41:38] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:41:38] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:43:00] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:43:00] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a68df9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28b576a9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7cf7aee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b1637e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18151a14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64711bf2, org.springframework.test.context.event.EventPublishingTestExecutionListener@169da7f2]
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@6c000e0c, started on Thu Jun 26 17:43:01 GMT+09:00 2025
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'||LEVEL AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.saveAll - <==    Updates: 509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - statement: com.pcwk.ehr.tour.saveAll
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - flag: 509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - count: 509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@6c000e0c, started on Thu Jun 26 17:43:01 GMT+09:00 2025
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}509
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.getRegionNo - ==>  Preparing: SELECT region_no FROM REGION WHERE region_sido = ? AND region_gugun = ?
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.getRegionNo - ==> Parameters: 서울특별시(String), 서대문구(String)
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.getRegionNo - <==      Total: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - ==>  Preparing: SELECT tour_no_seq.NEXTVAL FROM dual
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - ==> Parameters: 
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave!selectKey - <==      Total: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave - ==>  Preparing: INSERT INTO TOUR ( tour_no, name, subtitle, contents, views, address, holiday, time, tel, fee, region_no ) VALUES ( ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ? )
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave - ==> Parameters: 67(Integer), 관광지1(String), 소제목1(String), 상세내용1(String), 서울특별시 서대문구 123(String), 토요일(String), 09:00-16:00(String), 010-1111-2222(String), 100000(Integer), 11440(Integer)
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSave - <==    Updates: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1.statement:com.pcwk.ehr.tour.viewsUpdate
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - ==>  Preparing: UPDATE tour SET views = ?+1 WHERE tour_no = ?
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - ==> Parameters: 0(Integer), 67(Integer)
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.viewsUpdate - <==    Updates: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2.flag:1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSelectOne - ==>  Preparing: SELECT tour_no, name, subtitle, contents, views, address, holiday, time, tel, fee, region_no FROM TOUR WHERE tour_no = ?
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSelectOne - ==> Parameters: 67(Integer)
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.doSelectOne - <==      Total: 1
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:43:02] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:45:55] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:45:55] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28b576a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7cf7aee, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1b1637e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18151a14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64711bf2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@169da7f2, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c1e23ff]
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@5f233b26, started on Thu Jun 26 17:45:56 GMT+09:00 2025
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 1
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}1
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'||LEVEL AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.saveAll - <==    Updates: 509
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - statement: com.pcwk.ehr.tour.saveAll
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - flag: 509
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - count: 509
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:45:57] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:49:02] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:49:02] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28b576a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7cf7aee, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1b1637e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18151a14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64711bf2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@169da7f2, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c1e23ff]
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@5f233b26, started on Thu Jun 26 17:49:03 GMT+09:00 2025
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'||LEVEL AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.saveAll - <==    Updates: 509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - statement: com.pcwk.ehr.tour.saveAll
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - flag: 509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - count: 509
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 param: RegionDTO [regionNo=0, regionSido=, regionGugun=]
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 statement: com.pcwk.ehr.tour.doRetrieve
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==>  Preparing: SELECT A.*, B.* FROM ( SELECT tt3.* FROM ( SELECT ROWNUM AS RNUM, tt2.* FROM ( SELECT t.tour_no, t.name, r.region_sido, r.region_gugun, i.image_url FROM tour t JOIN region r ON r.region_no = t.region_no LEFT JOIN image i ON t.tour_no = i.target_no AND i.table_name = 'TOUR' WHERE r.region_gugun IS NULL ORDER BY t.tour_no DESC ) tt2 WHERE ROWNUM <= 10 ) tt3 WHERE RNUM >= 1 ) A CROSS JOIN ( SELECT COUNT(*) AS total_cnt FROM tour ) B
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==> Parameters: 
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.doRetrieve - <==      Total: 0
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 3 list: []
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:49:04] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:49:22] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:49:22] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28b576a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7cf7aee, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1b1637e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18151a14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64711bf2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@169da7f2, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c1e23ff]
+[2025-06-26 17:49:23] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:49:23] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:49:23] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:49:23] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@5f233b26, started on Thu Jun 26 17:49:22 GMT+09:00 2025
+[2025-06-26 17:49:23] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'||LEVEL AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.saveAll - <==    Updates: 509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - statement: com.pcwk.ehr.tour.saveAll
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - flag: 509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - count: 509
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 param: RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=]
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 statement: com.pcwk.ehr.tour.doRetrieve
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==>  Preparing: SELECT A.*, B.* FROM ( SELECT tt3.* FROM ( SELECT ROWNUM AS RNUM, tt2.* FROM ( SELECT t.tour_no, t.name, r.region_sido, r.region_gugun, i.image_url FROM tour t JOIN region r ON r.region_no = t.region_no LEFT JOIN image i ON t.tour_no = i.target_no AND i.table_name = 'TOUR' WHERE r.region_sido = ? AND r.region_gugun IS NULL ORDER BY t.tour_no DESC ) tt2 WHERE ROWNUM <= 10 ) tt3 WHERE RNUM >= 1 ) A CROSS JOIN ( SELECT COUNT(*) AS total_cnt FROM tour ) B
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==> Parameters: 서울특별시(String)
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.doRetrieve - <==      Total: 0
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 3 list: []
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:49:24] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:51:08] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2025-06-26 17:51:08] [INFO ] org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28b576a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7cf7aee, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2f6bbeb0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1b1637e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18151a14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64711bf2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@169da7f2, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c1e23ff]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.user.controller.UserController - ┌─────────────────────────────────┐
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.user.controller.UserController - │ UserController()                │
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.user.controller.UserController - └─────────────────────────────────┘
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - context: org.springframework.context.support.GenericApplicationContext@5f233b26, started on Thu Jun 26 17:51:08 GMT+09:00 2025
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 statement: {}com.pcwk.ehr.tour.deleteAll
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==>  Preparing: DELETE FROM TOUR
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.deleteAll - ==> Parameters: 
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.deleteAll - <==    Updates: 509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 flag: {}509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.saveAll - ==>  Preparing: INSERT INTO tour SELECT LEVEL AS tour_no, '관광지명'||LEVEL AS name, '소제목'||LEVEL AS subtitle, '내용'||LEVEL AS contents, MOD(level,10) AS views, '서울특별시 서대문구 '||LEVEL AS address, '휴일'|| LEVEL AS holiday, '운영시간 '|| LEVEL AS time, '010-0000-111'||LEVEL as tel, '20000'||LEVEL as fee, 11440 as region_no FROM dual CONNECT BY LEVEL <=509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.saveAll - ==> Parameters: 
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.saveAll - <==    Updates: 509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - statement: com.pcwk.ehr.tour.saveAll
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - flag: 509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - count: 509
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 1 param: RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 2 statement: com.pcwk.ehr.tour.doRetrieve
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==>  Preparing: SELECT A.*, B.* FROM ( SELECT tt3.* FROM ( SELECT ROWNUM AS RNUM, tt2.* FROM ( SELECT t.tour_no, t.name, r.region_sido, r.region_gugun, i.image_url FROM tour t JOIN region r ON r.region_no = t.region_no LEFT JOIN image i ON t.tour_no = i.target_no AND i.table_name = 'TOUR' WHERE r.region_sido = ? ORDER BY t.tour_no DESC ) tt2 WHERE ROWNUM <= 10 ) tt3 WHERE RNUM >= 1 ) A CROSS JOIN ( SELECT COUNT(*) AS total_cnt FROM tour ) B
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.doRetrieve - ==> Parameters: 서울특별시(String)
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.doRetrieve - <==      Total: 10
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.dao.TourDaoImpl - 3 list: [TourDTO [tourNo=509, name=관광지명509, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=508, name=관광지명508, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=507, name=관광지명507, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=506, name=관광지명506, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=505, name=관광지명505, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=504, name=관광지명504, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=503, name=관광지명503, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=502, name=관광지명502, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=501, name=관광지명501, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null], TourDTO [tourNo=500, name=관광지명500, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=509, name=관광지명509, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=508, name=관광지명508, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=507, name=관광지명507, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=506, name=관광지명506, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=505, name=관광지명505, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=504, name=관광지명504, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=503, name=관광지명503, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=502, name=관광지명502, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=501, name=관광지명501, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - TourDTO [tourNo=500, name=관광지명500, subtitle=null, contents=null, views=0, address=null, holiday=null, time=null, tel=null, fee=0, regionNo=0, region=RegionDTO [regionNo=0, regionSido=서울특별시, regionGugun=서대문구], image=null]
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - @After
+[2025-06-26 17:51:10] [DEBUG] com.pcwk.ehr.tour.TourDaoTest - ***************************

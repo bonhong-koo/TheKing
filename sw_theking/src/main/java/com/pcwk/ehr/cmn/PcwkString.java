@@ -1,6 +1,7 @@
 package com.pcwk.ehr.cmn;
 
 import com.google.common.base.Strings;
+import com.pcwk.ehr.user.domain.UserDTO;
 
 public class PcwkString {
 	
@@ -31,5 +32,10 @@ public class PcwkString {
 	public static String nullToEmpty(String str) {
 		//return (str==null) ? "" : str;
 		return Strings.nullToEmpty(str);
+	}
+	
+	//ADMIN인지 확인
+	public static boolean isAdmin(UserDTO user) {
+	    return "ADMIN".equalsIgnoreCase(user.getRole());
 	}
 }
