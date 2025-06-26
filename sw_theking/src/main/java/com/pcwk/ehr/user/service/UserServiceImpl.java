@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Service;
 
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
 	
 	@Override
-	public List<UserDTO> doRetrieve(UserDTO param) {
+	public List<UserDTO> doRetrieve(SearchDTO param) {
 		return mapper.doRetrieve(param);	
 	}
 	

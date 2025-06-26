@@ -4,6 +4,8 @@ import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,8 @@ import com.pcwk.ehr.user.service.UserService;
 
 @Controller
 @RequestMapping("/user")
-public class UserController implements PLog {
+public class UserController {
+	Logger log = LogManager.getLogger(getClass());
 	
 	@Autowired
 	private UserService userService;
