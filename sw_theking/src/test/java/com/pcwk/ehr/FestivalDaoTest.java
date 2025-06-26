@@ -17,9 +17,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.festival.domain.FestivalDTO;
 import com.pcwk.ehr.mapper.FestivalMapper;
-import com.pcwk.ehr.user.domain.UserDTO;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml",
 		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
@@ -31,17 +31,19 @@ class FestivalDaoTest {
 	FestivalDTO dto02;
 	FestivalDTO dto03;
 	
+	SearchDTO searchDTO = new SearchDTO();
+	
 	@Autowired
 	FestivalMapper mapper;
 	@Autowired
 	ApplicationContext context;
 	@BeforeEach
 	void setUp() throws Exception {
-		dto01 =new FestivalDTO(1, "축제1","축제 시작1" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto01 =new FestivalDTO(1, "축제1","축제 시작1" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
-		dto02 =new FestivalDTO(2, "축제2","축제 시작2" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto02 =new FestivalDTO(2, "축제2","축제 시작2" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
-		dto03 =new FestivalDTO(3, "축제3","축제 시작3" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto03 =new FestivalDTO(3, "축제3","축제 시작3" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
 		
 		
@@ -66,11 +68,54 @@ class FestivalDaoTest {
 	}
 	
 	@Test
+	void checkRetrieve() {
+		String regionSido = "";
+		String date ="";
+		searchDTO.setPageNo(1);
+		searchDTO.setPageSize(10);
+		List list = mapper.checkRetrieve(regionSido, date, searchDTO);
+	}
+	
+	
+	@Disabled
+	@Test
+	void upView(){
+		//삭제
+		mapper.doDelete(dto01);
+
+		//등록
+		mapper.doSave(dto01);
+		assertNotNull(dto01);
+		
+		//조회수 증가
+		mapper.upViews(dto01);
+		
+		FestivalDTO vo = mapper.doSelectOne(dto01);
+		log.debug(vo.getViews());
+		
+		assertEquals(1, vo.getViews());
+	}
+	
+	
+	@Disabled
+	@Test
+	void getCount() throws SQLException {
+		int count = mapper.getCount();
+		
+		log.debug("count :{}",count);
+		
+		assertEquals(52, count);
+		
+	}
+	
+	
+	@Disabled
+	@Test
 	void doRetrieve() {
 
-		dto01.setPageNo(2);
-		dto01.setPageSize(20);
-		List<FestivalDTO> list = mapper.doRetrieve(dto01);
+		searchDTO.setPageNo(2);
+		searchDTO.setPageSize(20);
+		List<FestivalDTO> list = mapper.doRetrieve(searchDTO);
 		assertNotNull(list);
 		for(FestivalDTO outVO : list) {
 			log.debug(outVO);
