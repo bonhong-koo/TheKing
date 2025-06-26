@@ -1,7 +1,7 @@
 package com.pcwk.ehr.region.domain;
 
 public class RegionDTO {
-	private int regionNo	    ; //지역번호
+	private Integer regionNo	    ; //지역번호
 	private String regionSido	; //지역시도
 	private String regionGugun	; //지역구군
 	
@@ -16,11 +16,11 @@ public class RegionDTO {
 		this.regionGugun = regionGugun;
 	}
 
-	public int getRegionNo() {
+	public Integer getRegionNo() {
 		return regionNo;
 	}
 
-	public void setRegionNo(int regionNo) {
+	public void setRegionNo(Integer regionNo) {
 		this.regionNo = regionNo;
 	}
 
