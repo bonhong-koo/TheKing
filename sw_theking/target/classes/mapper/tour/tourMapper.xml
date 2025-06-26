@@ -3,7 +3,7 @@
 <mapper namespace="com.pcwk.ehr.tour">
     
     <!-- resultMap -->
-    <resultMap id="tourResultMap" type="com.pcwk.ehr.tour.domain.TourDTO">
+    <resultMap id="tourResultMap" type="TourDTO">
         <id property="tourNo" column="tour_no"/>
         <result property="name" column="name"/>
         <result property="subtitle" column="subtitle"/>
@@ -16,7 +16,7 @@
         <result property="fee" column="fee"/>
 
         <!-- 중첩 Region 매핑 -->
-        <association property="region" javaType="com.pcwk.ehr.region.domain.RegionDTO">
+        <association property="region" javaType="RegionDTO">
             <id property="regionNo" column="region_no"/>
             <result property="regionSido" column="region_sido"/>
             <result property="regionGugun" column="region_gugun"/>
@@ -24,16 +24,55 @@
     </resultMap>
 
     <!-- 관광지 저장 -->
-    <insert id="doSave" parameterType="com.pcwk.ehr.tour.domain.TourDTO">
+    <insert id="doSave" parameterType="TourDTO">
+        <selectKey keyProperty="tourNo" resultType="int" order="BEFORE">
+            SELECT tour_no_seq.NEXTVAL FROM dual
+        </selectKey>
+
+        <!-- 주소를 바탕으로 region_no를 조회하여 저장 -->
         INSERT INTO TOUR (
-            tour_no, name, subtitle, contents, views,
-            address, holiday, time, tel, fee, region_no
+            tour_no,
+            name,
+            subtitle,
+            contents,
+            views,
+            address,
+            holiday,
+            time,
+            tel,
+            fee,
+            region_no
         ) VALUES (
-            TOUR_NO_SEQ.NEXTVAL,
-            #{name}, #{subtitle}, #{contents}, 0,
-            #{address}, #{holiday}, #{time}, #{tel}, #{fee}, #{region.regionNo}
+            #{tourNo},
+            #{name},
+            #{subtitle},
+            #{contents},
+            0,
+            #{address},
+            #{holiday},
+            #{time},
+            #{tel},
+            #{fee},
+            #{region.regionNo}
         )
     </insert>
+
+    <!-- 관광지 정보 수정 -->
+    <update id="doUpdate" parameterType="TourDTO">
+        UPDATE TOUR
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="subtitle != null">subtitle = #{subtitle},</if>
+            <if test="contents != null">contents = #{contents},</if>
+            <if test="address != null">address = #{address},</if>
+            <if test="holiday != null">holiday = #{holiday},</if>
+            <if test="time != null">time = #{time},</if>
+            <if test="tel != null">tel = #{tel},</if>
+            <if test="fee != null">fee = #{fee},</if>
+            <if test="region.regionNo != null">region_no = #{region.regionNo},</if>
+        </set>
+        WHERE tour_no = #{tourNo}
+    </update>
 
     <!-- 지역번호 조회 -->
     <select id="getRegionNo" parameterType="map" resultType="int">
@@ -48,11 +87,29 @@
         </if>
     </select>
 
-    <!--관광지 전체 삭제 (테스트용) -->
+    <!-- 관광지 조회 -->
+    <select id="doSelectOne" parameterType="int" resultMap="tourResultMap">
+        SELECT 
+            tour_no, name, subtitle, contents, views, address, holiday,
+            time, tel, fee, region_no
+        FROM TOUR
+        WHERE tour_no = #{tourNo}
+    </select>
+
+    <!-- 특정 관광지 삭제 -->
+    <delete id="doDelete" parameterType="TourDTO">
+        DELETE FROM TOUR
+        WHERE tour_no = #{tourNo}
+    </delete>
+
+    <!-- 관광지 전체 삭제 (테스트용) -->
     <delete id="deleteAll">
         DELETE FROM TOUR
     </delete>
+
+    <!-- 행 개수 확인(테스트용) -->
     <select id="getCount" resultType="java.lang.Integer">
-        SELECT COUNT(*) total_cnt FROM tour
+        SELECT COUNT(*) total_cnt FROM TOUR
     </select>
+
 </mapper>
