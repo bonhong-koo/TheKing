@@ -3,23 +3,19 @@ package com.pcwk.ehr.tour.dao;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import javax.sql.DataSource;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.pcwk.ehr.cmn.PLog;
 import com.pcwk.ehr.region.dao.RegionDao;
 import com.pcwk.ehr.region.domain.RegionDTO;
 import com.pcwk.ehr.tour.domain.TourDTO;
-import com.pcwk.ehr.user.domain.UserDTO;
 
 @Repository
 public class TourDaoImpl{
@@ -36,14 +32,38 @@ public class TourDaoImpl{
     private RegionDao regionDao;
 	
 	//1. 관광지 정보 등록 doSave 0
-	//2. 관광지 정보 수정 doUpdate 
+	//2. 관광지 정보 수정 doUpdate 0
 	//3. 관광지 정보 삭제 doDelete 0
 	//+deleteAll(테스트용)0
 	//4.1 관광지 시도별 조회(페이징) doRetrieve
-	//4.2 관광지 시군별 조회(페이징) doRetrieve
 	//4.3 관광지 검색 조회 (제목, 지역)(페이징) doSelectOne -> getRegionNo 0
 	//5.getCount -> 몇 권인지 조회할 때 0
+    //6.조회수 업데이트 views update
 	   // 관광지 정보 조회
+    
+    public List<TourDTO>doRetrieve(TourDTO param) {
+		List<TourDTO> list = new ArrayList<TourDTO>();
+		
+		//SearchDTO searchDTO =(SearchDTO) param;
+		String statement = NAMESPACE+DOT+"doRetrieve";
+		log.debug("1 param: {}",param);
+		log.debug("2 statement: {}",statement);
+
+		list = sqlSessionTemplate.selectList(statement, param);
+		log.debug("3 list: {}",list);
+		return list;
+	}
+    
+    public int viewsUpdate(TourDTO param) {
+    	int flag = 0;
+    	String statement = NAMESPACE + DOT + "viewsUpdate";
+    	log.debug("1.statement:{}", statement);
+    	
+    	flag = sqlSessionTemplate.update(statement, param);
+    	log.debug("2.flag:{}", flag);
+    	return flag;
+    }
+
     public TourDTO doSelectOne(TourDTO param) {
         TourDTO outDTO = null;
         String statement = NAMESPACE + DOT + "doSelectOne";
