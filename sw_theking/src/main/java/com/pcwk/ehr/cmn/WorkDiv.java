@@ -10,7 +10,7 @@ public interface WorkDiv<T> {
 	 * @param param
 	 * @return list<t>
 	 */
-	List<T> doRetrieve(DTO param);
+	List<T> doRetrieve(SearchDTO param);
 	/**
 	 * 단건 삭제
 	 * @param param

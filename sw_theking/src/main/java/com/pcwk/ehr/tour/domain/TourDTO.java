@@ -1,9 +1,10 @@
 package com.pcwk.ehr.tour.domain;
 
+import com.pcwk.ehr.image.domain.ImageDTO;
 import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class TourDTO  {
-	private  int tourNo	; //관광지 번호
+	private  Integer tourNo	; //관광지 번호
 	private  String name	    ; //관광지명      
 	private  String subtitle	; //소제목
 	private  String contents	; //상세 내용
@@ -16,12 +17,15 @@ public class TourDTO  {
 	private  int regionNo	; //지역코드
 	
 	private RegionDTO region;
+	private ImageDTO image;
+	
 	
 	public TourDTO() {}
 	
 
-	public TourDTO(int tourNo, String name, String subtitle, String contents, int views, String address, String holiday,
-			String time, String tel, int fee, int regionNo) {
+
+	public TourDTO(Integer tourNo, String name, String subtitle, String contents, int views, String address,
+			String holiday, String time, String tel, int fee, int regionNo, RegionDTO region) {
 		super();
 		this.tourNo = tourNo;
 		this.name = name;
@@ -34,7 +38,10 @@ public class TourDTO  {
 		this.tel = tel;
 		this.fee = fee;
 		this.regionNo = regionNo;
+		this.region = region;
 	}
+
+
 
 	public RegionDTO getRegion() {
 		return region;
@@ -55,95 +62,145 @@ public class TourDTO  {
 		this.regionNo = regionNo;
 	}
 
+	
 
-	public int getTourNo() {
+	public ImageDTO getImage() {
+		return image;
+	}
+
+
+
+	public void setImage(ImageDTO image) {
+		this.image = image;
+	}
+
+
+
+	public Integer getTourNo() {
 		return tourNo;
 	}
 
-	public void setTourNo(int tourNo) {
+
+
+	public void setTourNo(Integer tourNo) {
 		this.tourNo = tourNo;
 	}
+
+
 
 	public String getName() {
 		return name;
 	}
 
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 
 	public String getSubtitle() {
 		return subtitle;
 	}
 
+
+
 	public void setSubtitle(String subtitle) {
 		this.subtitle = subtitle;
 	}
+
+
 
 	public String getContents() {
 		return contents;
 	}
 
+
+
 	public void setContents(String contents) {
 		this.contents = contents;
 	}
+
+
 
 	public int getViews() {
 		return views;
 	}
 
+
+
 	public void setViews(int views) {
 		this.views = views;
 	}
+
+
 
 	public String getAddress() {
 		return address;
 	}
 
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
 
 	public String getHoliday() {
 		return holiday;
 	}
 
+
+
 	public void setHoliday(String holiday) {
 		this.holiday = holiday;
 	}
+
+
 
 	public String getTime() {
 		return time;
 	}
 
+
+
 	public void setTime(String time) {
 		this.time = time;
 	}
+
+
 
 	public String getTel() {
 		return tel;
 	}
 
+
+
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
 
+
+
 	public int getFee() {
 		return fee;
 	}
+
+
 
 	public void setFee(int fee) {
 		this.fee = fee;
 	}
 
 
+
 	@Override
 	public String toString() {
 		return "TourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
 				+ ", views=" + views + ", address=" + address + ", holiday=" + holiday + ", time=" + time + ", tel="
-				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + "]";
+				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + ", image=" + image + "]";
 	}
 
-
-	
 }
