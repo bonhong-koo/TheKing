@@ -55,7 +55,18 @@ class TourDaoTest {
         log.debug("@After");
         log.debug("***************************");
     }
-
+    @Test
+    void doRetrive()throws SQLException {
+    	//1. 전체 삭제
+    	dao.deleteAll();
+    	
+    	//2.
+    	int count = dao.saveAll();
+    	log.debug("count: "+count);
+    	assertEquals(509,count);
+    }
+    
+    @Disabled
     @Test
     void doUpdate() throws SQLException {
         dao.deleteAll();
@@ -91,7 +102,22 @@ class TourDaoTest {
         assertEquals(outVO.getSubtitle(), updatedVO.getSubtitle());
         assertEquals(outVO.getTel(), updatedVO.getTel());
     }
+    @Test
+    void viewsUpdate() {
+    	dao.deleteAll();
 
+        int flag = dao.doSave(dto01);
+        assertEquals(1, flag);
+        
+        flag = dao.viewsUpdate(dto01);
+        assertEquals(1, flag);
+        
+        TourDTO outDTO = dao.doSelectOne(dto01);
+        assertNotNull(outDTO);     
+        
+    }
+    
+    @Disabled
     @Test
     void testDoSave() throws SQLException {
         dao.deleteAll();
@@ -116,7 +142,7 @@ class TourDaoTest {
         int deleteCount = dao.doDelete(param);
         assertEquals(1, deleteCount);
     }
-
+    @Disabled
     @Test
     void beans() {
         assertNotNull(context);

@@ -1,5 +1,6 @@
 package com.pcwk.ehr.tour.domain;
 
+import com.pcwk.ehr.image.domain.ImageDTO;
 import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class TourDTO  {
@@ -16,6 +17,8 @@ public class TourDTO  {
 	private  int regionNo	; //지역코드
 	
 	private RegionDTO region;
+	private ImageDTO image;
+	
 	
 	public TourDTO() {}
 	
@@ -57,6 +60,18 @@ public class TourDTO  {
 
 	public void setRegionNo(int regionNo) {
 		this.regionNo = regionNo;
+	}
+
+	
+
+	public ImageDTO getImage() {
+		return image;
+	}
+
+
+
+	public void setImage(ImageDTO image) {
+		this.image = image;
 	}
 
 
@@ -185,8 +200,7 @@ public class TourDTO  {
 	public String toString() {
 		return "TourDTO [tourNo=" + tourNo + ", name=" + name + ", subtitle=" + subtitle + ", contents=" + contents
 				+ ", views=" + views + ", address=" + address + ", holiday=" + holiday + ", time=" + time + ", tel="
-				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + "]";
+				+ tel + ", fee=" + fee + ", regionNo=" + regionNo + ", region=" + region + ", image=" + image + "]";
 	}
-
 
 }
