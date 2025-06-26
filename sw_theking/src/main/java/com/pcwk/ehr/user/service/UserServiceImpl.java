@@ -96,6 +96,6 @@ public class UserServiceImpl implements UserService {
 	    return password != null &&
 	           password.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,20}$");
 	}
-
+	
 }
 // class 끝
