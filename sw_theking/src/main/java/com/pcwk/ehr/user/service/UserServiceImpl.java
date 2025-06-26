@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Service;
 
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
 	
 	@Override
-	public List<UserDTO> doRetrieve(UserDTO param) {
+	public List<UserDTO> doRetrieve(SearchDTO param) {
 		return mapper.doRetrieve(param);	
 	}
 	
@@ -96,6 +97,6 @@ public class UserServiceImpl implements UserService {
 	    return password != null &&
 	           password.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,20}$");
 	}
-
+	
 }
 // class 끝
