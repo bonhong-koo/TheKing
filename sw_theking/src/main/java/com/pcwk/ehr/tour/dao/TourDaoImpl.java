@@ -40,7 +40,16 @@ public class TourDaoImpl{
 	//5.getCount -> 몇 권인지 조회할 때 0
     //6.조회수 업데이트 views update
 	   // 관광지 정보 조회
-    
+    public int saveAll() {
+		int flag =0;
+		
+		String statement = NAMESPACE+DOT+"saveAll";
+		flag = sqlSessionTemplate.insert(statement);
+		log.debug("statement: "+statement);
+		log.debug("flag: "+flag);
+		
+		return flag;
+	}
     public List<TourDTO>doRetrieve(TourDTO param) {
 		List<TourDTO> list = new ArrayList<TourDTO>();
 		
