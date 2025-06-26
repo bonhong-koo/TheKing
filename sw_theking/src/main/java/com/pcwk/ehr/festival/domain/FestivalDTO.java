@@ -1,6 +1,8 @@
 package com.pcwk.ehr.festival.domain;
 
 import com.pcwk.ehr.cmn.DTO;
+import com.pcwk.ehr.image.domain.ImageDTO;
+import com.pcwk.ehr.region.domain.RegionDTO;
 
 public class FestivalDTO extends DTO{
 	private int festaNo  ;	//축제번호
@@ -14,8 +16,30 @@ public class FestivalDTO extends DTO{
 	private int regionNo ;	//지역번호
 	private String startDate;	//축제 시작일
 	private String endDate  ;	//축제 종료일
+	private ImageDTO image  ;
+	private RegionDTO region ;
 	
 	
+	public ImageDTO getImage() {
+		return image;
+	}
+
+
+	public void setImage(ImageDTO image) {
+		this.image = image;
+	}
+
+
+	public RegionDTO getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(RegionDTO region) {
+		this.region = region;
+	}
+
+
 	public FestivalDTO() {}
 
 
@@ -129,13 +153,17 @@ public class FestivalDTO extends DTO{
 	}
 
 
-	public FestivalDTO(int festaNo, String name, String subtitle, String contents, String address, String tel, int fee,
-			int regionNo, String startDate, String endDate) {
+
+
+
+	public FestivalDTO(int festaNo, String name, String subtitle, String contents, int views, String address,
+			String tel, int fee, int regionNo, String startDate, String endDate) {
 		super();
 		this.festaNo = festaNo;
 		this.name = name;
 		this.subtitle = subtitle;
 		this.contents = contents;
+		this.views = views;
 		this.address = address;
 		this.tel = tel;
 		this.fee = fee;
@@ -149,8 +177,12 @@ public class FestivalDTO extends DTO{
 	public String toString() {
 		return "FestivalDTO [festaNo=" + festaNo + ", name=" + name + ", subtitle=" + subtitle + ", contents="
 				+ contents + ", views=" + views + ", address=" + address + ", tel=" + tel + ", fee=" + fee
-				+ ", regionNo=" + regionNo + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+				+ ", regionNo=" + regionNo + ", startDate=" + startDate + ", endDate=" + endDate + ", image=" + image
+				+ ", region=" + region + "]";
 	}
+
+
+
 
 
 	
