@@ -8,6 +8,11 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- Mapper 자동 scan *Impl 제거 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.pcwk.ehr.mapper"/>
+	</bean>
 
     <!-- mybatis -->
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
@@ -94,11 +99,12 @@
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-
+    <!-- 192.168.100.30 -->
+    <!-- 218.144.130.138 -->
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
         <property name="driverClassName"
             value="oracle.jdbc.driver.OracleDriver" />
-        <property name="jdbcUrl"
+        <property name="jdbcUrl" 
             value="jdbc:oracle:thin:@218.144.130.138:1522:XE" />
         <property name="username" value="king" />
         <property name="password" value="7749" />
