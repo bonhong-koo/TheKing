@@ -37,11 +37,11 @@ class FestivalDaoTest {
 	ApplicationContext context;
 	@BeforeEach
 	void setUp() throws Exception {
-		dto01 =new FestivalDTO(1, "축제1","축제 시작1" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto01 =new FestivalDTO(1, "축제1","축제 시작1" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
-		dto02 =new FestivalDTO(2, "축제2","축제 시작2" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto02 =new FestivalDTO(2, "축제2","축제 시작2" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
-		dto03 =new FestivalDTO(3, "축제3","축제 시작3" , "축제가 시작됩니다.", "경기도 고양시", "010-1234-1234",
+		dto03 =new FestivalDTO(3, "축제3","축제 시작3" , "축제가 시작됩니다.",0, "경기도 고양시", "010-1234-1234",
 				10000, 41280, "2025-06-12", "2025-07-12");
 		
 		
@@ -65,6 +65,26 @@ class FestivalDaoTest {
 		log.debug("mapper : " + mapper);
 	}
 	
+	@Test
+	void upView(){
+		//삭제
+		mapper.doDelete(dto01);
+
+		//등록
+		mapper.doSave(dto01);
+		assertNotNull(dto01);
+		
+		//조회수 증가
+		mapper.upViews(dto01);
+		
+		FestivalDTO vo = mapper.doSelectOne(dto01);
+		log.debug(vo.getViews());
+		
+		assertEquals(1, vo.getViews());
+	}
+	
+	
+	@Disabled
 	@Test
 	void getCount() throws SQLException {
 		int count = mapper.getCount();

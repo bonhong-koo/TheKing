@@ -12,13 +12,9 @@ import com.pcwk.ehr.user.domain.UserDTO;
 
 @Mapper
 public interface FestivalMapper extends WorkDiv<FestivalDTO>{
-
-	int saveAll();
-	
-	List<FestivalDTO> getAll();
-	
-	void deleteAll() throws SQLException;
-	
+	//총 축제 건수 
 	int getCount() throws SQLException;
+	//조회수 증가
+	int upViews(FestivalDTO dto);
 
 }

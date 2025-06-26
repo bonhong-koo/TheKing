@@ -129,13 +129,17 @@ public class FestivalDTO extends DTO{
 	}
 
 
-	public FestivalDTO(int festaNo, String name, String subtitle, String contents, String address, String tel, int fee,
-			int regionNo, String startDate, String endDate) {
+
+
+
+	public FestivalDTO(int festaNo, String name, String subtitle, String contents, int views, String address,
+			String tel, int fee, int regionNo, String startDate, String endDate) {
 		super();
 		this.festaNo = festaNo;
 		this.name = name;
 		this.subtitle = subtitle;
 		this.contents = contents;
+		this.views = views;
 		this.address = address;
 		this.tel = tel;
 		this.fee = fee;
