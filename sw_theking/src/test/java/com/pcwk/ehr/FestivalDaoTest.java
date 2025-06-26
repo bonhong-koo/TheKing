@@ -17,9 +17,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.festival.domain.FestivalDTO;
 import com.pcwk.ehr.mapper.FestivalMapper;
-import com.pcwk.ehr.user.domain.UserDTO;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml",
 		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" })
@@ -30,6 +30,8 @@ class FestivalDaoTest {
 	FestivalDTO dto01;
 	FestivalDTO dto02;
 	FestivalDTO dto03;
+	
+	SearchDTO searchDTO = new SearchDTO();
 	
 	@Autowired
 	FestivalMapper mapper;
@@ -100,9 +102,9 @@ class FestivalDaoTest {
 	@Test
 	void doRetrieve() {
 
-		dto01.setPageNo(2);
-		dto01.setPageSize(20);
-		List<FestivalDTO> list = mapper.doRetrieve(dto01);
+		searchDTO.setPageNo(2);
+		searchDTO.setPageSize(20);
+		List<FestivalDTO> list = mapper.doRetrieve(searchDTO);
 		assertNotNull(list);
 		for(FestivalDTO outVO : list) {
 			log.debug(outVO);
