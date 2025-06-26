@@ -68,6 +68,17 @@ class FestivalDaoTest {
 	}
 	
 	@Test
+	void checkRetrieve() {
+		String regionSido = "";
+		String date ="";
+		searchDTO.setPageNo(1);
+		searchDTO.setPageSize(10);
+		List list = mapper.checkRetrieve(regionSido, date, searchDTO);
+	}
+	
+	
+	@Disabled
+	@Test
 	void upView(){
 		//삭제
 		mapper.doDelete(dto01);
