@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>첫 페이지</h1>
-<a href="/user/signUp"><font color="#000000">회원가입</font></a>
+<a href="user/signUp.do"><font color="#000000">회원가입</font></a>
 </body>
 </html>

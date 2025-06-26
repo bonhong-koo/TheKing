@@ -4,6 +4,8 @@ import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.pcwk.ehr.cmn.PLog;
 import com.pcwk.ehr.user.domain.UserDTO;
@@ -19,7 +22,8 @@ import com.pcwk.ehr.user.service.UserService;
 
 @Controller
 @RequestMapping("/user")
-public class UserController implements PLog {
+public class UserController {
+	Logger log = LogManager.getLogger(getClass());
 	
 	@Autowired
 	private UserService userService;
@@ -37,13 +41,13 @@ public class UserController implements PLog {
 	}
 	
 	 //회원가입 화면
-    @GetMapping("/signUP.do")
+    @GetMapping("/signUp.do")
     public String signUPPage() {
         return "user/signUp";
     }
     
     //회원가입
-    @PostMapping("/signUP")
+    @PostMapping("/doSave.do")
     public String doSave(UserDTO user, Model model) throws SQLException {
     	try {
             // 1. 서비스 호출
@@ -59,9 +63,37 @@ public class UserController implements PLog {
             model.addAttribute("error", e.getMessage()); // 서비스에서 던진 에러 메시지를 모델에 추가
 
             // 4. 다시 회원가입 폼으로 돌아감
-            return "user/signUP"; // join.jsp
+            return "user/signUp"; //
         }
     }
+    
+    @RequestMapping(value="/async_result.do" 
+			, method = RequestMethod.POST
+			, produces="text/plain;charset=UTF-8")
+	@ResponseBody
+	public String asyncResult(HttpServletRequest req) {
+		log.debug("┌─────────────────────────┐");
+		log.debug("│ asyncResult()           │");
+		log.debug("└─────────────────────────┘");
+		
+		String userId = req.getParameter("userId");
+		String password = req.getParameter("password");
+		String name = req.getParameter("name");
+		String nickname = req.getParameter("nickname");
+		String email = req.getParameter("email");
+		String mobile = req.getParameter("mobile");
+		String address= req.getParameter("address");
+		
+		log.debug("userId:{}",userId);
+		log.debug("password:{}",password);
+		log.debug("name:{}",name);
+		log.debug("nickname:{}",nickname);
+		log.debug("email:{}",email);
+		log.debug("mobile:{}",mobile);
+		log.debug("address:{}",address);
+		
+		return "PCWK_"+userId;
+	}
     
 	@GetMapping("/doSaveView.do")
 	public String doSaveView() {
