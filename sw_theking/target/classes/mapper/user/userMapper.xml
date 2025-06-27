@@ -127,8 +127,8 @@
 	        email,
 	        mobile,
 	        address,
-	        role,
-	        profile,
+	        <if test="role != null">role,</if>
+       	 	<if test="profile != null">profile,</if>
 	        reg_date,
 	        mod_date
 	    ) VALUES (
@@ -139,8 +139,8 @@
 	        #{email},
 	        #{mobile},
 	        #{address},
-	        #{role},
-	        #{profile, jdbcType=VARCHAR},
+	        <if test="role != null">#{role},</if>
+        	<if test="profile != null">#{profile},</if>
 	        SYSDATE,
 	        SYSDATE
 	    )
