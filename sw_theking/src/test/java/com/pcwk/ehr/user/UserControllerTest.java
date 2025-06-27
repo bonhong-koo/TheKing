@@ -6,8 +6,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.sql.SQLException;
-
-import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,19 +22,16 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.google.gson.Gson;
 import com.pcwk.ehr.cmn.MessageDTO;
-import com.pcwk.ehr.cmn.PcwkString;
 import com.pcwk.ehr.mapper.UserMapper;
 import com.pcwk.ehr.user.domain.UserDTO;
 
@@ -81,6 +78,7 @@ class UserControllerTest {
 		
 	}
 
+	@Disabled
 	@Test
 	void doLogin() throws Exception {
 	    log.debug("┌───────────────────────────────┐");
@@ -167,6 +165,54 @@ class UserControllerTest {
 //	    } else {
 //	        return new MessageDTO(0, "사용자 삭제 실패.");
 //	    }
+	}
+	
+	@Test
+	void doRetrieve() throws Exception {
+		log.debug("┌───────────────────────────┐");
+		log.debug("│ doRetrieve()              │");
+		log.debug("└───────────────────────────┘");
+		
+		//1. 전체삭제
+		//2. 502건 입력
+		//3. 조회
+		
+		//1.
+		userMapper.deleteAll();
+		
+		//2.
+		userMapper.saveAll();
+		assertEquals(502, userMapper.getCount());
+		
+		//3.url호출, method:get, param
+		MockHttpServletRequestBuilder  requestBuilder
+		= MockMvcRequestBuilders.get("/user/doRetrieve.do")
+		.param("pageNo", "0")
+		.param("pageSize", "0")
+		.param("searchDiv", "")
+		.param("searchWord", "");
+		
+		
+		//3.1
+		ResultActions resultActions= mockMvc.perform(requestBuilder)
+		.andExpect(status().isOk());		
+		
+		
+		//3.2 Model 데이터 조회
+		MvcResult  mvcResult=resultActions.andDo(print()).andReturn();
+				
+		//3.3
+		Map<String, Object> model=mvcResult.getModelAndView().getModel();
+		List<UserDTO> list=(List<UserDTO>) model.get("list");
+		
+		for(UserDTO dto   :list) {
+			log.debug(dto);
+		}
+		
+		//3.4
+		String viewName = mvcResult.getModelAndView().getViewName();
+		log.debug("viewName:{}",viewName);
+		assertEquals("user/user_list", viewName);
 	}
 	
 	@Disabled

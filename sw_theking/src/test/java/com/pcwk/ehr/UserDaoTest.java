@@ -292,17 +292,17 @@ public class UserDaoTest {
 		assertEquals(count, 3);
 
 		// 3.
-//		UserDTO outVO = mapper.doSelectOne(dto01);
-//		assertNotNull(outVO);
-//		isSameUser(outVO, dto01);
-//
-//		UserDTO outVO2 = mapper.doSelectOne(dto02);
-//		assertNotNull(outVO2);
-//		isSameUser(outVO2, dto02);
-//
-//		UserDTO outVO3 = mapper.doSelectOne(dto03);
-//		assertNotNull(outVO3);
-//		isSameUser(outVO3, dto03);
+		UserDTO outVO = mapper.doSelectOne(dto01);
+		assertNotNull(outVO);
+		isSameUser(outVO, dto01);
+
+		UserDTO outVO2 = mapper.doSelectOne(dto02);
+		assertNotNull(outVO2);
+		isSameUser(outVO2, dto02);
+
+		UserDTO outVO3 = mapper.doSelectOne(dto03);
+		assertNotNull(outVO3);
+		isSameUser(outVO3, dto03);
 
 	}
 
