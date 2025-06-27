@@ -4,13 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.sql.SQLException;
+<<<<<<< HEAD
 import java.util.List;
+=======
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+>>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +23,21 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+<<<<<<< HEAD
 import com.pcwk.ehr.region.domain.RegionDTO;
 import com.pcwk.ehr.tour.dao.TourDaoImpl;
+=======
+import com.pcwk.ehr.cmn.SearchDTO;
+import com.pcwk.ehr.mapper.TourMapper;
+import com.pcwk.ehr.region.domain.RegionDTO;
+>>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
 import com.pcwk.ehr.tour.domain.TourDTO;
-import com.pcwk.ehr.user.domain.UserDTO;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml"
 		,"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"	})
 class TourDaoTest {
 	Logger log = LogManager.getLogger(getClass());
-	
-	@Autowired
-	TourDaoImpl dao;
 	
 	TourDTO dto01;
 	TourDTO dto02;
@@ -40,6 +47,14 @@ class TourDaoTest {
 	ApplicationContext context;
 	
 	RegionDTO region;
+<<<<<<< HEAD
+=======
+	
+	@Autowired
+	TourMapper mapper;
+	
+	SearchDTO search;
+>>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -51,9 +66,16 @@ class TourDaoTest {
                 "세종특별자치시 123", "토요일", "09:00-16:00", "010-1111-2223", 200000, 0, null);
         dto03 = new TourDTO(0, "관광지3", "소제목3", "상세내용3", 0,
                 "세종특별자치시 풍무로", "토요일", "09:00-16:00", "010-1111-2223", 200000, 0, null);
+<<<<<<< HEAD
     
         region = new RegionDTO();
 	}
+=======
+        
+        region = new RegionDTO();
+        search = new SearchDTO();
+    }
+>>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
 
     @AfterEach
     void tearDown() throws Exception {
@@ -61,11 +83,13 @@ class TourDaoTest {
         log.debug("@After");
         log.debug("***************************");
     }
+    //@Disabled
     @Test
     void doRetrive()throws SQLException {
     	//1. 전체 삭제
-    	dao.deleteAll();
+    	mapper.deleteAll();
     	
+<<<<<<< HEAD
     	//2. saveAll(); 성공
     	int count = dao.saveAll();
     	log.debug("count: "+count);
@@ -80,23 +104,57 @@ class TourDaoTest {
 			log.debug(vo);
 		}
     	assertEquals(list.size(),10);
+=======
+    	//2.
+    	int count = mapper.saveAll();
+    	log.debug("count: "+count);
+    	assertEquals(509,count);
+    	
+    	//paging
+    	search.setPageSize(10);
+    	search.setPageNo(1);
+    	search.setSearchDiv("");
+		search.setSearchWord("");
+    	
+
+    	region.setRegionSido("서울특별시");
+    	region.setRegionGugun("서대문구");
+    	
+    	// Map에 담아서 전달
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("search", search);
+        paramMap.put("region", region);
+    	
+    	List<TourDTO> list = mapper.doRetrieve(paramMap);
+    	for (TourDTO vo : list) {
+    	    log.debug(vo);
+    	}
+>>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
     }
     
-    @Disabled
+    //@Disabled
     @Test
     void doUpdate() throws SQLException {
-        dao.deleteAll();
+    	mapper.deleteAll();
 
-        // 1. 등록
-        int flag = dao.doSave(dto01);
+    	// 2. regionNo 조회
+        Integer regionNo = mapper.getRegionNo("서울특별시", "서대문구");
+        assertNotNull(regionNo);
+
+        // 3. 객체 전체
+        region.setRegionNo(regionNo);  
+        dto01.setRegion(region);  
+
+        int flag = mapper.doSave(dto01);
         assertEquals(1, flag);
+
 
         log.debug("등록된 tourNo: {}", dto01.getTourNo());
 
         // 2. 조회
         TourDTO searchDTO = new TourDTO();
         searchDTO.setTourNo(dto01.getTourNo());
-        TourDTO outVO = dao.doSelectOne(searchDTO);
+        TourDTO outVO = mapper.doSelectOne(searchDTO);
         assertNotNull(outVO);
 
         // 3. 수정
@@ -107,11 +165,11 @@ class TourDaoTest {
         outVO.setSubtitle(outVO.getSubtitle() + upString);
         outVO.setTel("9999-9999");
 
-        flag = dao.doUpdate(outVO);
+        flag = mapper.doUpdate(outVO);
         assertEquals(1, flag);
 
         // 4. 검증
-        TourDTO updatedVO = dao.doSelectOne(searchDTO);
+        TourDTO updatedVO = mapper.doSelectOne(searchDTO);
         assertNotNull(updatedVO);
 
         assertEquals(outVO.getName(), updatedVO.getName());
@@ -120,51 +178,60 @@ class TourDaoTest {
     }
     @Disabled
     @Test
-    void viewsUpdate() {
-    	dao.deleteAll();
+    void viewsUpdate() throws SQLException {
+    	mapper.deleteAll();
 
-        int flag = dao.doSave(dto01);
+    	// 2. regionNo 조회
+        Integer regionNo = mapper.getRegionNo("서울특별시", "서대문구");
+        assertNotNull(regionNo);   
+
+        // 객체 전체
+        region.setRegionNo(regionNo);  
+        dto01.setRegion(region);
+
+        int flag = mapper.doSave(dto01);
         assertEquals(1, flag);
         
-        flag = dao.viewsUpdate(dto01);
+        flag = mapper.viewsUpdate(dto01);
         assertEquals(1, flag);
         
-        TourDTO outDTO = dao.doSelectOne(dto01);
+        TourDTO outDTO = mapper.doSelectOne(dto01);
         assertNotNull(outDTO);     
         
     }
     
-    @Disabled
+    //@Disabled
     @Test
     void testDoSave() throws SQLException {
-        dao.deleteAll();
+    	// 1. 전체 삭제
+        mapper.deleteAll();
 
-        int flag = dao.doSave(dto01);
+        // 2. regionNo 조회
+        Integer regionNo = mapper.getRegionNo("서울특별시", "서대문구");
+        assertNotNull(regionNo);
+
+        region.setRegionNo(regionNo);  
+        dto01.setRegion(region);
+
+        int flag = mapper.doSave(dto01);
         assertEquals(1, flag);
+        log.debug("저장된 tourNo: {}", dto01.getTourNo());
 
-        int savedTourNo = dto01.getTourNo();
-        log.debug("저장된 tourNo: {}", savedTourNo);
-
-        // 조회
+        // 4. 조회
         TourDTO param = new TourDTO();
-        param.setTourNo(savedTourNo);
+        param.setTourNo(dto01.getTourNo());
+        TourDTO outDTO = mapper.doSelectOne(param);
 
-        TourDTO outDTO = dao.doSelectOne(param);
         assertNotNull(outDTO);
-
-        int count = dao.getCount();
-        assertEquals(1, count);
-
-        // 삭제
-        int deleteCount = dao.doDelete(param);
-        assertEquals(1, deleteCount);
+        assertEquals(dto01.getName(), outDTO.getName());
+        assertEquals(dto01.getAddress(), outDTO.getAddress());
     }
-    @Disabled
+    //@Disabled
     @Test
     void beans() {
         assertNotNull(context);
-        assertNotNull(dao);
+        assertNotNull(mapper);
         log.debug("context: {}", context);
-        log.debug("dao: {}", dao);
+        log.debug("dao: {}", mapper);
     }
 }

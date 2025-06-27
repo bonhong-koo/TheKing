@@ -104,11 +104,6 @@
 		            LEFT JOIN image i ON t.tour_no = i.target_no
 		                        AND i.table_name = 'TOUR'
 		            <where>
-<<<<<<< HEAD
-		                <if test="regionSido != null and regionSido != ''">
-		                    AND r.region_sido = #{regionSido}
-		                </if>
-=======
 		                <if test="region.regionSido != null and region.regionSido != ''">
 					        AND r.region_sido = #{region.regionSido}
 					    </if>
@@ -125,7 +120,6 @@
 	                     <if test="search.searchDiv !='' ">             
 			                 t.name LIKE '%'|| #{search.searchWord} || '%'
 			            </if>  
->>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
 		            </where>
 		            ORDER BY t.tour_no DESC
 		        ) tt2
@@ -193,11 +187,7 @@
         SELECT  LEVEL AS tourNo,                    
                 '관광지명'||LEVEL AS name,                        
                 '소제목'||LEVEL AS subtitle,                            
-<<<<<<< HEAD
-                '내용'||LEVEL AS contents,                     
-=======
                 '내용'|| LEVEL AS contents,                     
->>>>>>> fb0d3465bb45f7417a9bb1dc24889cdef7ee2853
                 MOD(level,10) AS views,                        
                 '서울특별시 서대문구 '||LEVEL AS address,                     
                 '휴일'|| LEVEL  AS holiday,

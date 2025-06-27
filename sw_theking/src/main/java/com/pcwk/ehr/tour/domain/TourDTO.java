@@ -14,7 +14,7 @@ public class TourDTO  {
 	private  String time	; //운영시간
 	private  String tel	    ; //연락처
 	private  int fee	    ; //입장료
-	private  int regionNo	; //지역코드
+	private  Integer regionNo	; //지역코드
 	
 	private RegionDTO region;
 	private ImageDTO image;
@@ -25,7 +25,7 @@ public class TourDTO  {
 
 
 	public TourDTO(Integer tourNo, String name, String subtitle, String contents, int views, String address,
-			String holiday, String time, String tel, int fee, int regionNo, RegionDTO region) {
+			String holiday, String time, String tel, int fee, Integer regionNo, RegionDTO region) {
 		super();
 		this.tourNo = tourNo;
 		this.name = name;
@@ -53,12 +53,12 @@ public class TourDTO  {
 	}
 
 
-	public int getRegionNo() {
+	public Integer getRegionNo() {
 		return regionNo;
 	}
 
 
-	public void setRegionNo(int regionNo) {
+	public void setRegionNo(Integer regionNo) {
 		this.regionNo = regionNo;
 	}
 

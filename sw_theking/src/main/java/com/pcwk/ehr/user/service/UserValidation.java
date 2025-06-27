@@ -49,27 +49,27 @@ public class UserValidation {
 	 * @return
 	 */
     public static boolean isDuplicateUserId(UserMapper mapper, String userId) {
-        UserDTO dto = new UserDTO();
-        dto.setUserId(userId);
-
-        UserDTO result = mapper.doSelectOne(dto);
-        return result != null;
+    	if (userId == null) {
+        	return false;
+        } else {
+        	return mapper.isDuplicateUserId(userId) > 0;
+        }
     }
     
     public static boolean isDuplicateNickname(UserMapper mapper, String nickname) {
-    	UserDTO dto = new UserDTO();
-        dto.setNickname(nickname);
-
-        UserDTO result = mapper.doSelectOne(dto);
-        return result != null;
+        if (nickname == null) {
+        	return false;
+        } else {
+        	return mapper.isDuplicateNickname(nickname) > 0;
+        }	
     }
     
     public static boolean isDuplicateEmail(UserMapper mapper, String email) {
-    	UserDTO dto = new UserDTO();
-        dto.setNickname(email);
-
-        UserDTO result = mapper.doSelectOne(dto);
-        return result != null;
+    	if (email == null) {
+        	return false;
+        } else {
+        	return mapper.isDuplicateEmail(email) > 0;
+        }
     }
     
 }
