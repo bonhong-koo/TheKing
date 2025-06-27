@@ -10,7 +10,7 @@
   </settings>
   
   <typeAliases>
-
+    <typeAlias alias="BoardDTO" type="com.pcwk.ehr.board.domain.BoardDTO"/>
     <typeAlias alias="DTO" type="com.pcwk.ehr.cmn.DTO"/>
     <typeAlias alias="ImageDTO" type="com.pcwk.ehr.image.domain.ImageDTO"/>
     <typeAlias alias="TourDTO" type="com.pcwk.ehr.tour.domain.TourDTO"/>
