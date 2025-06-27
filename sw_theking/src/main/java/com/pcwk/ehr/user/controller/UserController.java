@@ -1,8 +1,8 @@
 package com.pcwk.ehr.user.controller;
 
 import java.sql.SQLException;
+import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,14 +13,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.gson.Gson;
 import com.pcwk.ehr.cmn.MessageDTO;
 import com.pcwk.ehr.cmn.PcwkString;
+import com.pcwk.ehr.cmn.SearchDTO;
 import com.pcwk.ehr.user.domain.UserDTO;
 import com.pcwk.ehr.user.service.UserService;
 
@@ -49,7 +48,47 @@ public class UserController {
 	public String signUPPage() {
 		return "user/signUp";
 	}
+	
+	// 사용자 전체 조회 화면
+	@GetMapping("/userList.do")
+	public String loginPage() {
+		return "user/userList";
+	}
+	
+	@GetMapping(value="/doRetrieve.do")
+	public String doRetrieve(Model model, SearchDTO inVO ) throws SQLException {
+		String viewName = "user/user_list";
+		
+		log.debug("┌───────────────────────────┐");
+		log.debug("│ *doRetrieve()*            │");
+		log.debug("└───────────────────────────┘");		
+		
+		//pageNo==0 ->1
+		//pageSize==0 ->10
+		//페이지 번호
+		int pageNo=PcwkString.nvlZero(inVO.getPageNo(), 1);
+		//페이지 사이즈
+		int pageSize=PcwkString.nvlZero(inVO.getPageSize(), 10);
 
+		//검색구분
+		String searchDiv = PcwkString.nullToEmpty(inVO.getSearchDiv());
+		//검색어
+		String searchWord = PcwkString.nullToEmpty(inVO.getSearchWord());
+		
+		inVO.setPageNo(pageNo);
+		inVO.setPageSize(pageSize);
+		inVO.setSearchDiv(searchDiv);
+		inVO.setSearchWord(searchWord);
+		
+		log.debug("inVO:{}",inVO);
+		
+		List<UserDTO> list = userService.doRetrieve(inVO);
+		
+		model.addAttribute("list", list);
+
+		return viewName;
+	}	
+	
 	// 회원가입
 	@PostMapping("/signUp.do")
 	public String doSave(UserDTO user, Model model) throws SQLException {
@@ -84,8 +123,7 @@ public class UserController {
 		loginUserId.setUserId(userId);
 		UserDTO loginUser = userService.doSelectOne(loginUserId);
 		log.debug("loginUser: {}", loginUser);
-		
-		int flag;
+
 		String message = "";
 		// 2.로그인 실패 시
 		if (loginUser == null || password == null || !password.equals(loginUser.getPassword())) {
@@ -200,38 +238,38 @@ public class UserController {
 
 	}
 
-	@PostMapping(value = "/deleteUser.do", produces = "text/plain;charset=UTF-8")
-	@ResponseBody
-	public String deleteUser(@RequestParam String targetUserId, HttpSession session, RedirectAttributes redirect)
-			throws SQLException {
-
-		// 1. 로그인한 사용자 꺼내기
-		UserDTO loginUser = (UserDTO) session.getAttribute("user");
-
-		// 2. 로그인 안 됐으면 리턴
-		if (loginUser == null) {
-			redirect.addFlashAttribute("error", "로그인이 필요합니다.");
-			return "redirect:/login.do";
-		}
-
-		// 3. 어드민인지 확인 (여기서 만든 static 메서드 활용!)
-		if (!PcwkString.isAdmin(loginUser)) {
-			redirect.addFlashAttribute("error", "관리자만 삭제할 수 있습니다.");
-			return "redirect:/user/list.do";
-		}
-
-		// 4. 삭제 수행
-		UserDTO targetUser = new UserDTO();
-		targetUser.setUserId(targetUserId);
-
-		int result = userService.doDelete(targetUser);
-		if (result > 0) {
-			redirect.addFlashAttribute("message", "사용자 삭제 성공!");
-		} else {
-			redirect.addFlashAttribute("error", "사용자 삭제 실패.");
-		}
-
-		return "redirect:/user/UserSelectAll";
-	}
+//	@PostMapping(value = "/deleteUser.do", produces = "text/plain;charset=UTF-8")
+//	@ResponseBody
+//	public String deleteUser(@RequestParam String targetUserId, HttpSession session, RedirectAttributes redirect)
+//			throws SQLException {
+//
+//		// 1. 로그인한 사용자 꺼내기
+//		UserDTO loginUser = (UserDTO) session.getAttribute("user");
+//
+//		// 2. 로그인 안 됐으면 리턴
+//		if (loginUser == null) {
+//			redirect.addFlashAttribute("error", "로그인이 필요합니다.");
+//			return "redirect:/login.do";
+//		}
+//
+//		// 3. 어드민인지 확인 (여기서 만든 static 메서드 활용!)
+//		if (!PcwkString.isAdmin(loginUser)) {
+//			redirect.addFlashAttribute("error", "관리자만 삭제할 수 있습니다.");
+//			return "redirect:/user/list.do";
+//		}
+//
+//		// 4. 삭제 수행
+//		UserDTO targetUser = new UserDTO();
+//		targetUser.setUserId(targetUserId);
+//
+//		int result = userService.doDelete(targetUser);
+//		if (result > 0) {
+//			redirect.addFlashAttribute("message", "사용자 삭제 성공!");
+//		} else {
+//			redirect.addFlashAttribute("error", "사용자 삭제 실패.");
+//		}
+//
+//		return "redirect:/user/list.do";
+//	}
 
 }
